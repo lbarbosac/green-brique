@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Detalhes do Produto</title>
+  <link rel="stylesheet" href="produto.css" />
+</head>
+<body>
+  <header class="header">
+    <h1>Marketplace - Detalhes do Produto</h1>
+  </header>
+
+  <main id="conteudo-principal">
+    <div id="centro-informacoes">
+      <h1 id="nome-produto">Nome do Produto</h1>
+      <p id="descricao-produto">Esta é a descrição do produto, detalhando suas principais características e informações relevantes para o comprador.</p>
+      <a href="#" id="link-falar-vendedor">falar com o vendedor</a>
+    </div>
+    <img src="https://th.bing.com/th/id/OIP.PFyk2CU232YQ2V04gbSu1QHaE8?w=279&h=186&c=7&r=0&o=7&cb=12&dpr=1.5&pid=1.7&rm=3" alt="Imagem do Produto" id="imagem-produto" />
+    <div id="controles-direita">
+      <div id="botao-preco">R$ 99,99</div>
+      <h3 id="titulo-chat">fale com o vendedor via chat</h3>
+      <button id="botao-chat">esse produto está disponível?</button>
+      <div id="seletor-quantidade">
+        <button id="diminuir-qtd" aria-label="Diminuir quantidade">-</button>
+        <span id="quantidade-valor">1 unidade</span>
+        <button id="aumentar-qtd" aria-label="Aumentar quantidade">+</button>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p>© 2025 Marketplace</p>
+  </footer>
+
+  <script src="produto.js"></script>
+</body>
+</html>
