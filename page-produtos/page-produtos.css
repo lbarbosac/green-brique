@@ -9,32 +9,20 @@
 #titulos {
     color: #1a1a1a;
     margin-left: 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 20px;
 }
 
 .main {
     display: flex;
+    float: left;
     margin-left: 50px;
     margin-top: 50px;
-    height: 500px;
-    width: 100%;
+    height: 500px;   
 }
 
-#container-filtros {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    background-color: #f2f2f2;
-    border-radius: 5%;
-    padding: 30px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    height: 100%;
-}
-
-#container-filtros li {
-    list-style: none;
-    font-size: 20px;
-    color: #1a1a1a;
-}
 
 .filtro {
     display: flex;
@@ -43,24 +31,27 @@
     gap: 10px;
     margin-bottom: 10px;
     cursor: pointer;
+    float: left;
 }
 
 #container-produtos {
     display: grid;
+    float: left;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
     padding: 20px;
 }
 
 .container-produto {
+    margin-left: 15%;
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 200px;
     height: 280px;
     border: 1px solid #ccc;
-    gap: 20px;
     font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    gap: 20px;
 }
 
 .img-produto {
@@ -89,4 +80,49 @@
 
 .btn-add-carrinho:hover {
     opacity: 0.8;
+}
+
+#container-filtros {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    background-color: #f2f2f2;
+    border-radius: 5%;
+    padding: 30px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    height: 100%;
+    text-decoration: none;
+    list-style-type: none;
+    width: 100%;
+}
+
+aside{
+    display: flex;
+    float: left;
+    margin-left: 8%;
+}
+
+.nav-title{
+    display: flex;
+    align-items: center;
+}
+
+header{
+    width: 100%;
+    height: 60px;
+    background-color: white;
+    box-shadow: 0 8px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+.header-list{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    text-decoration: none;
+    list-style-type: none;
+
 }
