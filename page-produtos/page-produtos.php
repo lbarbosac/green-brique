@@ -1,3 +1,10 @@
+<?php 
+include_once 'conn.php';
+if (!$conn) {
+    die("Erro: conexão com o banco não encontrada.");
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,7 +12,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Produtos</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <link rel="stylesheet" href="page-produtos.css">
+    <link rel="stylesheet" href="page-produtos.css?v=<?php echo date("YmdHis").rand(0,9999999);?>">
 </head>
 <body>
     <header>
@@ -87,21 +94,24 @@
     <main class="main">
         <div id="container-produtos">
         <?php
-
-        //CRIAR CONXAO COM SQL
-
+        $sql = "SELECT * FROM produtos";
         $retorno = mysqli_query($conn, $sql);
 
-        while($linha = mysqli_fetch_assoc($retorno)) { 
-            echo '
-                <div class="container-produto">
-                    <img src="https://cdn.awsli.com.br/1802/1802445/produto/88808259761a3c6d8c.jpg" alt="" class="img-produto">
-                    <h2 class="nome-produto">'.$linha.['Nome'].'</h2>
-                    <h2 class="preco-produto">'.$linha['Preco'].'</h2>
-                    <button class="btn-add-carrinho">Adicionar no Carrinho
-                        <a href=""></a>
-                    </button>';
-          }
+        if ($retorno && mysqli_num_rows($retorno) > 0) {
+            while ($linha = mysqli_fetch_assoc($retorno)) {
+                echo '
+                <a href="">
+                    <div class="container-produto">
+                        <img src="'.$linha['Img'].'" alt="Produto" class="image-produto">
+                        <h2 class="nome-produto">'.$linha['Nome'].'</h2>
+                        <h3 class="descricao-produto">'.$linha['Descricao'].'</h3>
+                        <h2 class="preco-produto">R$ '.$linha['Preco'].'</h2>
+                    </div>
+                </a>';
+            }
+        } else {
+            echo "<p>Nenhum produto encontrado.</p>";
+        }
         ?>   
             
         
