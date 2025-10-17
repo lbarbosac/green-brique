@@ -51,40 +51,28 @@ if (!$conn) {
         <nav>
             <h2 class="nav-title">Filtros:</h2>
             <ul id="container-filtros">
-                <li>
+                <li class="filtros">
                     <div class="filtro">
                         <i class="fa-solid fa-arrow-trend-up"></i>
-                        <li>Embalagem</li>
+                        <span>Todos</span>
                     </div>
                 </li>
-                <li>
+                <li class="filtros">
                     <div class="filtro">
                         <i class="fa-solid fa-arrow-trend-up"></i>
-                        <li>Embalagem</li>
+                        <span>Roupas</span>
                     </div>
                 </li>
-                <li>
+                <li class="filtros">
                     <div class="filtro">
                         <i class="fa-solid fa-arrow-trend-up"></i>
-                        <li>Embalagem</li>
+                        <span>Utensílios</span>
                     </div>
                 </li>
-                <li>
+                <li class="filtros">
                     <div class="filtro">
                         <i class="fa-solid fa-arrow-trend-up"></i>
-                        <li>Embalagem</li>
-                    </div>
-                </li>
-                <li>
-                    <div class="filtro">
-                        <i class="fa-solid fa-arrow-trend-up"></i>
-                        <li>Embalagem</li>
-                    </div>
-                </li>
-                <li>
-                    <div class="filtro">
-                        <i class="fa-solid fa-arrow-trend-up"></i>
-                        <li>Embalagem</li>
+                        <span>Alimentos</span>
                     </div>
                 </li>
             </ul>
@@ -100,13 +88,20 @@ if (!$conn) {
         if ($retorno && mysqli_num_rows($retorno) > 0) {
             while ($linha = mysqli_fetch_assoc($retorno)) {
                 echo '
-                <a href="">
-                    <div class="container-produto">
+                <a href="" class="container-produto">
+                    <div class="container-image-produto">
                         <img src="'.$linha['Img'].'" alt="Produto" class="image-produto">
+                    </div>
+                    <div class="container-nome-produto">
                         <h2 class="nome-produto">'.$linha['Nome'].'</h2>
+                    </div>
+                    <div class="container-descricao-produto">
                         <h3 class="descricao-produto">'.$linha['Descricao'].'</h3>
+                    </div>
+                    <div class="container-preco-produto">
                         <h2 class="preco-produto">R$ '.$linha['Preco'].'</h2>
                     </div>
+                   
                 </a>';
             }
         } else {
