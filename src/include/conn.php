@@ -3,7 +3,7 @@
 define('DBHOST' ,'localhost');
 define('DBUSER' ,'root');
 define('DBPASS', '' );
-define('DBBASE' ,'empresa');
+define('DBBASE' ,'projeto_tecnico');
 
 //Conectar no banco
 $conn = mysqli_connect(DBHOST, DBUSER, DBPASS, DBBASE);

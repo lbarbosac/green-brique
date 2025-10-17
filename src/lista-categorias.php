@@ -1,59 +1,39 @@
 <?php 
-// include dos arquivos
 include_once './include/logado.php';
-include_once './include/conexao.php';
+include_once './include/conn.php';
 include_once './include/head.php';
 ?>
 
 <main>
-
-<div class="container">
-    <?php if (isset($_GET['erro']) && $_GET['erro'] === 'categoria_em_uso'): ?>
-      <div class="alert alert-error">
-        A categoria não pode ser excluída porque está sendo utilizada em outra tabela.
-      </div>
-    <?php endif; ?>
-    <h1>Lista de Categorias</h1>
-    <a href="./salvar-categorias.php" class="btn btn-add">Incluir</a>
-    <table>
-      <thead>
-        <tr>
-          <th>ID</th>
-          <th>Nome</th>
-          <th>Ações</th>
-        </tr>
-      </thead>
-      <tbody>
-      <?php
-            // montando o SQL que seá executado no banco de dados
-            $sql = 'SELECT * FROM categorias
-            ORDER BY CategoriaID ASC;';
-
-            // executar o SQL e guardar o retorno
-            $return = mysqli_query($conexao, $sql);
-
-            //listar todos os dados
+    <div class="container">
+      <table>
+        <th>ProdutoID</th>
+        <th>Nome</th>
+        <th>Quantidade</th>
+        <th>Preço</th>
+        <th>Categoria</th>
+        <th>Ações</th>
+          <?php
+            $sql = 'SELECT * FROM produtos;';
+            $return = mysqli_query($conn, $sql);
             while($linha = mysqli_fetch_assoc($return)){
-                echo '<tr id="'.$linha['CategoriaID'].'">
-          <td>'.$linha['CategoriaID'].'</td>
-          <td>'.$linha['Nome'].'</td>
+              echo '<tr>
+                      <td>'.$linha['ProdutoID'].'</td>
+                      <td>'.$linha['Nome'].'</td>
+                      <td>'.$linha['Quantidade'].'</td>
+                      <td>'.$linha['Preco'].'</td>
+                      <td>'.$linha['CategoriaID'].'</td>
+                      <td>
+                        <a href="" class="btn btn-edit">Editar</a>
+                        <a href="" class="btn btn-delete">Excluir</a>
+                      </td>
+                    </tr>';
+            }
+            ?>
+      </table>
 
-          <td>
-            <a href="./salvar-categorias.php?id='.$linha['CategoriaID'].'" class="btn btn-edit">Editar</a>
-            <a href="./action/categorias.php?id='.$linha['CategoriaID'].'&acao=excluir" class="btn btn-delete">Excluir</a>
-          </td>
-        </tr>';
-            };
-            ?>   
-      </tbody>
-    </table>
-  </div>
-
-
-
-</main>
-
+    </div>
+  </main>
 <?php 
-// include dos arquivos
 include_once './include/footer.php';
 ?>

@@ -4,18 +4,19 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sistema Empresarial</title>
-  <link rel="stylesheet" href="../assets/css/style-crud.css">
-  <link rel="stylesheet" href="./assets/style.css">
+  <link rel="stylesheet" href="../src/assets/css/style-crud.css">
   <style>
     
   </style>
 </head>
 <body>
   <header>
-    <h1>Sistema de Cadastro de Produtos</h1>
+    <img src="./img/logo-branco.png" alt="" id="logo">
     <nav id="menu" >
-        <a href="..src/lista-categorias.php">Categorias</a>
-        <a href="./lista-produtos.php">Produtos</a>
-        <a href="./logoff.php">Sair</a>
+        <a href="./lista-categorias.php">Perfil</a>
+        <a href="./lista-produtos.php">Compras</a>
+        <a href="./logoff.php">Blog</a>
+        <a href="./logoff.php">Quem somos</a>
+        <i class="fa-solid fa-cart-shopping fa-xl"></i>
       </nav>
   </header>

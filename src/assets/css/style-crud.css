@@ -1,138 +1,216 @@
+/* --- Import fonts --- */
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Pangolin&display=swap');
+
+/* --- PALETA TERRA FIRMA (Definição para facilitar a manutenção) --- */
+:root {
+    --fundo-principal: #F5F1E9; /* Bege claro */
+    --texto-principal: #3D352E; /* Marrom escuro */
+    --acento-principal: #C76F16; /* Laranja queimado (CTA) */
+    --acento-secundario: #6B705C; /* Verde musgo (Elementos de destaque, logo) */
+    --neutro: #B7B09C;           /* Cinza-bege (Bordas, linhas) */
+    --fundo-card: #FAFAFA;       /* Fundo mais claro para cards/containers */
+}
+
+/* --- ESTILOS GERAIS DO BODY E FONTES --- */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
     margin: 0;
     padding: 0;
-  }
-  header {
-    background-color: #333;
-    color: white;
-    padding: 1rem;
-    text-align: center;
-  }
-  nav {
+    font-family: "Lato", sans-serif; /* Define Lato como fonte padrão para o corpo */
+    background-color: var(--fundo-principal);
+    color: var(--texto-principal);
+    line-height: 1.6;
+}
+
+/* --- CABEÇALHO --- */
+header {
+    background-color: var(--acento-secundario); /* Fundo verde musgo */
+    color: var(--fundo-principal); /* Texto bege claro para contraste */
+    padding: 1rem 2rem;
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.8rem;
+    font-family: "Pangolin", cursive; /* Títulos com Pangolin para um toque amigável */
+    font-weight: 400;
+}
+
+/* --- NAVEGAÇÃO --- */
+nav#menu {
+    display: flex;
+    gap: 1.5rem; /* Espaço entre os links */
     justify-content: center;
-    background-color: #444;
-  }
-  nav a {
-    background: none;
-    color: white;
-    border: none;
-    padding: 1rem;
-    cursor: pointer;
-  }
-  nav a:hover {
-    background-color: #666;
-  }
-  .tela {
+    align-items: center;
+}
+
+nav#menu a {
+    color: var(--fundo-principal); /* Links na cor de fundo claro do header */
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    font-family: "Lato", sans-serif;
+}
+
+nav#menu a:hover {
+    color: var(--acento-principal); /* Laranja ao passar o mouse */
+}
+
+/* --- CONTEÚDO PRINCIPAL (MAIN) --- */
+main {
     padding: 2rem;
-  }
-  .active {
-    display: block;
-  }
-  .login-form, .crud-form {
-    background-color: white;
-    padding: 1rem;
-    border-radius: 5px;
-    max-width: 400px;
-    margin: auto;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
-  }
-  input, textarea{
-    display: block;
-    width: 95%;
-    margin: 0.5rem 0;
-    padding: 0.5rem;
-  }
-  textarea{
-    height: 150px;
-  }
-  button,select {
-    display: block;
-    width: 100%;
-    margin: 0.5rem 0;
-    padding: 0.5rem;
-  }
-  label{
-    display: block;
-    width: 100%;
-    font-size: 12px;
-    color: #333;
-    font-weight: 800;
-    margin: 0.5rem 0;
-    
-  }
+    display: flex; /* Para centralizar o container se necessário */
+    justify-content: center;
+    align-items: flex-start; /* Alinha no topo */
+    min-height: calc(100vh - 80px); /* Ajusta a altura mínima considerando o header */
+}
 
-  .container {
-    max-width: 900px;
-    margin: 40px auto 0 auto;
-    background: #fff;
-    padding: 20px;
+.container {
+    max-width: 1000px; /* Largura máxima para a tabela */
+    width: 95%; /* Flexível em larguras menores */
+    background-color: var(--fundo-card); /* Fundo branco/quase branco para o container */
+    padding: 2rem;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-  }
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    box-sizing: border-box; /* Garante que padding não aumente a largura total */
+}
 
-  table {
+/* --- ESTILOS DA TABELA --- */
+table {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 20px;
-  }
+    margin-top: 1.5rem; /* Espaço acima da tabela */
+    text-align: left;
+}
 
-  th, td {
+th, td {
     padding: 12px 15px;
-    border-bottom: 1px solid #ccc;
-    text-align: center;
-  }
+    border-bottom: 1px solid var(--neutro); /* Linhas divisórias usando o neutro */
+    font-family: "Lato", sans-serif;
+}
 
-  td {
-    padding: 8px 10px;
-  }
+th {
+    background-color: var(--fundo-principal); /* Bege claro no cabeçalho da tabela */
+    color: var(--texto-principal);
+    font-weight: 700;
+    text-transform: uppercase; /* Deixa o cabeçalho em maiúsculas */
+    font-size: 0.9rem;
+    letter-spacing: 0.05em;
+    border-bottom: 2px solid var(--neutro); /* Borda mais forte para o cabeçalho */
+}
 
-  th {
-    background-color: #444;
-    color: white;
-  }
+tr:nth-child(even) {
+    background-color: rgba(245, 241, 233, 0.5); /* Listras sutis com o fundo principal */
+}
 
-  tr:hover {
-    background-color: #f1f1f1;
-  }
+tr:hover {
+    background-color: var(--fundo-principal); /* Bege claro ao passar o mouse */
+    transition: background-color 0.2s ease;
+}
 
-  .btn {
-    padding: 6px 12px;
+td:last-child {
+    text-align: center; /* Centraliza as ações */
+    white-space: nowrap; /* Evita que os botões quebrem a linha */
+}
+
+/* --- ESTILOS DOS BOTÕES DA TABELA --- */
+.btn {
+    display: inline-block;
+    padding: 8px 14px;
     border: none;
     border-radius: 5px;
-    color: white;
-    cursor: pointer;
+    color: var(--fundo-principal); /* Cor de texto clara para contraste */
     text-decoration: none;
-    font-size: 14px;
-    display: inline-block;
-    margin: 2px;
-  }
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin: 0 5px; /* Espaço entre os botões */
+    font-family: "Lato", sans-serif;
+    font-size: 0.9rem;
+}
 
-  .btn-edit {
-    background-color: #ffc107;
-  }
+.btn-edit {
+    background-color: var(--acento-principal); /* Laranja para Editar */
+}
 
-  .btn-delete {
-    background-color: #dc3545;
-  }
-  .btn-add{
-    background-color: green;
-  }
-  .btn:hover {
-    opacity: 0.9;
-  }
+.btn-edit:hover {
+    background-color: #af6012; /* Laranja um pouco mais escuro no hover */
+    transform: translateY(-1px);
+}
 
-  .alert {
-    padding: 15px;
-    margin-bottom: 20px;
-    border: 1px solid transparent;
-    border-radius: 4px;
-  }
+.btn-delete {
+    background-color: var(--texto-principal); /* Marrom escuro para Excluir */
+}
 
-  .alert-error {
-    color: #a94442;
-    background-color: #f2dede;
-    border-color: #ebccd1;
-  }
+.btn-delete:hover {
+    background-color: #2e2823; /* Marrom um pouco mais escuro no hover */
+    transform: translateY(-1px);
+}
+
+/* --- RESPONSIVIDADE BÁSICA --- */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+        padding: 1rem;
+    }
+
+    nav#menu {
+        margin-top: 1rem;
+        flex-wrap: wrap; /* Permite que os links quebrem a linha */
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    main {
+        padding: 1rem;
+    }
+
+    .container {
+        padding: 1rem;
+    }
+
+    table, th, td {
+        display: block; /* Tabela em formato de "cartão" em telas pequenas */
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    th {
+        display: none; /* Esconde os cabeçalhos em telas pequenas, pode ser refeito com data-atributos */
+    }
+
+    td {
+        border-bottom: none;
+        position: relative;
+        padding-left: 50%; /* Espaço para o "novo" label */
+        text-align: right;
+    }
+
+    td::before {
+        content: attr(data-label); /* Adiciona o label do cabeçalho */
+        position: absolute;
+        left: 0;
+        width: 45%;
+        padding-left: 15px;
+        font-weight: 700;
+        text-align: left;
+        color: var(--acento-secundario);
+    }
+
+    td:last-child {
+        text-align: right;
+        padding-left: 15px; 
+    }
+}
+#logo{
+    width: 3rem;
+    height: 3rem;
+}

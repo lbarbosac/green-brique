@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Página Login Comerciante</title>
-    <link rel="stylesheet" href="pagina-login-comerciante.css">
+    <link rel="stylesheet" href="./assets/css/pagina-login-comerciante.css">
     <link rel="icon" href="../img/pagelines-brands-solid-full.svg">
 </head>
 <body>
@@ -29,7 +29,7 @@
         </div>
         <button>Logar</button>
     </main>
-    <script src="pagina-login-comerciante.js"></script>
+    <script src="./assets/js/pagina-login-comerciante.js"></script>
     <script src="https://kit.fontawesome.com/a0cfbec9a7.js" crossorigin="anonymous"></script>
 </body>
 </html>
