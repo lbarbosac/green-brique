@@ -10,7 +10,7 @@
 <body>
     <main>
         <div class="box-logo">
-            <img src="../img/logo-png.png" alt="" style="height: 8rem;">
+            <img src="./img/logo-png.png" alt="" style="height: 8rem;">
             <span class="texto-logo" style="font-size: 2rem ;">Low Carbo</span>
             <span class="texto-logo" style="font-size: 1.2rem;">Marketplace</span>
         </div>
