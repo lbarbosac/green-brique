@@ -4,6 +4,9 @@
     margin: 0;
     padding: 0;
     font-family: lato, sans-serif;  
+    height: auto;
+    box-sizing: border-box;
+    width: auto;
 } 
 
 #titulos {
@@ -15,12 +18,10 @@
     margin-top: 20px;
 }
 
-.main {
-    display: flex;
-    float: left;
-    margin-left: 50px;
-    margin-top: 50px;
-    height: 500px;   
+main {
+  display: flex;
+  gap: rem;
+  padding: 7rem 2rem;
 }
 
 
@@ -39,8 +40,13 @@
     float: left;
     grid-template-columns: repeat(4, 1fr);
     gap: 20px;
-    padding: 20px;
-    width: 100%;
+    width: 90%;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.container-produto:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
 
 .container-produto {
@@ -53,10 +59,11 @@
     font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
     gap: 20px;
     border-radius: 8%;
+    overflow: hidden;
 }
 .image-produto{
     width: 100%;
-    height: 30vh;
+    height: 25vh;
     display: flex;
     justify-content: center;
     border-top-right-radius: 8%;
@@ -103,7 +110,6 @@
 }
 
 .btn-add-carrinho {
-
     background-color: rgb(255 125 25);
     color: #fff;
     padding: 10px 20px;
@@ -135,21 +141,29 @@
     display: flex;
     flex-direction: column;
     gap: 18px;
-    background-color: #f2f2f2;
     border-radius: 5%;
     padding: 30px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    height: 100%;
     text-decoration: none;
     list-style-type: none;
     width: 100%;
     margin-top: 27%;
+    height: 48vh;
 }
+
 
 aside{
     display: flex;
     float: left;
     margin-left: 8%;
+    flex-shrink: 0;
+    background: #fff;
+    border-radius: 12px;
+    padding: 1.5rem;
+    top: 1rem;
+    height: fit-content;
+    position: sticky;
+    width: 15%;
 }
 
 .nav-title{

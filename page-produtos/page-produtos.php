@@ -51,7 +51,7 @@ if (!$conn) {
         </nav>
     </aside>
 
-    <main class="main">
+    <main>
         <div id="container-produtos">
         <?php
         $sql = "SELECT * FROM produtos";
