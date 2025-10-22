@@ -9,6 +9,14 @@
     width: auto;
 } 
 
+
+nav{
+
+    background-color: #f8f8f8;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-top:  30px;
+}
+
 #titulos {
     color: #1a1a1a;
     margin-left: 50px;
@@ -144,11 +152,11 @@ main {
     border-radius: 5%;
     padding: 30px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    text-decoration: none;
     list-style-type: none;
     width: 100%;
     margin-top: 27%;
-    height: 48vh;
+    height: auto;
+    overflow: visible;
 }
 
 
@@ -164,7 +172,12 @@ aside{
     height: fit-content;
     position: sticky;
     width: 15%;
+    flex-direction: column;
+    align-items: flex-start;
+    overflow: visible;
+    height: auto;
 }
+
 
 .nav-title{
     display: flex;
@@ -175,4 +188,32 @@ aside{
 .filtros{
     font-size: 14px;
     width: 25%;
+}
+
+
+.mini-filtros {
+    background: #f6f6f6;
+    border-radius: 10px;
+    margin: 5px 0 10px 25px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    overflow: hidden;
+    height: 0;
+    opacity: 0;
+    transition: height 0.3s ease, opacity 0.3s ease;
+}
+
+.filtro-item {
+    cursor: pointer;
+    padding: 5px 10px;
+    border-radius: 6px;
+    transition: background 0.3s;
+    font-size: 0.9rem;
+}
+
+.filtro-item:hover {
+    background: #8a2be2;
+    color: #fff;
 }

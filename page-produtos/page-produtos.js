@@ -36,11 +36,11 @@ function criarMiniFiltros(liElemento, categoria) {
     filtrosDiv.style.transition = "height 0.3s ease, opacity 0.3s ease";
     filtrosDiv.style.opacity = "0";
 
-    setTimeout(() => {
+    requestAnimationFrame(() => {
         filtrosDiv.style.height = filtrosDiv.scrollHeight + "px";
         filtrosDiv.style.opacity = "1";
-    }, 10);
-
+    });
+    
     return filtrosDiv;
 }
 
