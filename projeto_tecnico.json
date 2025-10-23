@@ -1,0 +1,211 @@
+[
+  {
+    "type": "header",
+    "version": "5.2.1",
+    "comment": "Export to JSON plugin for PHPMyAdmin"
+  },
+  {
+    "type": "database",
+    "name": "projeto_tecnico"
+  },
+  {
+    "type": "table",
+    "name": "categorias",
+    "database": "projeto_tecnico",
+    "data": [
+      {
+        "CategoriaID": "1",
+        "Nome": "Eletrônicos",
+        "Descricao": "Dispositivos eletrônicos e acessórios."
+      },
+      {
+        "CategoriaID": "2",
+        "Nome": "Roupas",
+        "Descricao": "Vestuário masculino, feminino e infantil."
+      },
+      {
+        "CategoriaID": "3",
+        "Nome": "Livros",
+        "Descricao": "Livros de diversos gêneros e autores."
+      },
+      {
+        "CategoriaID": "4",
+        "Nome": "Alimentos",
+        "Descricao": "Produtos alimentícios não perecíveis."
+      },
+      {
+        "CategoriaID": "5",
+        "Nome": "Ferramentas",
+        "Descricao": "Ferramentas para uso doméstico e profissional."
+      }
+    ]
+  },
+  {
+    "type": "table",
+    "name": "clientes",
+    "database": "projeto_tecnico",
+    "data": [
+      {
+        "ClienteID": "1",
+        "Nome": "Ana Silva",
+        "Telefone": "0",
+        "Email": "ana.silva@email.com",
+        "Endereco": "Rua das Flores, 123",
+        "Estado": "SP",
+        "Cidade": "São Paulo",
+        "Idade": "28",
+        "Cpf": "123456",
+        "Img": "http://example.com/img/cliente1.jpg"
+      },
+      {
+        "ClienteID": "2",
+        "Nome": "Bruno Costa",
+        "Telefone": "0",
+        "Email": "bruno.costa@email.com",
+        "Endereco": "Avenida Principal, 456",
+        "Estado": "RJ",
+        "Cidade": "Rio de Janeiro",
+        "Idade": "34",
+        "Cpf": "234567",
+        "Img": "http://example.com/img/cliente2.jpg"
+      },
+      {
+        "ClienteID": "3",
+        "Nome": "Carla Dias",
+        "Telefone": "0",
+        "Email": "carla.dias@email.com",
+        "Endereco": "Praça da Liberdade, 789",
+        "Estado": "MG",
+        "Cidade": "Belo Horizonte",
+        "Idade": "45",
+        "Cpf": "345678",
+        "Img": "http://example.com/img/cliente3.jpg"
+      },
+      {
+        "ClienteID": "4",
+        "Nome": "Daniel Oliveira",
+        "Telefone": "0",
+        "Email": "daniel.oliveira@email.com",
+        "Endereco": "Travessa dos Andradas, 101",
+        "Estado": "RS",
+        "Cidade": "Porto Alegre",
+        "Idade": "22",
+        "Cpf": "456789",
+        "Img": "http://example.com/img/cliente4.jpg"
+      }
+    ]
+  },
+  {
+    "type": "table",
+    "name": "comerciantes",
+    "database": "projeto_tecnico",
+    "data": [
+      {
+        "ComercianteID": "1",
+        "Nome": "Tech Imports Ltda",
+        "Email": "contato@techimports.com",
+        "Telefone": "0",
+        "Endereco": "Rua dos Importados, 789",
+        "CNPJ": "12345",
+        "Cidade": "São Paulo",
+        "Estado": "SP",
+        "Img": "http://example.com/img/comerciante1.jpg"
+      },
+      {
+        "ComercianteID": "2",
+        "Nome": "Moda & Estilo S.A.",
+        "Email": "vendas@modaestilo.com",
+        "Telefone": "0",
+        "Endereco": "Avenida da Moda, 321",
+        "CNPJ": "98765",
+        "Cidade": "Rio de Janeiro",
+        "Estado": "RJ",
+        "Img": "http://example.com/img/comerciante2.jpg"
+      },
+      {
+        "ComercianteID": "3",
+        "Nome": "Livraria Saber e Cia",
+        "Email": "atendimento@livrariasaber.com",
+        "Telefone": "0",
+        "Endereco": "Rua dos Leitores, 500",
+        "CNPJ": "55444",
+        "Cidade": "Curitiba",
+        "Estado": "PR",
+        "Img": "http://example.com/img/comerciante3.jpg"
+      }
+    ]
+  },
+  {
+    "type": "table",
+    "name": "produtos",
+    "database": "projeto_tecnico",
+    "data": [
+      {
+        "ProdutoID": "2",
+        "Nome": "Notebook Gamer Pro",
+        "Quantidade": "80",
+        "Descricao": "Notebook com processador i7, 16GB RAM e placa de vídeo RTX 3060.",
+        "Preco": "5999",
+        "CategoriaID": "1",
+        "Img": "http://example.com/img/notebook.jpg",
+        "DataCadastro": "0",
+        "Ativo": "1"
+      },
+      {
+        "ProdutoID": "3",
+        "Nome": "Camiseta de Algodão",
+        "Quantidade": "300",
+        "Descricao": "Camiseta básica de algodão orgânico, diversas cores.",
+        "Preco": "80",
+        "CategoriaID": "2",
+        "Img": "http://example.com/img/camiseta.jpg",
+        "DataCadastro": "0",
+        "Ativo": "1"
+      },
+      {
+        "ProdutoID": "4",
+        "Nome": "Calça Jeans Slim",
+        "Quantidade": "200",
+        "Descricao": "Calça jeans com corte moderno e confortável.",
+        "Preco": "190",
+        "CategoriaID": "2",
+        "Img": "http://example.com/img/calca_jeans.jpg",
+        "DataCadastro": "0",
+        "Ativo": "1"
+      },
+      {
+        "ProdutoID": "5",
+        "Nome": "O Senhor dos Anéis",
+        "Quantidade": "120",
+        "Descricao": "Box com a trilogia completa de J.R.R. Tolkien.",
+        "Preco": "150",
+        "CategoriaID": "3",
+        "Img": "http://example.com/img/livro_senhor_aneis.jpg",
+        "DataCadastro": "0",
+        "Ativo": "1"
+      },
+      {
+        "ProdutoID": "6",
+        "Nome": "Arroz Integral 5kg",
+        "Quantidade": "500",
+        "Descricao": "Pacote de arroz integral orgânico.",
+        "Preco": "25",
+        "CategoriaID": "4",
+        "Img": "http://example.com/img/arroz.jpg",
+        "DataCadastro": "0",
+        "Ativo": "1"
+      },
+      {
+        "ProdutoID": "7",
+        "Nome": "Kit de Chaves de Fenda",
+        "Quantidade": "95",
+        "Descricao": "Kit com 10 chaves de fenda de diferentes tamanhos.",
+        "Preco": "90",
+        "CategoriaID": "5",
+        "Img": "http://example.com/img/chaves_fenda.jpg",
+        "DataCadastro": "0",
+        "Ativo": "0"
+      }
+    ]
+  }
+]
