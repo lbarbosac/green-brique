@@ -23,7 +23,6 @@ function criarMiniFiltros(liElemento, categoria) {
         item.addEventListener("mouseout", () => item.style.background = "transparent");
 
         // clique (substitua pela ação real)
-        item.addEventListener("click", () => alert(`Você clicou em: ${texto}`));
 
         filtrosDiv.appendChild(item);
     });
