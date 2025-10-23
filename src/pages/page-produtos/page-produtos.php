@@ -61,7 +61,7 @@ if (!$conn) {
         if ($retorno && mysqli_num_rows($retorno) > 0) {
             while ($linha = mysqli_fetch_assoc($retorno)) {
                 echo '
-                <a href="" class="container-produto">
+                <a href="/src/pages/info-produto/info-produto.html" class="container-produto">
                     <div class="container-image-produto">
                         <img src="'.$linha['Img'].'" alt="Produto" class="image-produto">
                     </div>
