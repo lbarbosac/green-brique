@@ -3,37 +3,49 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Detalhes do Produto</title>
+  <title><?= htmlspecialchars($produto['nome'] ?? 'Produto'); ?> - Marketplace</title>
   <link rel="stylesheet" href="produto.css" />
 </head>
 <body>
-  <header class="header">
-    <h1>Marketplace - Detalhes do Produto</h1>
-  </header>
+  <main class="container">
+    <figure class="imagem-produto-container">
+      <!-- 
+       <img 
+        src="<?= htmlspecialchars($produto['imagem'] ?? 'https://via.placeholder.com/400x300?text=Sem+Imagem'); ?>" 
+        alt="Imagem do produto <?= htmlspecialchars($produto['nome'] ?? 'produto'); ?>" 
+        class="imagem-produto" 
+        loading="lazy"
+      />
+      -->
+      <img src="https://production.autoforce.com/uploads/version/profile_image/11035/model_main_webp_comprar-platinum-c-teto-solar_6eb208799e.png.webp" alt="" class="imagem-produto">
+    </figure>
+    <section class="info-produto">
+    <!-- 
+      <h2 class="nome-produto"><?= htmlspecialchars($produto['nome'] ?? 'Nome do Produto'); ?></h2>
+      <p class="descricao-produto"><?= nl2br(htmlspecialchars($produto['descricao'] ?? 'Descrição do produto aqui...')); ?></p>
+      <a href="#" id="link-falar-vendedor" class="link-acao">Falar com o vendedor</a>
+    -->
+      <h2 class="nome-produto">Carro veloz e furioso</h2>
+      <p class="descricao-produto">Completo em segurança, com alertas de colisão frontal, assistente de permanência em faixa e 6 airbags.
+      </p>
+      <a href="#" id="info-vendedor" class="link-acao">Informações do vendedor</a>
+    </section>
+    <aside class="controles">
+      <!-- 
+       <div class="preco">R$ <?= number_format($produto['preco'] ?? 0, 2, ',', '.'); ?></div>
+      -->
+      <div class="preco">R$ 50,00</div>
+      
+      <h3>Fale com o vendedor via chat</h3>
+      <button id="botao-chat" class="btn-primario">Este produto está disponível?</button>
 
-  <main id="conteudo-principal">
-    <div id="centro-informacoes">
-      <h1 id="nome-produto">Nome do Produto</h1>
-      <p id="descricao-produto">Esta é a descrição do produto, detalhando suas principais características e informações relevantes para o comprador.</p>
-      <a href="#" id="link-falar-vendedor">falar com o vendedor</a>
-    </div>
-    <img src="https://th.bing.com/th/id/OIP.PFyk2CU232YQ2V04gbSu1QHaE8?w=279&h=186&c=7&r=0&o=7&cb=12&dpr=1.5&pid=1.7&rm=3" alt="Imagem do Produto" id="imagem-produto" />
-    <div id="controles-direita">
-      <div id="botao-preco">R$ 99,99</div>
-      <h3 id="titulo-chat">fale com o vendedor via chat</h3>
-      <button id="botao-chat">esse produto está disponível?</button>
-      <div id="seletor-quantidade">
-        <button id="diminuir-qtd" aria-label="Diminuir quantidade">-</button>
+      <div class="seletor-quantidade" role="group" aria-label="Selecionar quantidade">
+        <button id="diminuir-qtd" aria-label="Diminuir quantidade">−</button>
         <span id="quantidade-valor">1 unidade</span>
         <button id="aumentar-qtd" aria-label="Aumentar quantidade">+</button>
       </div>
-    </div>
+    </aside>
   </main>
-
-  <footer class="footer">
-    <p>© 2025 Marketplace</p>
-  </footer>
-
   <script src="produto.js"></script>
 </body>
 </html>

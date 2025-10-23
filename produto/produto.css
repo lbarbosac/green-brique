@@ -1,168 +1,170 @@
 /* Reset básico */
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-  }
-  body, html {
-    height: 100vh;
-    background: #f9f9f9;
-  }
-  
-  /* Header e footer fixos com 100px de altura */
-  .header, .footer {
-    width: 100%;
-    height: 100px;
-    background-color: #0066cc;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    user-select: none;
-  }
-  
-  #cabecalho h1, #rodape p {
-    font-weight: normal;
-    font-size: 1.5rem;
-  }
-  
-  /* Conteúdo principal ocupa o restante da tela */
-  #conteudo-principal {
-    height: calc(100vh - 200px); 
-    display: flex;
-    justify-content: space-between;
-    background: #fff;
-    padding: 20px 50px;
-    gap: 50px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-  }
-  
-  /* Centro: nome, descrição e link */
-  #centro-informacoes {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-  }
-  
-  #nome-produto {
-    font-size: 2.5rem;
-    color: #222;
-  }
-  
-  #descricao-produto {
-    font-size: 1.3rem;
-    width: 80%;
-    color: #555;
-  }
-  
-  #link-falar-vendedor {
-    color: #0066cc;
-    text-decoration: none;
-    font-weight: bold;
-    margin-top: 10px;
-    transition: color 0.2s ease;
-  }
-  
-  #link-falar-vendedor:hover {
-    color: #004999;
-    text-decoration: underline;
-  }
-  
-  /* Imagem do produto do lado direito, tamanho fixo */
-  #imagem-produto {
-    width: 400px;
-    object-fit: contain;
-    align-self: center;
-    border-radius: 6px;
-    box-shadow: 0 0 8px rgba(0,0,0,0.1);
-  }
-  
-  /* Controles no canto direito */
-  #controles-direita {
-    width: 240px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 50px;
-    border-left: 1px solid #ddd;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    border-radius: 10px;
-  }
-  
-  /* Preço */
-  #botao-preco {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #27ae60;
-    text-align: center;
-    padding: 12px;
-    background-color: #eafaf1;
-    border-radius: 6px;
-    margin-bottom: 20px;
-    user-select: none;
-  }
-  
-  /* Título do chat */
-  #titulo-chat {
-    text-align: center;
-    font-size: 1.25rem;
-    font-weight: 600;
-    margin-bottom: 10px;
-    color: #333;
-  }
-  
-  /* Botão do chat */
-  #botao-chat {
-    background-color: #0066cc;
-    color: white;
-    border: none;
-    padding: 12px;
-    border-radius: 6px;
-    font-weight: bold;
-    cursor: pointer;
-    margin-bottom: 25px;
-    transition: background-color 0.2s ease;
-    user-select: none;
-  }
-  
-  #botao-chat:hover {
-    background-color: #004999;
-  }
-  
-  /* Seletor de quantidade */
-  #seletor-quantidade {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 15px;
-    font-size: 1rem;
-    color: #333;
-    user-select: none;
-  }
-  
-  #seletor-quantidade button {
-    width: 32px;
-    height: 32px;
-    font-size: 1.3rem;
-    font-weight: bold;
-    color: #0066cc;
-    border: 1px solid #0066cc;
-    background: white;
-    border-radius: 6px;
-    cursor: pointer;
-    transition: all 0.2s ease;
-  }
-  
-  #seletor-quantidade button:hover {
-    background-color: #0066cc;
-    color: white;
-  }
-  
-  #quantidade-valor {
-    min-width: 60px;
-    text-align: center;
-    font-weight: bold;
-  }
-  
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #fafafa;
+  color: #333;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.container {
+  display: flex;
+  justify-content: space-around;
+  width: 1100px;
+  margin: 20px auto;
+  background: #fff;
+  box-shadow: 0 4px 12px rgb(0 0 0 / 0.05);
+  border-radius: 8px;
+  display: flex;
+  gap: 40px;
+  padding: 30px;
+  flex-wrap: wrap;
+}
+
+.info-produto {
+  flex: 1 1 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.nome-produto {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: #222;
+}
+
+.descricao-produto {
+  font-size: 1.125rem;
+  line-height: 1.5;
+  color: #555;
+  margin-bottom: 20px;
+  white-space: pre-wrap;
+}
+
+.link-acao {
+  font-weight: 600;
+  color: #0d6efd;
+  text-decoration: none;
+  align-self: flex-start;
+  transition: color 0.3s ease;
+  cursor: pointer;
+}
+
+.link-acao:hover,
+.link-acao:focus {
+  color: #084298;
+  text-decoration: underline;
+}
+
+.imagem-produto-container {
+  flex-shrink: 0;
+  width: 400px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgb(0 0 0 / 0.1);
+}
+
+.imagem-produto {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  background-color: #f0f0f0;
+}
+
+.controles {
+  width: 260px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 15px;
+  border-left: 1px solid #ddd;
+}
+
+.preco {
+  font-size: 1.75rem;
+  color: white; 
+  font-weight: 700;
+  text-align: center;
+  padding: 15px;
+  background: #0d6efd;
+  box-shadow: #2222223d 0px 4px 8px -2px;
+  border-radius: 8px;
+  user-select: none;
+  margin-bottom: 30px;
+}
+
+h3 {
+  margin-bottom: 10px;
+  font-weight: 600;
+  color: #333;
+  text-align: center;
+}
+
+.btn-primario {
+  background-color: #0d6efd;
+  border: none;
+  color: white;
+  padding: 12px 0;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  user-select: none;
+  margin-bottom: 30px;
+}
+
+.btn-primario:hover,
+.btn-primario:focus {
+  background-color: #084298;
+  outline: none;
+}
+
+.seletor-quantidade {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  font-weight: 600;
+  color: #333;
+  user-select: none;
+}
+
+.seletor-quantidade button {
+  width: 36px;
+  height: 36px;
+  border: 2px solid #0d6efd;
+  background: transparent;
+  color: #0d6efd;
+  border-radius: 8px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.seletor-quantidade button:hover,
+.seletor-quantidade button:focus {
+  background-color: #0d6efd;
+  color: white;
+  outline: none;
+}
+
+#quantidade-valor {
+  min-width: 70px;
+  text-align: center;
+  font-size: 1.125rem;
+}
+
+.footer p {
+  font-size: 1rem;
+}
