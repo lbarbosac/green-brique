@@ -34,7 +34,7 @@ include_once './include/head.php';
                   <td>'.'R$ '.number_format($linha['Preco'], 2, ',', '.').'</td>
                   <td>
                     <a href="./salvar-produtos.php?id='.$linha['ProdutoID'].'" class="btn btn-edit">Editar</a>
-                    <a href="./action/produtos.php?id='.$linha['ProdutoID'].'&acao=excluir" class="btn btn-delete">Excluir</a>
+                    <a href="./act/produtos.php?id='.$linha['ProdutoID'].'&acao=excluir" class="btn btn-delete">Excluir</a>
                   </td>
                 </tr>';
         }
