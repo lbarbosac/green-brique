@@ -1,0 +1,169 @@
+/* Reset básico */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+  }
+  body, html {
+    height: 100vh;
+    background: #f9f9f9;
+  }
+  
+  /* Header e footer fixos com 100px de altura */
+  .header, .footer {
+    width: 100%;
+    height: 100px;
+    background-color: #0066cc;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    user-select: none;
+  }
+  
+  #cabecalho h1, #rodape p {
+    font-weight: normal;
+    font-size: 1.5rem;
+  }
+  
+  /* Conteúdo principal ocupa o restante da tela */
+  #conteudo-principal {
+    height: calc(100vh - 200px); 
+    display: flex;
+    justify-content: space-between;
+    background: #fff;
+    padding: 20px 50px;
+    gap: 50px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  }
+  
+  /* Centro: nome, descrição e link */
+  #centro-informacoes {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  
+  #nome-produto {
+    font-size: 2.5rem;
+    color: #222;
+  }
+  
+  #descricao-produto {
+    font-size: 1.3rem;
+    width: 80%;
+    color: #555;
+  }
+  
+  #link-falar-vendedor {
+    color: #0066cc;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 10px;
+    transition: color 0.2s ease;
+  }
+  
+  #link-falar-vendedor:hover {
+    color: #004999;
+    text-decoration: underline;
+  }
+  
+  /* Imagem do produto do lado direito, tamanho fixo */
+  #imagem-produto {
+    width: 400px;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    border-radius: 6px;
+    box-shadow: 0 0 8px rgba(0,0,0,0.1);
+  }
+  
+  /* Controles no canto direito */
+  #controles-direita {
+    width: 240px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 50px;
+    border-left: 1px solid #ddd;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    border-radius: 10px;
+  }
+  
+  /* Preço */
+  #botao-preco {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #27ae60;
+    text-align: center;
+    padding: 12px;
+    background-color: #eafaf1;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    user-select: none;
+  }
+  
+  /* Título do chat */
+  #titulo-chat {
+    text-align: center;
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  /* Botão do chat */
+  #botao-chat {
+    background-color: #0066cc;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-bottom: 25px;
+    transition: background-color 0.2s ease;
+    user-select: none;
+  }
+  
+  #botao-chat:hover {
+    background-color: #004999;
+  }
+  
+  /* Seletor de quantidade */
+  #seletor-quantidade {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    font-size: 1rem;
+    color: #333;
+    user-select: none;
+  }
+  
+  #seletor-quantidade button {
+    width: 32px;
+    height: 32px;
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #0066cc;
+    border: 1px solid #0066cc;
+    background: white;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  
+  #seletor-quantidade button:hover {
+    background-color: #0066cc;
+    color: white;
+  }
+  
+  #quantidade-valor {
+    width: 60px;
+    text-align: center;
+    font-weight: bold;
+  }
+  
