@@ -15,8 +15,11 @@ if (!$conn) {
     <link rel="stylesheet" href="page-produtos.css?v=<?php echo date("YmdHis").rand(0,9999999);?>">
 </head>
 <body>
-    <header>
-        
+    <header class="header">
+        <div></div>
+        <div></div>
+        <i id="carrinho-compra" class="fa-solid fa-cart-shopping carrinho-compras">
+        <sup id="num-compras-car">1</sup></i>
     </header>
 
     <aside>
