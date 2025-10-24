@@ -4,25 +4,36 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>Sobre Nós</title>
-  <link rel="stylesheet" href="./sobreNos.css">
+  <link rel="stylesheet" href="./assets/css/sobreNos.css">
 </head>
 
 <body>
+  <?php
+  include_once './include/head.php';
+  ?>
   <menu>
     <div class="menu-container-title">
       <h1 class="menu-title">Sobre Nós</h1>
     </div>
 
-    <!-- ======= CARROSSEL ======= -->
+   
     <div class="carousel-wrapper">
       <button class="carousel-btn prev">❮</button>
 
       <div class="carousel">
         <div class="carousel-images">
-          <img src="https://m.magazineluiza.com.br/a-static/420x420/mascara-macaca-macaco-animal-carnaval-festas-spook-elastico/magiccenter/11546/4880acba1a5f71bd94ee1ec057d87b7a.jpg" alt="Eduardo Avila">
-          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxJNsyJtBYI0nWnDpMXv38LO0rc4G_1AAJkg&s" alt="Nicolas Hara">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Macaca_nigra_self-portrait_large.jpg" alt="Lucas Barbosa">
-          <img src="https://rihappy.vtexassets.com/arquivos/ids/8457168/17515702501622.jpg?v=638872412174200000" alt="Cassiano Ramos">
+          <div class="carousel-slide">
+            <img src="./img/dudu-carrosel.png" alt="Eduardo Avila">
+          </div>
+          <div class="carousel-slide">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxJNsyJtBYI0nWnDpMXv38LO0rc4G_1AAJkg&s" alt="Nicolas Hara">
+          </div>
+          <div class="carousel-slide">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Macaca_nigra_self-portrait_large.jpg" alt="Lucas Barbosa">
+          </div>
+          <div class="carousel-slide">
+            <img src="https://rihappy.vtexassets.com/arquivos/ids/8457168/17515702501622.jpg?v=638872412174200000" alt="Cassiano Ramos">
+          </div>
         </div>
 
         <div class="carousel-indicators">
@@ -63,7 +74,9 @@
       <p class="footer-paragraph">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Expedita, rem odit quam alias natus incidunt, officia nostrum, minima totam quasi quas id numquam laboriosam sint corporis nihil saepe? Tenetur, delectus.</p>
     </div>
   </footer>
-
-  <script src="./sobreNos.js"></script>
+  <?php
+  include_once './include/footer.php';
+  ?>
+  <script src="./assets/js/sobreNos.js"></script>
 </body>
 </html>

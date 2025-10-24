@@ -1,6 +1,9 @@
 /* --- Import fonts --- */
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Pangolin&display=swap');
 
+*{
+    box-sizing: border-box;
+}
 :root {
     --fundo-principal: #F5F1E9; 
     --texto-principal: #3D352E; 
@@ -17,6 +20,7 @@ body {
     background-color: var(--fundo-principal);
     color: var(--texto-principal);
     line-height: 1.6;
+    
 }
 
 body.crud-page {
@@ -37,7 +41,7 @@ header {
     position: fixed;
     top: 0;
     left: 0;
-    width: 95%;
+    width: 100%;
     z-index: 1000;
 }
 
