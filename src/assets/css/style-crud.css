@@ -10,7 +10,6 @@
     --fundo-card: #FAFAFA;    
 }
 
-
 body {
     margin: 0;
     padding: 0;
@@ -20,7 +19,13 @@ body {
     line-height: 1.6;
 }
 
-/* --- CABEÇALHO --- */
+body.crud-page {
+    background-color: var(--fundo-principal);
+    color: var(--texto-principal);
+    font-family: "Lato", sans-serif;
+}
+
+
 header {
     background-color: var(--acento-secundario); /* Fundo verde musgo */
     color: var(--fundo-principal); /* Texto bege claro para contraste */
@@ -29,6 +34,16 @@ header {
     justify-content: space-between;
     align-items: center;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 95%;
+    z-index: 1000;
+}
+
+header.crud-header {
+    background-color: var(--acento-secundario);
+    color: var(--fundo-principal);
 }
 
 header h1 {
@@ -78,6 +93,16 @@ main {
     box-sizing: border-box;
 }
 
+/* Escopo para tabelas CRUD */
+table.crud-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th.crud-header, td.crud-cell {
+    padding: 12px;
+    border-bottom: 1px solid var(--neutro);
+}
 
 table {
     width: 100%;
@@ -244,7 +269,7 @@ td:last-child {
     gap: 1rem;
 }
 
-/* --- FORMULÁRIO DE CADASTRO DE PRODUTOS --- */
+
 .tela{
     width: 70%;
 }

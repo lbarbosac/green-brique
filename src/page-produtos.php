@@ -10,14 +10,14 @@ include_once './include/head.php';
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Produtos</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="./assets/css/style-crud.css?v=<?php echo date("YmdHis").rand(0,9999999);?>">
     <link rel="stylesheet" href="./assets/css/page-produtos.css?v=<?php echo date("YmdHis").rand(0,9999999);?>">
 </head>
 <body>
-    <header>
-        
-    </header>
-
-    <aside>
+    <?php
+    include_once './include/head.php';
+    ?>
+    <aside class="scrollable-filters">
         <img src="#" alt="">
         <nav>
             <h2 class="nav-title">Filtros:</h2>
@@ -72,15 +72,17 @@ include_once './include/head.php';
                     <div class="container-preco-produto">
                         <h2 class="preco-produto">R$ '.$linha['Preco'].'</h2>
                     </div>
-                   
                 </a>';
             }
         } else {
             echo "<p>Nenhum produto encontrado.</p>";
         }
         ?>   
-            
+        </div>
         <script src="./assets/js/page-produtos.js"></script>
     </main>
+    <?php 
+include_once './include/footer.php';
+?>
 </body>
 </html>
