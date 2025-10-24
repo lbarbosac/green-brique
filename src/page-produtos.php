@@ -1,8 +1,6 @@
 <?php 
-include_once 'conn.php';
-if (!$conn) {
-    die("Erro: conexão com o banco não encontrada.");
-}
+include_once './include/conn.php';
+include_once './include/head.php';
 ?>
 
 <!DOCTYPE html>
@@ -12,7 +10,7 @@ if (!$conn) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Produtos</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <link rel="stylesheet" href="page-produtos.css?v=<?php echo date("YmdHis").rand(0,9999999);?>">
+    <link rel="stylesheet" href="./assets/css/page-produtos.css?v=<?php echo date("YmdHis").rand(0,9999999);?>">
 </head>
 <body>
     <header>
@@ -61,7 +59,7 @@ if (!$conn) {
         if ($retorno && mysqli_num_rows($retorno) > 0) {
             while ($linha = mysqli_fetch_assoc($retorno)) {
                 echo '
-                <a href="/src/pages/info-produto/info-produto.html" class="container-produto">
+                <a href="./info-produto.php" class="container-produto">
                     <div class="container-image-produto">
                         <img src="'.$linha['Img'].'" alt="Produto" class="image-produto">
                     </div>
@@ -82,7 +80,7 @@ if (!$conn) {
         }
         ?>   
             
-        <script src="./page-produtos.js"></script>
+        <script src="./assets/js/page-produtos.js"></script>
     </main>
 </body>
 </html>

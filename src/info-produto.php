@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Info produto</title>
-  <link rel="stylesheet" href="info-produto.css" />
+  <link rel="stylesheet" href="./assets/css/info-produto.css"/>
 </head>
 <body>
   <main class="container">
@@ -43,9 +43,9 @@
         <button id="diminuir-qtd" aria-label="Diminuir quantidade">−</button>
         <span id="quantidade-valor">1 unidade</span>
         <button id="aumentar-qtd" aria-label="Aumentar quantidade">+</button>
-      </div>saddasdsadsdas
+      </div>
     </aside>
   </main>
-  <script src="info-produto.js"></script>
+  <script src="./assets/js/info-produto.js"></script>
 </body>
 </html>
