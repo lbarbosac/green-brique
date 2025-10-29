@@ -2,7 +2,7 @@
 <html lang="pt-br">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sobre Nós</title>
   <link rel="stylesheet" href="./sobreNos.css">
 </head>
@@ -13,54 +13,75 @@
       <h1 class="menu-title">Sobre Nós</h1>
     </div>
 
-    <!-- ======= CARROSSEL ======= -->
-    <div class="carousel-wrapper">
-      <button class="carousel-btn prev">❮</button>
+    <!-- ======= EQUIPE (ESTILO AMERICANAS) ======= -->
+    <div class="team-section">
+      <button class="carousel-btn prev" id="prevBtn">❮</button>
 
-      <div class="carousel">
-        <div class="carousel-images">
+      <div class="team-carousel" id="carousel">
+        <div class="team-card">
           <img src="https://m.magazineluiza.com.br/a-static/420x420/mascara-macaca-macaco-animal-carnaval-festas-spook-elastico/magiccenter/11546/4880acba1a5f71bd94ee1ec057d87b7a.jpg" alt="Eduardo Avila">
-          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxJNsyJtBYI0nWnDpMXv38LO0rc4G_1AAJkg&s" alt="Nicolas Hara">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Macaca_nigra_self-portrait_large.jpg" alt="Lucas Barbosa">
-          <img src="https://rihappy.vtexassets.com/arquivos/ids/8457168/17515702501622.jpg?v=638872412174200000" alt="Cassiano Ramos">
+          <h3>Eduardo Ávila</h3>
+          <p>Desenvolvedor Front-End</p>
+          <span class="social">@eduardoavila</span>
         </div>
 
-        <div class="carousel-indicators">
-          <div class="indicator active" data-index="0"></div>
-          <div class="indicator" data-index="1"></div>
-          <div class="indicator" data-index="2"></div>
-          <div class="indicator" data-index="3"></div>
+        <div class="team-card">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxJNsyJtBYI0nWnDpMXv38LO0rc4G_1AAJkg&s" alt="Nicolas Hara">
+          <h3>Nicolas Hara</h3>
+          <p>Designer UI/UX</p>
+          <span class="social">@nicolashara</span>
+        </div>
+
+        <div class="team-card">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Macaca_nigra_self-portrait_large.jpg" alt="Lucas Barbosa">
+          <h3>Lucas Barbosa</h3>
+          <p>Programador Back-End</p>
+          <span class="social">@lucasbarbosa</span>
+        </div>
+
+        <div class="team-card">
+          <img src="https://rihappy.vtexassets.com/arquivos/ids/8457168/17515702501622.jpg?v=638872412174200000" alt="Cassiano Ramos">
+          <h3>Cassiano Ramos</h3>
+          <p>Gestor de Projetos</p>
+          <span class="social">@cassianoramos</span>
         </div>
       </div>
-      <button class="carousel-btn next">❯</button>
+
+      <button class="carousel-btn next" id="nextBtn">❯</button>
     </div>
   </menu>
 
   <main>
-    <h2 class="main-title1">Quem Somos</h2>
-    <p class="main-paragraph1">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officia laboriosam, atque aspernatur quibusdam amet suscipit fugiat. Molestiae sapiente doloremque repellendus facilis velit non dolores veniam, ea, ipsa ad fuga ullam!</p>
-
-    <h2 class="main-title2">Nossa Missão</h2>
-    <p class="main-paragraph2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque molestias dolorem atque repellat enim incidunt ut. Earum exercitationem dolor id, culpa error, nisi blanditiis architecto doloribus, minus tempora odit sit.</p>
+    <div class="main-container">
+      <h2 class="main-title1">Quem Somos</h2>
+      <p class="main-paragraph1">
+        Somos um grupo de estudantes apaixonados por tecnologia, inovação e sustentabilidade.
+        Nosso objetivo é desenvolver projetos que unam impacto social e soluções digitais acessíveis.
+      </p>
+    </div>
+    <div class="main-container">
+      <h2 class="main-title2">Nossa Missão</h2>
+      <p class="main-paragraph2">
+        Queremos transformar ideias em ações que ajudem o planeta, utilizando a tecnologia como
+        aliada para um futuro mais verde e consciente.
+      </p>
+    </div>
   </main>
 
   <footer>
     <div class="footer-container1">
-      <img src="" alt="" class="footer-img">
       <h3 class="footer-title">Sustentabilidade</h3>
-      <p class="footer-paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum consequatur mollitia ea fugiat. Dicta similique doloribus blanditiis veritatis, accusantium delectus! Est quis, fuga consectetur amet dicta voluptas. A, deleniti quae!</p>
+      <p class="footer-paragraph">Buscamos sempre integrar práticas sustentáveis em nossos projetos e no dia a dia.</p>
     </div>
 
     <div class="footer-container2">
-      <img src="" alt="" class="footer-img">
       <h3 class="footer-title">Saúde</h3>
-      <p class="footer-paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi asperiores voluptatem earum reprehenderit, similique odit in voluptates quidem magni, delectus, sapiente rerum consequatur exercitationem. Molestias dicta dolores nam hic earum!</p>
+      <p class="footer-paragraph">Acreditamos que bem-estar físico e mental são fundamentais para um bom desempenho.</p>
     </div>
 
     <div class="footer-container3">
-      <img src="" alt="" class="footer-img">
       <h3 class="footer-title">Economia</h3>
-      <p class="footer-paragraph">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Expedita, rem odit quam alias natus incidunt, officia nostrum, minima totam quasi quas id numquam laboriosam sint corporis nihil saepe? Tenetur, delectus.</p>
+      <p class="footer-paragraph">Priorizamos eficiência e soluções acessíveis para todos os tipos de público.</p>
     </div>
   </footer>
 
