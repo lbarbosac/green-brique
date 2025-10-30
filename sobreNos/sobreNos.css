@@ -1,196 +1,183 @@
-/* ======== RESET E BASE ======== */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  background: #f5f5f5;
+  color: #222;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ===== MENU ===== */
+menu { text-align:center; width:100%; padding-top:30px; }
+.menu-container-title { margin-bottom:25px; }
+.menu-title { font-size:2rem; font-weight:700; color:#333; text-transform:uppercase; letter-spacing:2px; }
+
+/* ===== CAROUSEL WRAPPER ===== */
+.carousel-wrapper {
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap: 12px;
+  width:90%;
+  max-width:1200px;
+  margin:40px auto;
+  position:relative;
+}
+
+/* container que desliza — ocultamos overflow e usamos scroll */
+.carousel {
+  display:flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  gap:20px;
+  width:80%;
+  padding: 12px 6px;
+  /* esconder barra */
+  scrollbar-width: none;
+}
+.carousel::-webkit-scrollbar { display:none; }
+
+/* ===== CARD: estilo base para todos os cards ===== */
+/* cards de fundo aparecem discretos; o card ativo tem destaque */
+.card {
+  background:#fff;
+  border-radius:12px;
+  box-shadow:0 4px 12px rgba(0,0,0,0.08);
+  flex:0 0 calc(25% - 20px);
+  padding:20px;
+  text-align:center;
+  transition: transform 0.35s ease, box-shadow 0.35s ease, filter 0.35s ease, opacity 0.35s ease;
+  /* estado de fundo: levemente desfocado e menos opaco (mas não exagerado) */
+  opacity: 0.75;
+  filter: blur(1px) saturate(0.96);
+  transform: scale(0.98);
+  will-change: transform, opacity, filter;
+  position: relative;
+}
+
+/* card que estiver ativo (central): sem blur, nítido e maior */
+.card.active {
+  opacity: 1;
+  filter: none;
+  transform: scale(1);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.18);
+  z-index: 3;
+}
+
+/* hover também aumenta um pouco — mas não mais que o active */
+.card:hover { transform: translateY(-6px) scale(1.01); }
+
+/* conteúdo do card */
+.card img {
+  width:120px;
+  height:120px;
+  border-radius:50%;
+  object-fit:cover;
+  margin-bottom:10px;
+  border: 3px solid #ff7b00;
+}
+.card h2 { font-size:1.1rem; color:#222; margin-bottom:6px; }
+.card a { color:#ff7b00; text-decoration:none; font-size:0.9rem; }
+.card a:hover { text-decoration:underline; }
+
+/* ===== BOTÕES ===== */
+.nav-btn {
+  border:none;
+  background:#ff7b00;
+  color:#fff;
+  font-size:1.6rem;
+  width:44px;
+  height:44px;
+  border-radius:50%;
+  cursor:pointer;
+  transition: transform .18s ease, background .18s;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+}
+.nav-btn:hover { transform: translateY(-3px); background:#e56f00; }
+.nav-btn:disabled {
+  opacity:0.45; cursor:not-allowed; transform:none; background:#ffd1a8;
+}
+
+/* ajuste visual em telas pequenas */
+@media (max-width: 900px) {
+  .card { flex:0 0 calc(50% - 20px); }
+}
+@media (max-width: 600px) {
+  .carousel { width:95%; }
+  .card { flex:0 0 100%; }
+  .nav-btn { width:40px; height:40px; font-size:1.2rem; }
+}
+/* ===== MAIN E FOOTER ===== */
+.main-container {
+  background: #fff;
+  width: 100%;
+  max-width: 850px;
+  border-radius: 10px;
+  padding: 40px;
+  box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+  margin-bottom: 50px;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+  margin-bottom: 60px;
+  width: 70%;
+}
+
+.footer-container {
+  background: #fff;
+  border-radius: 10px;
+  padding: 25px;
+  width: 260px;
+  box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.footer-paragraph {
+  overflow: visible !important;
+  text-overflow: unset !important;
+  white-space: normal !important;
+  height: auto !important;
+}
+
+
+.footer-container:hover {
+  transform: translateY(-5px);
+}
+
+.footer-img {
+  width: 100%;
+  height: 140px;
+  border-radius: 10px;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
+/* ===== RESPONSIVO ===== */
+@media (max-width: 900px) {
+  .card {
+    flex: 0 0 calc(50% - 20px);
   }
-  
-  body {
-    background-color: #f5f5f5;
-    color: #222;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  /* ======== TÍTULO MENU ======== */
-  menu {
-    text-align: center;
-    width: 100%;
-    padding-top: 30px;
-  }
-  
-  .menu-container-title {
-    margin-bottom: 20px;
-  }
-  
-  .menu-title {
-    font-size: 2rem;
-    font-weight: 700;
-    color: #222;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-  }
-  
-  /* ======== CARROSSEL ======== */
-  .carousel-wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 15px;
-    margin-bottom: 50px;
-  }
-  
+}
+
+@media (max-width: 600px) {
   .carousel {
-    position: relative;
-    width: 70%;
-    max-width: 850px;
-    overflow: hidden;
-    border-radius: 15px;
-    background-color: #000;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    width: 95%;
   }
-  
-  .carousel-images {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
+
+  .card {
+    flex: 0 0 100%;
   }
-  
-  .carousel-images img {
-    width: 100%;
-    height: 320px;
-    object-fit: cover;
-    flex-shrink: 0;
-    border-radius: 15px;
-  }
-  
-  /* ======== BOTÕES DO CARROSSEL ======== */
-  .carousel-btn {
-    background-color: rgba(0, 0, 0, 0.75);
-    border: none;
-    color: white;
-    font-size: 1.8rem;
-    cursor: pointer;
-    padding: 15px;
-    border-radius: 50%;
-    transition: background 0.3s;
-  }
-  
-  .carousel-btn:hover {
-    background-color: #ff7b00;
-  }
-  
-  /* ======== INDICADORES ======== */
-  .carousel-indicators {
-    position: absolute;
-    bottom: 12px;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    gap: 8px;
-  }
-  
-  .indicator {
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background-color: rgba(255, 255, 255, 0.6);
-    cursor: pointer;
-    transition: background 0.3s;
-  }
-  
-  .indicator.active {
-    background-color: #ff7b00;
-  }
-  
-  /* ======== MAIN (QUEM SOMOS / MISSÃO) ======== */
-  main {
-    background-color: #fff;
-    width: 70%;
-    max-width: 850px;
-    border-radius: 10px;
-    padding: 40px;
-    box-shadow: 0 2px 15px rgba(0,0,0,0.1);
-    margin-bottom: 50px;
-  }
-  
-  .main-title1,
-  .main-title2 {
-    font-size: 1.6rem;
-    color: #222;
-    margin-bottom: 10px;
-  }
-  
-  .main-paragraph1,
-  .main-paragraph2 {
-    color: #444;
-    line-height: 1.6;
-    margin-bottom: 25px;
-    font-size: 1rem;
-  }
-  
-  /* ======== FOOTER ======== */
-  footer {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 25px;
-    flex-wrap: wrap;
-    margin-bottom: 60px;
-    width: 70%;
-  }
-  
-  .footer-container1,
-  .footer-container2,
-  .footer-container3 {
-    background: #fff;
-    border-radius: 10px;
-    padding: 25px;
-    text-align: center;
-    width: 260px;
-    box-shadow: 0 2px 15px rgba(0,0,0,0.1);
-    transition: transform 0.3s;
-  }
-  
-  .footer-container1:hover,
-  .footer-container2:hover,
-  .footer-container3:hover {
-    transform: translateY(-5px);
-  }
-  
-  .footer-img {
-    width: 60px;
-    height: 60px;
-    margin-bottom: 10px;
-    object-fit: contain;
-  }
-  
-  .footer-title {
-    color: #ff7b00;
-    margin-bottom: 10px;
-    font-size: 1.1rem;
-    font-weight: 600;
-  }
-  
-  .footer-paragraph {
-    font-size: 0.95rem;
-    color: #555;
-    line-height: 1.5;
-  }
-  
-  /* ======== RESPONSIVIDADE ======== */
-  @media (max-width: 768px) {
-    .carousel {
-      width: 90%;
-    }
-  
-    main, footer {
-      width: 90%;
-    }
-  
-    .carousel-images img {
-      height: 220px;
-    }
-  }
-  
+}

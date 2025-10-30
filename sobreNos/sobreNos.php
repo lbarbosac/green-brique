@@ -4,66 +4,69 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>Sobre Nós</title>
-  <link rel="stylesheet" href="./sobreNos.css">
+  <link rel="stylesheet" href="sobreNos.css">
 </head>
 
 <body>
   <menu>
-    <div class="menu-container-title">
-      <h1 class="menu-title">Sobre Nós</h1>
+  <div class="menu-container-title">
+    <h1 class="menu-title">Sobre Nós</h1>
+  </div>
+
+  <div class="carousel-wrapper">
+    <button class="nav-btn prev">‹</button>
+
+    <div class="carousel">
+      <div class="card"><img src="imagens/eduardo.png" alt="Eduardo Ávila"><h2>Eduardo Ávila</h2><a href="#">@eduardoavila</a></div>
+      <div class="card"><img src="imagens/nicolas.png" alt="Nicolas Hara"><h2>Nicolas Hara</h2><a href="#">@nicolashara</a></div>
+      <div class="card"><img src="imagens/lucas.png" alt="Lucas Barbosa"><h2>Lucas Barbosa</h2><a href="#">@lucasbarbosa</a></div>
+      <div class="card"><img src="imagens/cassiano.png" alt="Cassiano Ramos"><h2>Cassiano Ramos</h2><a href="#">@cassianoramos</a></div>
+      <div class="card"><img src="imagens/sandreco.png" alt="Sandreco"><h2>Sandreco</h2><a href="#">@sandreco</a></div>
     </div>
 
-    <!-- ======= CARROSSEL ======= -->
-    <div class="carousel-wrapper">
-      <button class="carousel-btn prev">❮</button>
+    <button class="nav-btn next">›</button>
+  </div>
+</menu>
 
-      <div class="carousel">
-        <div class="carousel-images">
-          <img src="https://m.magazineluiza.com.br/a-static/420x420/mascara-macaca-macaco-animal-carnaval-festas-spook-elastico/magiccenter/11546/4880acba1a5f71bd94ee1ec057d87b7a.jpg" alt="Eduardo Avila">
-          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxJNsyJtBYI0nWnDpMXv38LO0rc4G_1AAJkg&s" alt="Nicolas Hara">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Macaca_nigra_self-portrait_large.jpg" alt="Lucas Barbosa">
-          <img src="https://rihappy.vtexassets.com/arquivos/ids/8457168/17515702501622.jpg?v=638872412174200000" alt="Cassiano Ramos">
-        </div>
-
-        <div class="carousel-indicators">
-          <div class="indicator active" data-index="0"></div>
-          <div class="indicator" data-index="1"></div>
-          <div class="indicator" data-index="2"></div>
-          <div class="indicator" data-index="3"></div>
-        </div>
-      </div>
-      <button class="carousel-btn next">❯</button>
-    </div>
-  </menu>
 
   <main>
-    <h2 class="main-title1">Quem Somos</h2>
-    <p class="main-paragraph1">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officia laboriosam, atque aspernatur quibusdam amet suscipit fugiat. Molestiae sapiente doloremque repellendus facilis velit non dolores veniam, ea, ipsa ad fuga ullam!</p>
+    <div class="main-container">
+      <h2 class="main-title1">Quem Somos</h2>
+      <p class="main-paragraph1">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. At necessitatibus, tempore quas cupiditate autem iure nostrum dolorum iste aliquam atque rerum architecto eveniet porro accusamus repellat harum nemo, quasi itaque.
+      </p>
+    </div>
 
-    <h2 class="main-title2">Nossa Missão</h2>
-    <p class="main-paragraph2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque molestias dolorem atque repellat enim incidunt ut. Earum exercitationem dolor id, culpa error, nisi blanditiis architecto doloribus, minus tempora odit sit.</p>
+    <div class="main-container">
+      <h2 class="main-title2">Nossa Missão</h2>
+      <p class="main-paragraph2">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laborum architecto incidunt quibusdam explicabo voluptatem. Sit, facilis dolorem labore delectus, fuga odio deserunt, vitae nesciunt modi nulla omnis eum alias minus!
+      </p>
+    </div>
   </main>
 
   <footer>
-    <div class="footer-container1">
-      <img src="" alt="" class="footer-img">
+    <div class="footer-container">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDF5XsLZjD60SsGNTcNquq9VNn59Vi5mXooFRNJcTvk0HtVEE38ovxcwbM2gV8I07Pxd-uYo-2oPRhilXoywtu0vd33vtap9krlwgIitk" alt="" class="footer-img">
       <h3 class="footer-title">Sustentabilidade</h3>
-      <p class="footer-paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum consequatur mollitia ea fugiat. Dicta similique doloribus blanditiis veritatis, accusantium delectus! Est quis, fuga consectetur amet dicta voluptas. A, deleniti quae!</p>
+      <p class="footer-paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur eos reprehenderit autem laboriosam, repellendus, praesentium id assumenda commodi provident excepturi, veniam similique optio magni! Ab et perspiciatis harum corporis! Magnam.</p>
     </div>
 
-    <div class="footer-container2">
-      <img src="" alt="" class="footer-img">
+    <div class="footer-container">
+      <img src="https://s2-g1.glbimg.com/MVIpOVDJgHL5JQkPIkh6NbAtkzw=/0x0:620x794/984x0/smart/filters:strip_icc()/s.glbimg.com/jo/g1/f/original/2012/03/06/caters_monkey_snapper_03.jpg" alt="" class="footer-img">
       <h3 class="footer-title">Saúde</h3>
-      <p class="footer-paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi asperiores voluptatem earum reprehenderit, similique odit in voluptates quidem magni, delectus, sapiente rerum consequatur exercitationem. Molestias dicta dolores nam hic earum!</p>
+      <p class="footer-paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Non fugit officiis aliquam illum, accusantium laudantium animi laboriosam minus nemo sit quaerat neque porro ad amet quidem. Cum iusto temporibus qui?</p>
     </div>
 
-    <div class="footer-container3">
-      <img src="" alt="" class="footer-img">
+    <div class="footer-container">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtVYaMLeNtbgLIbOMBDD2b0FfSxlNTrqS4dA79kvp0rEtNCb4BomrTE20fePof9J3MAcEHMq6EDUVM0XMFpQtLyVF0F9dO7z70ZEsCdOI" alt="" class="footer-img">
       <h3 class="footer-title">Economia</h3>
-      <p class="footer-paragraph">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Expedita, rem odit quam alias natus incidunt, officia nostrum, minima totam quasi quas id numquam laboriosam sint corporis nihil saepe? Tenetur, delectus.</p>
+      <p class="footer-paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde saepe quia nesciunt, voluptatum facilis suscipit nobis tempora fuga provident fugit repellendus quibusdam animi assumenda inventore? Vitae sapiente optio quia veritatis.</p>
     </div>
   </footer>
+</div>
 
-  <script src="./sobreNos.js"></script>
+
+  <script src="sobreNos.js"></script>
 </body>
 </html>
