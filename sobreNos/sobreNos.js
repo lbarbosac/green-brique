@@ -1,57 +1,92 @@
-// seleção de elementos
 const carousel = document.querySelector('.carousel');
 const cards = Array.from(document.querySelectorAll('.card'));
 const nextBtn = document.querySelector('.next');
 const prevBtn = document.querySelector('.prev');
 
-// distância que o botão irá mover (aprox. largura de 1 card + gap)
-function getStep() {
-  const first = cards[0];
-  if (!first) return 300;
-  const rect = first.getBoundingClientRect();
-  return Math.round(rect.width + 20);
+let currentIndex = 0;
+let isAnimating = false;
+let autoPlayInterval = null;
+
+function clamp(v, a, b) { return Math.max(a, Math.min(b, v)); }
+
+function getTargetScroll(index) {
+  const target = cards[index];
+  if (!target) return carousel.scrollLeft;
+  return target.offsetLeft - (carousel.clientWidth - target.offsetWidth) / 2;
 }
 
-// desloca com animação
-nextBtn.addEventListener('click', () => {
-  const step = getStep();
-  carousel.scrollBy({ left: step, behavior: 'smooth' });
-});
-prevBtn.addEventListener('click', () => {
-  const step = getStep();
-  carousel.scrollBy({ left: -step, behavior: 'smooth' });
-});
+// animação suave via requestAnimationFrame
+function animateScroll(target) {
+  if (isAnimating) return;
+  isAnimating = true;
 
-// atualiza estado e destaque do card central
-function updateState() {
-  const maxScroll = carousel.scrollWidth - carousel.clientWidth;
-  prevBtn.disabled = carousel.scrollLeft <= 4;
-  nextBtn.disabled = carousel.scrollLeft >= maxScroll - 4;
+  const start = carousel.scrollLeft;
+  const distance = target - start;
+  const duration = 600;
+  const startTime = performance.now();
 
-  const carouselRect = carousel.getBoundingClientRect();
-  const carouselCenterX = carouselRect.left + carouselRect.width / 2;
+  function step(now) {
+    const progress = Math.min((now - startTime) / duration, 1);
+    const ease = 0.5 - Math.cos(progress * Math.PI) / 2;
+    carousel.scrollLeft = start + distance * ease;
 
-  let closest = null;
-  let minDist = Infinity;
-  cards.forEach(card => {
-    const r = card.getBoundingClientRect();
-    const cardCenterX = r.left + r.width / 2;
-    const dist = Math.abs(carouselCenterX - cardCenterX);
-    if (dist < minDist) {
-      minDist = dist;
-      closest = card;
+    if (progress < 1) {
+      requestAnimationFrame(step);
+    } else {
+      isAnimating = false;
+      updateState();
     }
-  });
+  }
 
-  cards.forEach(c => c.classList.remove('active'));
-  if (closest) closest.classList.add('active');
+  requestAnimationFrame(step);
 }
 
-let scrollTimer;
-carousel.addEventListener('scroll', () => {
-  clearTimeout(scrollTimer);
-  scrollTimer = setTimeout(() => updateState(), 80);
+function scrollToCard(index) {
+  // looping infinito
+  if (index >= cards.length) index = 0;
+  if (index < 0) index = cards.length - 1;
+
+  const target = getTargetScroll(index);
+  animateScroll(target);
+  currentIndex = index;
+  updateState();
+}
+
+function updateState() {
+  cards.forEach(c => c.classList.remove('active'));
+  if (cards[currentIndex]) cards[currentIndex].classList.add('active');
+}
+
+// botões de navegação
+nextBtn.addEventListener('click', () => {
+  if (isAnimating) return;
+  scrollToCard(currentIndex + 1);
 });
 
-window.addEventListener('resize', updateState);
-window.addEventListener('load', updateState);
+prevBtn.addEventListener('click', () => {
+  if (isAnimating) return;
+  scrollToCard(currentIndex - 1);
+});
+
+// ===== AUTO PLAY =====
+function startAutoPlay() {
+  if (autoPlayInterval) clearInterval(autoPlayInterval);
+  autoPlayInterval = setInterval(() => {
+    if (!isAnimating) scrollToCard(currentIndex + 1);
+  }, 3000); // muda a cada 3s (pode ajustar)
+}
+
+function stopAutoPlay() {
+  clearInterval(autoPlayInterval);
+  autoPlayInterval = null;
+}
+
+// pausa ao passar o mouse
+carousel.addEventListener('mouseenter', stopAutoPlay);
+carousel.addEventListener('mouseleave', startAutoPlay);
+
+// inicializa
+window.addEventListener('load', () => {
+  scrollToCard(0);
+  startAutoPlay();
+});

@@ -11,6 +11,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: #F5F1E9;
 }
 
 /* ===== MENU ===== */
@@ -22,6 +23,7 @@ menu {
 
 .menu-container-title {
   margin-bottom: 25px;
+
 }
 
 .menu-title {
@@ -30,6 +32,7 @@ menu {
   color: #333;
   text-transform: uppercase;
   letter-spacing: 2px;
+  color: #3D352E;
 }
 
 /* ===== CARROSSEL ===== */
@@ -48,7 +51,7 @@ menu {
   display: flex;
   overflow-x: auto;
   scroll-behavior: smooth;
-  gap: 20px;
+  gap: 30px;
   width: 80%;
   padding: 12px 6px;
   scrollbar-width: none;
@@ -70,6 +73,8 @@ menu {
   transform: scale(0.95);
   will-change: transform, opacity, filter;
   position: relative;
+  height: auto;
+  background-color: #FFFDF8;
 }
 
 .card.active {
@@ -78,6 +83,7 @@ menu {
   transform: scale(1);
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
   z-index: 3;
+  background-color: #FFFDF8;
 }
 
 .card:hover {
@@ -138,6 +144,38 @@ menu {
   padding: 40px;
   box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
   margin-bottom: 50px;
+  height: auto;
+  background-color: #FFFDF8;
+}
+
+.main-paragraph{
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+
+.main-paragraph2{
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #555;
+  width: 38%;
+  float: left;
+  margin-right: 2%;
+}
+
+.main-img{
+  width: 60%;
+  border-radius: 10px;
+  height: auto;
+}
+
+.main-title3{
+  font-size: 1.8rem;
+  color: #333;
+
+  color: #3D352E;
 }
 
 /* ===== FOOTER ===== */
@@ -158,6 +196,7 @@ footer {
   width: 260px;
   box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s;
+  background-color: #FFFDF8;
 }
 
 .footer-container:hover {

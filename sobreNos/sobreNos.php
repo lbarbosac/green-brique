@@ -50,20 +50,28 @@
 
   <main>
     <div class="main-container">
-      <h2 class="main-title1">Quem Somos</h2>
-      <p class="main-paragraph1">
+      <h2 class="main-title">Quem Somos</h2>
+      <p class="main-paragraph">
         Somos um grupo de estudantes apaixonados por tecnologia, inovação e sustentabilidade.
         Nosso objetivo é desenvolver projetos que unam impacto social e soluções digitais acessíveis.
       </p>
     </div>
 
     <div class="main-container">
-      <h2 class="main-title2">Nossa Missão</h2>
-      <p class="main-paragraph2">
+      <h2 class="main-title">Nossa Missão</h2>
+      <p class="main-paragraph">
         Queremos transformar ideias em ações que ajudem o planeta, utilizando a tecnologia como aliada
         para um futuro mais verde e consciente.
       </p>
     </div>
+
+    <div class="main-container">
+      <h2 class="main-title">Nossos Integrantes e Colaboradores</h2>
+      <p class="main-paragraph2">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ratione cupiditate, perspiciatis laboriosam aspernatur ea, explicabo architecto natus ex excepturi qui id maxime harum, blanditiis veritatis quisquam doloremque autem nemo consequuntur!</p>
+      <img class="main-img" src="https://imagenes.elpais.com/resizer/v2/673D4A73LEPUI7Z23TDW3QSKXY.jpg?auth=7046c0634436d6da9c781b2e9396fcd83adf3441f30cafebd252a06ed694dfce&width=414" alt="">
+    <div>
+
+  
   </main>
 
   <footer>
