@@ -8,12 +8,13 @@ $nome = '';
 $preco = '';
 $quantidade = '';
 $descricao = '';
+$img= '' ;
 
 if(isset($_GET['id'])){
   $id = intval($_GET['id']);
 
   // busca o produto específico e suas informações
-  $sql = 'SELECT ProdutoID, Quantidade, Nome, Preco, Descricao
+  $sql = 'SELECT ProdutoID, Img, Quantidade, Nome, Preco, Descricao
           FROM produtos
           WHERE ProdutoID = '.$id.';';
 
@@ -25,6 +26,7 @@ if(isset($_GET['id'])){
       $preco = isset($row['Preco']) ? $row['Preco'] : '';
       $quantidade = isset($row['Quantidade']) ? $row['Quantidade'] : '';
       $descricao = isset($row['Descricao']) ? $row['Descricao'] : '';
+      $img = isset($row['Img']) ? $row['Img'] : '';
     }
   }
 
@@ -41,6 +43,9 @@ if(isset($_GET['id'])){
           
           <label for="nome-produto" class="form-label">Nome do Produto</label>
           <input id="nome-produto" class="form-input" type="text" name="nome" placeholder="Nome do Produto" value="<?php echo htmlspecialchars($nome); ?>" required>
+
+          <label for="img-produto" class="form-label">Url da Imagem</label>
+          <input id="img-produto" class="form-input" type="text" name="img" placeholder="Url da Imagem do Produto" value="<?php echo htmlspecialchars($img); ?>" required>
           
           <label for="preco-produto" class="form-label">Preço</label>
           <input id="preco-produto" class="form-input" type="number" step="0.01" name="preco" placeholder="Preço" value="<?php echo htmlspecialchars($preco); ?>" required>

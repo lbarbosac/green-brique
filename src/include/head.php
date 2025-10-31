@@ -16,7 +16,7 @@
         <a href="./page-produtos.php">Home</a>
         <a href="./perfil.php">Perfil</a>
         <a href="./logoff.php">Blog</a>
-        <a href="./logoff.php">Quem somos</a>
+        <a href="../src/sobreNos.php">Quem somos</a>
         <i class="fa-solid fa-cart-shopping fa-xl"></i>
       </nav>
   </header>

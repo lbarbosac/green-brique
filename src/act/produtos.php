@@ -23,10 +23,11 @@ switch ($acao) {
         $preco = mysqli_real_escape_string($conn, $_POST['preco']);
         $quantidade = mysqli_real_escape_string($conn, $_POST['quantidade']);
         $descricao = mysqli_real_escape_string($conn, $_POST['descricao']);
+        $img = mysqli_real_escape_string($conn, $_POST['img']);
 
         if ($id > 0) {
             $sql = "UPDATE produtos 
-                    SET Nome = '$nome', Preco = '$preco', Quantidade = '$quantidade', Descricao = '$descricao'
+                    SET Nome = '$nome', Preco = '$preco', Quantidade = '$quantidade', Descricao = '$descricao', Img = '$img'
                     WHERE ProdutoID = $id";
         } else {
             $sql = "INSERT INTO produtos (Nome, Preco, Quantidade, Descricao) 
