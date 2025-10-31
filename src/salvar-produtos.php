@@ -1,6 +1,6 @@
 <?php 
-// include dos arquivox
 include_once './include/logado.php';
+// include dos arquivox
 include_once './include/conn.php';
 include_once './include/head.php';
 
