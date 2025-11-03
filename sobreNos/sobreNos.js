@@ -1,5 +1,5 @@
 const carousel = document.querySelector('.carousel');
-const cards = Array.from(document.querySelectorAll('.card'));
+const cards = Array.from(document.querySelectorAll('.card')); 
 const nextBtn = document.querySelector('.next');
 const prevBtn = document.querySelector('.prev');
 
@@ -15,20 +15,21 @@ function getTargetScroll(index) {
   return target.offsetLeft - (carousel.clientWidth - target.offsetWidth) / 2;
 }
 
-// animação suave via requestAnimationFrame
+// animação suave via requestAnimationFrame + ease-out mais fluido
 function animateScroll(target) {
   if (isAnimating) return;
   isAnimating = true;
 
   const start = carousel.scrollLeft;
   const distance = target - start;
-  const duration = 600;
+  const duration = 800; // levemente mais longo = mais suave
   const startTime = performance.now();
 
   function step(now) {
-    const progress = Math.min((now - startTime) / duration, 1);
-    const ease = 0.5 - Math.cos(progress * Math.PI) / 2;
-    carousel.scrollLeft = start + distance * ease;
+    const elapsed = now - startTime;
+    const progress = Math.min(elapsed / duration, 1);
+    const easeOut = 1 - Math.pow(1 - progress, 3); // suavização mais "natural"
+    carousel.scrollLeft = start + distance * easeOut;
 
     if (progress < 1) {
       requestAnimationFrame(step);

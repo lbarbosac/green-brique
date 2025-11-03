@@ -18,22 +18,22 @@
 
       <div class="carousel">
         <div class="card active">
-          <img src="imagens/eduardo.png" alt="Eduardo Ávila">
+          <img src="https://gracakids.com.br/wp-content/uploads/2023/03/Muito-Animal.jpg" alt="Eduardo Ávila">
           <h2>Eduardo Ávila</h2>
           <a href="#">@eduardoavila</a>
         </div>
         <div class="card">
-          <img src="imagens/nicolas.png" alt="Nicolas Hara">
+          <img src="https://s2-g1.glbimg.com/P9KY0OSc8Ik4isMSRHVnDHtZ59Y=/0x0:606x591/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2024/I/8/GkLO4AQ6qYvf6yDmn2AA/large.png" alt="Nicolas Hara">
           <h2>Nicolas Hara</h2>
           <a href="#">@nicolashara</a>
         </div>
         <div class="card">
-          <img src="imagens/lucas.png" alt="Lucas Barbosa">
+          <img src="https://ichef.bbci.co.uk/ace/ws/640/cpsprodpb/a285/live/1760ca90-8335-11f0-83cc-c5da98c419b8.jpg.webp" alt="Lucas Barbosa">
           <h2>Lucas Barbosa</h2>
           <a href="#">@lucasbarbosa</a>
         </div>
         <div class="card">
-          <img src="imagens/cassiano.png" alt="Cassiano Ramos">
+          <img src="https://conexaoplaneta.com.br/wp-content/uploads/2019/10/macaco-especie-rarissima-criticamente-ameacado-extincao-nasce-zoo-australia-2-conexao-planeta.jpg.png" alt="Cassiano Ramos">
           <h2>Cassiano Ramos</h2>
           <a href="#">@cassianoramos</a>
         </div>
@@ -41,6 +41,12 @@
           <img src="imagens/sandreco.png" alt="Sandreco">
           <h2>Sandreco</h2>
           <a href="#">@sandreco</a>
+        </div>
+
+        <div class="card">
+          <img src="imagens/sandreco.png" alt="Sandreco">
+          <h2>Willi</h2>
+          <a href="#">@will</a>
         </div>
       </div>
 
@@ -52,22 +58,40 @@
     <div class="main-container">
       <h2 class="main-title">Quem Somos</h2>
       <p class="main-paragraph">
-        Somos um grupo de estudantes apaixonados por tecnologia, inovação e sustentabilidade.
-        Nosso objetivo é desenvolver projetos que unam impacto social e soluções digitais acessíveis.
+      <ul class="main-list">
+          <li>Menos Carbono (CO2): Ao comprar aqui, você evita o transporte de longas distâncias, o que significa menos poluição e uma economia real de CO2. Seu produto não precisa dar a volta ao mundo para chegar até você!</li>
+          <li>Força Local: Damos poder aos pequenos comerciantes e produtores que já trabalham de forma sustentável. Seu dinheiro fica na comunidade, criando empregos e fortalecendo o bairro.</li>
+          <li>Produtos Inteligentes: Promovemos itens que são feitos para durar, são reutilizados ou reciclados. É a economia circular funcionando de verdade. </li>
+        </ul>
       </p>
     </div>
 
     <div class="main-container">
       <h2 class="main-title">Nossa Missão</h2>
       <p class="main-paragraph">
-        Queremos transformar ideias em ações que ajudem o planeta, utilizando a tecnologia como aliada
-        para um futuro mais verde e consciente.
+        <ul class="main-list">
+        <li>
+          <strong>Menos Carbono (CO2):</strong>
+          Ao comprar aqui, você evita o transporte de longas distâncias, o que significa
+          <strong>menos poluição</strong> e uma economia real de CO2.
+        </li>
+        <li>
+          <strong>Força Local:</strong>
+          Damos poder aos pequenos comerciantes e produtores que já trabalham de forma sustentável.
+          Seu dinheiro fica na comunidade, <strong>criando empregos e fortalecendo o bairro.</strong>
+        </li>
+        <li>
+          <strong>Produtos Inteligentes:</strong>
+          Promovemos itens que são feitos para durar, são reutilizados ou reciclados.
+          É a <strong>economia circular</strong> funcionando de verdade.
+  </li>
       </p>
     </div>
 
     <div class="main-container">
       <h2 class="main-title">Nossos Integrantes e Colaboradores</h2>
-      <p class="main-paragraph2">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ratione cupiditate, perspiciatis laboriosam aspernatur ea, explicabo architecto natus ex excepturi qui id maxime harum, blanditiis veritatis quisquam doloremque autem nemo consequuntur!</p>
+      <p class="main-paragraph2">
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ratione cupiditate, perspiciatis laboriosam aspernatur ea, explicabo architecto natus ex excepturi qui id maxime harum, blanditiis veritatis quisquam doloremque autem nemo consequuntur!</p>
       <img class="main-img" src="https://imagenes.elpais.com/resizer/v2/673D4A73LEPUI7Z23TDW3QSKXY.jpg?auth=7046c0634436d6da9c781b2e9396fcd83adf3441f30cafebd252a06ed694dfce&width=414" alt="">
     <div>
 
@@ -78,19 +102,29 @@
     <div class="footer-container">
       <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDF5XsLZjD60SsGNTcNquq9VNn59Vi5mXooFRNJcTvk0HtVEE38ovxcwbM2gV8I07Pxd-uYo-2oPRhilXoywtu0vd33vtap9krlwgIitk" alt="" class="footer-img">
       <h3 class="footer-title">Sustentabilidade</h3>
-      <p class="footer-paragraph">Buscamos sempre integrar práticas sustentáveis em nossos projetos e no dia a dia.</p>
+      <p class="footer-paragraph">
+        A gente não só fala de verde, a gente faz. Nosso foco principal 
+        <strong>é cortar a poluição por CO2. </strong> 
+        Como? Facilitando a compra local e de produtos que geram menos lixo. É sustentabilidade que você consegue medir e sentir.</p>
     </div>
 
     <div class="footer-container">
       <img src="https://s2-g1.glbimg.com/MVIpOVDJgHL5JQkPIkh6NbAtkzw=/0x0:620x794/984x0/smart/filters:strip_icc()/s.glbimg.com/jo/g1/f/original/2012/03/06/caters_monkey_snapper_03.jpg" alt="" class="footer-img">
       <h3 class="footer-title">Saúde</h3>
-      <p class="footer-paragraph">Acreditamos que bem-estar físico e mental são fundamentais para um bom desempenho.</p>
+      <p class="footer-paragraph">
+      Comprar na Green Brique é cuidar de você. Produtos locais e sustentáveis são, muitas vezes, mais frescos e têm menos químicos.
+      <strong>Cuidar do seu planeta é a melhor forma de cuidar da sua saúde.</strong>
+      </p>
     </div>
 
     <div class="footer-container">
       <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtVYaMLeNtbgLIbOMBDD2b0FfSxlNTrqS4dA79kvp0rEtNCb4BomrTE20fePof9J3MAcEHMq6EDUVM0XMFpQtLyVF0F9dO7z70ZEsCdOI" alt="" class="footer-img">
       <h3 class="footer-title">Economia</h3>
-      <p class="footer-paragraph">Priorizamos eficiência e soluções acessíveis para todos os tipos de público.</p>
+      <p class="footer-paragraph">
+      Seu dinheiro fica aqui, pertinho. Ao apoiar o comércio local, você ajuda a criar uma 
+      <strong>economia forte no seu bairro</strong>
+      e garante que o sucesso não custe o futuro do nosso planeta. É um consumo consciente que gera valor.
+      </p>
     </div>
   </footer>
 

@@ -51,8 +51,10 @@ menu {
   display: flex;
   overflow-x: auto;
   scroll-behavior: smooth;
+  scroll-snap-type: x mandatory; /* fixa o cartão no centro */
+  -webkit-overflow-scrolling: touch;
   gap: 30px;
-  width: 80%;
+  width: 75%;
   padding: 12px 6px;
   scrollbar-width: none;
 }
@@ -67,7 +69,6 @@ menu {
   flex: 0 0 calc(25% - 20px);
   padding: 20px;
   text-align: center;
-  transition: transform 0.35s ease, box-shadow 0.35s ease, filter 0.35s ease, opacity 0.35s ease;
   opacity: 0.75;
   filter: blur(2px) saturate(0.9);
   transform: scale(0.95);
@@ -75,13 +76,15 @@ menu {
   position: relative;
   height: auto;
   background-color: #FFFDF8;
+  scroll-snap-align: center; /* cada card "encaixa" ao parar */
+  transition: transform 0.45s ease, opacity 0.45s ease, filter 0.45s ease, box-shadow 0.45s ease;
 }
 
 .card.active {
   opacity: 1;
   filter: none;
   transform: scale(1);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
+  box-shadow: 10px 10px 5px rgb(154, 154, 154);
   z-index: 3;
   background-color: #FFFDF8;
 }
@@ -124,14 +127,14 @@ menu {
   height: 44px;
   border-radius: 50%;
   cursor: pointer;
-  transition: transform 0.18s ease, background 0.18s;
+  transition: all 0.25s ease;
   display: flex;
   align-items: center;
   justify-content: center;
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
 }
 .nav-btn:hover {
-  transform: translateY(-3px);
+  transform: translateY(-3px) scale(1.05);
   background: #e56f00;
 }
 
@@ -146,13 +149,20 @@ menu {
   margin-bottom: 50px;
   height: auto;
   background-color: #FFFDF8;
+  transition: transform 0.3s;
+
+}
+.main-container:hover {
+  transform: translateY(-5px);
 }
 
-.main-paragraph{
+.main-list{
   font-size: 1.1rem;
   line-height: 1.6;
   color: #555;
   margin-bottom: 20px;
+  margin-top: 20px;
+  list-style-type: none;
 }
 
 
@@ -181,11 +191,11 @@ menu {
 /* ===== FOOTER ===== */
 footer {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   gap: 25px;
   flex-wrap: wrap;
   margin-bottom: 60px;
-  width: 70%;
+  width: 67%;
 }
 
 .footer-container {
