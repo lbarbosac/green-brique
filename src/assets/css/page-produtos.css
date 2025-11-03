@@ -125,6 +125,11 @@ main {
     font-size: 0.9rem; /* Smaller font size */
     color: var(--texto-principal); /* Ensure visibility */
     margin: 0.5rem 0;
+    display: -webkit-box;       /* Necessário para navegadores baseados em Webkit */
+    -webkit-line-clamp: 2;      /* Define o número de linhas para 2 */
+    -webkit-box-orient: vertical; /* Define a orientação da caixa para vertical */
+    overflow: hidden;           /* Esconde o texto que ultrapassa o limite */
+    text-overflow: ellipsis; 
 }
 
 .preco-produto {
