@@ -59,9 +59,10 @@
       <h2 class="main-title">Quem Somos</h2>
       <p class="main-paragraph">
       <ul class="main-list">
-          <li>Menos Carbono (CO2): Ao comprar aqui, você evita o transporte de longas distâncias, o que significa menos poluição e uma economia real de CO2. Seu produto não precisa dar a volta ao mundo para chegar até você!</li>
-          <li>Força Local: Damos poder aos pequenos comerciantes e produtores que já trabalham de forma sustentável. Seu dinheiro fica na comunidade, criando empregos e fortalecendo o bairro.</li>
-          <li>Produtos Inteligentes: Promovemos itens que são feitos para durar, são reutilizados ou reciclados. É a economia circular funcionando de verdade. </li>
+          <li>Cansado de comprar coisas que viajam o mundo e prejudicam o planeta? Nós também!
+            A Green Brique nasceu para mudar isso. Somos um marketplace ecológico com uma missão simples: provar que dá para cuidar do planeta e do seu bolso ao mesmo tempo.
+            A ideia é juntar você com o melhor do comércio local e sustentável. Em vez de comprar de longe, você encontra aqui, perto da sua casa, aquele produtor ou loja que faz tudo com cuidado, pensando no futuro.
+            A gente usa a tecnologia para te conectar com esses vizinhos incríveis, facilitando a compra de produtos que são bons para você, para a sua comunidade e, principalmente, para o meio ambiente.</li>
         </ul>
       </p>
     </div>
@@ -89,7 +90,7 @@
     </div>
 
     <div class="main-container">
-      <h2 class="main-title">Nossos Integrantes e Colaboradores</h2>
+      <h2 class="main-title">Nossos Colaboradores</h2>
       <p class="main-paragraph2">
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ratione cupiditate, perspiciatis laboriosam aspernatur ea, explicabo architecto natus ex excepturi qui id maxime harum, blanditiis veritatis quisquam doloremque autem nemo consequuntur!</p>
       <img class="main-img" src="https://imagenes.elpais.com/resizer/v2/673D4A73LEPUI7Z23TDW3QSKXY.jpg?auth=7046c0634436d6da9c781b2e9396fcd83adf3441f30cafebd252a06ed694dfce&width=414" alt="">
