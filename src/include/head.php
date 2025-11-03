@@ -12,6 +12,10 @@
 <body>
   <header>
     <img src="./img/logo-branco.png" alt="" id="logo">
+    <form id="search-bar" action="../src/act/search.php" method="GET">
+      <input type="text" name="query" placeholder="Pesquisar..." required>
+      <button id="button" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+    </form>
     <nav id="menu" >
         <a href="./page-produtos.php">Home</a>
         <a href="./perfil.php">Perfil</a>

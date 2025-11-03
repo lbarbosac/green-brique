@@ -59,7 +59,7 @@ include_once './include/head.php';
         if ($retorno && mysqli_num_rows($retorno) > 0) {
             while ($linha = mysqli_fetch_assoc($retorno)) {
                 echo '
-                <a href="./info-produto.php" class="container-produto">
+                <a id="'.$linha['ProdutoID'].'" href="./info-produto.php" class="container-produto">
                     <div class="container-image-produto">
                         <img src="'.$linha['Img'].'" alt="Produto" class="image-produto">
                     </div>
