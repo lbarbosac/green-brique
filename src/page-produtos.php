@@ -43,7 +43,7 @@ include_once './include/head.php';
                 $preco_formatado = number_format($linha['Preco'], 2, ',', '.');
 
                 echo '
-                <a href="./info-produto.php?id=' . $produto_id . '" class="container-produto"> 
+                <a id="'.$linha['ProdutoID'].'" href="./info-produto.php?id=' . $produto_id . '" class="container-produto">
                     <div class="container-image-produto">
                         <img src="' . $img_url . '" alt="' . $nome_produto . '" class="image-produto">
                     </div>
