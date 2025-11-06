@@ -105,7 +105,7 @@ menu {
   border-radius: 50%;
   object-fit: cover;
   margin-bottom: 10px;
-  border: 3px solid #ff7b00;
+  border: 3px solid #6b705c;
 }
 
 .card h2 {
@@ -115,7 +115,7 @@ menu {
 }
 
 .card a {
-  color: #ff7b00;
+  color: #3d352e;
   text-decoration: none;
   font-size: 0.9rem;
 }
@@ -126,7 +126,7 @@ menu {
 /* ===== BOTÕES ===== */
 .nav-btn {
   border: none;
-  background: #ff7b00;
+  background: #3d352e;
   color: #fff;
   font-size: 1.6rem;
   width: 44px;
@@ -141,7 +141,7 @@ menu {
 }
 .nav-btn:hover {
   transform: translateY(-3px) scale(1.05);
-  background: #e56f00;
+  background: #6b705c;
 }
 
 /* ===== MAIN ===== */
@@ -181,6 +181,7 @@ menu {
   width: 38%;
   float: left;
   margin-right: 2%;
+  margin-top: 20px;
 }
 
 .main-img{
