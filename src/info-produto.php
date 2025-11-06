@@ -1,5 +1,6 @@
 <?php
 include_once './include/conn.php';
+include_once './include/head.php';
 
 $produto_id = null;
 $produto = false;
@@ -26,7 +27,6 @@ if ($produto_id !== null && $produto_id > 0) {
         $quantidade_estoque = htmlspecialchars($produto['Quantidade']);
 
     } else {
-        // Produto não encontrado no DB
         $titulo_pagina = "Produto Não Encontrado";
         $img_url = "./assets/img/produto_padrao.png";
         $nome_produto = "Produto Não Encontrado";
