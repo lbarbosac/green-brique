@@ -12,8 +12,7 @@
         <form action="./act/login-comerciante.php" method="post">
             <div class="box-logo">
                 <img src="./img/logo-png.png" alt="" style="height: 8rem;">
-                <span class="texto-logo" style="font-size: 2rem;">Low Carbo</span>
-                <span class="texto-logo" style="font-size: 1.2rem;">Marketplace</span>
+                <span class="texto-logo" style="font-size: 2rem;">Green Brique</span>
             </div>
             <div class="div-label">
                 <label for="nome_user">Nome de Usuário</label>
