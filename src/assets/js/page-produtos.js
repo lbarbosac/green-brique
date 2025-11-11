@@ -1,7 +1,3 @@
-
-console.log("Página de Produtos - Low Carbo");
-
-// Mini-filtros por categoria
 const categorias = {
     "Roupas": ["Usadas", "Novas", "Em promoção", "Mais Vendidas"],
     "Utensílios": ["Cozinha", "Limpeza", "Escritório", "Promoção"],
@@ -12,17 +8,25 @@ const categorias = {
 function criarMiniFiltros(liElemento, categoria) {
     const filtrosDiv = document.createElement("div");
     filtrosDiv.className = "mini-filtros";
+    filtrosDiv.setAttribute("role", "list");    
 
     categorias[categoria].forEach(texto => {
         const item = document.createElement("div");
         item.className = "filtro-item";
         item.textContent = texto;
+        item.setAttribute("tabindex", "0");
+        item.setAttribute("role", "listitem");
 
-        // hover visual
-        item.addEventListener("mouseover", () => item.style.background = "#8a2be2");
-        item.addEventListener("mouseout", () => item.style.background = "transparent");
+        // hover visual e acessibilidade
+        item.addEventListener("mouseover", () => item.style.backgroundColor = "var(--acento-principal)");
+        item.addEventListener("mouseout", () => item.style.backgroundColor = "transparent");
+        item.addEventListener("focus", () => item.style.backgroundColor = "var(--acento-principal)");
+        item.addEventListener("blur", () => item.style.backgroundColor = "transparent");
 
-        // clique (substitua pela ação real)
+        // Clique (substitua pela ação real)
+        item.addEventListener("click", () => {
+            alert(`Filtrado por: ${categoria} - ${texto}`);
+        });
 
         filtrosDiv.appendChild(item);
     });
@@ -39,7 +43,7 @@ function criarMiniFiltros(liElemento, categoria) {
         filtrosDiv.style.height = filtrosDiv.scrollHeight + "px";
         filtrosDiv.style.opacity = "1";
     });
-    
+
     return filtrosDiv;
 }
 
@@ -58,14 +62,12 @@ function initFiltros() {
         const categoria = span.textContent.trim();
         const liElemento = span.closest("li");
 
-        // Cada li terá seu próprio estado
         let miniFiltrosFixados = null;
         let miniFiltrosHover = null;
 
-        // --- Hover temporário ---
+        // Hover temporário
         span.addEventListener("mouseenter", () => {
             if (miniFiltrosFixados || miniFiltrosHover) return;
-
             miniFiltrosHover = criarMiniFiltros(liElemento, categoria);
 
             liElemento.addEventListener("mouseleave", () => {
@@ -76,22 +78,27 @@ function initFiltros() {
             }, { once: true });
         });
 
-        // --- Clique para fixar ---
+        // Clique para fixar
         span.addEventListener("click", () => {
-            // Se já existe fixo, fecha
             if (miniFiltrosFixados) {
                 fecharMiniFiltros(miniFiltrosFixados);
                 miniFiltrosFixados = null;
                 return;
             }
-
-            // Se hover aberto, transforma em fixo
             if (miniFiltrosHover) {
                 miniFiltrosFixados = miniFiltrosHover;
                 miniFiltrosHover = null;
             } else {
-                // cria novo fixo
                 miniFiltrosFixados = criarMiniFiltros(liElemento, categoria);
+            }
+        });
+
+        // Permitir foco e ativar o clique com enter ou espaço (acessibilidade)
+        span.parentElement.setAttribute("tabindex", "0");
+        span.parentElement.addEventListener("keydown", (e) => {
+            if (e.key === "Enter" || e.key === " ") {
+                e.preventDefault();
+                span.click();
             }
         });
     });

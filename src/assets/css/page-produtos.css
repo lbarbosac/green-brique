@@ -7,6 +7,8 @@
     --acento-secundario: #6B705C;
     --neutro: #B7B09C;
     --fundo-card: #FAFAFA;
+    --hover-bg: var(--acento-secundario);
+    --hover-text: var(--fundo-principal);
 }
 
 body {
@@ -27,6 +29,11 @@ body {
     overflow-y: auto;
     height: 100vh;
     position: fixed;
+    top: 0;
+    left: 0;
+    border-right: 1px solid var(--neutro);
+    /* Accessibility: focus outline for keyboard navigation */
+    outline-offset: 2px;
 }
 
 .scrollable-filters img {
@@ -36,7 +43,7 @@ body {
 }
 
 .nav-title {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     font-weight: 700;
     margin-bottom: 1rem;
     color: var(--texto-principal);
@@ -59,12 +66,41 @@ body {
     cursor: pointer;
     padding: 0.5rem;
     border-radius: 5px;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    user-select: none;
 }
 
-.filtro:hover {
-    background-color: var(--acento-secundario);
+.filtro:hover,
+.filtro:focus {
+    background-color: var(--hover-bg);
+    color: var(--hover-text);
+    outline: none;
+}
+
+.mini-filtros {
+    padding-left: 1.5rem;
+    margin-top: -0.5rem;
+    margin-bottom: 1rem;
+    overflow: hidden;
+    border-left: 3px solid var(--acento-principal);
+}
+
+.filtro-item {
+    padding: 0.3rem 0.6rem;
+    margin: 0.2rem 0;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 0.9rem;
+    color: var(--acento-secundario);
+    user-select: none;
+}
+
+.filtro-item:hover,
+.filtro-item:focus {
+    background-color: var(--acento-principal);
     color: var(--fundo-principal);
+    outline: none;
 }
 
 main {

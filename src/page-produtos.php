@@ -14,15 +14,35 @@ include_once './include/head.php';
     <link rel="stylesheet" href="./assets/css/page-produtos.css?v=<?php echo date("YmdHis").rand(0,9999999);?>">
 </head>
 <body>
-    <aside class="scrollable-filters">
-        <img src="#" alt="">
+<aside class="scrollable-filters" role="navigation" aria-label="Filtros de produtos">
+        <img src="#" alt="Imagem ilustrativa de filtros ambientais">
         <nav>
             <h2 class="nav-title">Filtros:</h2>
-            <ul id="container-filtros">
-                <li class="filtros"><div class="filtro"><i class="fa-solid fa-arrow-trend-up"></i><span>Todos</span></div></li>
-                <li class="filtros"><div class="filtro"><i class="fa-solid fa-arrow-trend-up"></i><span>Roupas</span></div></li>
-                <li class="filtros"><div class="filtro"><i class="fa-solid fa-arrow-trend-up"></i><span>Utensílios</span></div></li>
-                <li class="filtros"><div class="filtro"><i class="fa-solid fa-arrow-trend-up"></i><span>Alimentos</span></div></li>
+            <ul id="container-filtros" role="list">
+                <li class="filtros" role="listitem">
+                    <div class="filtro" tabindex="0">
+                        <i class="fa-solid fa-arrow-trend-up" aria-hidden="true"></i>
+                        <span>Todos</span>
+                    </div>
+                </li>
+                <li class="filtros" role="listitem">
+                    <div class="filtro" tabindex="0">
+                        <i class="fa-solid fa-tshirt" aria-hidden="true"></i>
+                        <span>Roupas</span>
+                    </div>
+                </li>
+                <li class="filtros" role="listitem">
+                    <div class="filtro" tabindex="0">
+                        <i class="fa-solid fa-bowl-food" aria-hidden="true"></i>
+                        <span>Utensílios</span>
+                    </div>
+                </li>
+                <li class="filtros" role="listitem">
+                    <div class="filtro" tabindex="0">
+                        <i class="fa-solid fa-apple-whole" aria-hidden="true"></i>
+                        <span>Alimentos</span>
+                    </div>
+                </li>
             </ul>
         </nav>
     </aside>
