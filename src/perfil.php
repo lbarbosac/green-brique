@@ -11,6 +11,7 @@ include_once './include/head.php';
         <div class="foto-nome">
           <img class="img-perfil" src="https://gcomp.devpampa.com/fotos/times/time_759/jogadores/18268_1684415809422.png" alt="">
           <h2>Leonardo Vargas Saldanha</h2>
+          
         </div>
       </div>
     </div>

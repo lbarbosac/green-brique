@@ -116,7 +116,8 @@ main {
     justify-content: center;
     align-items: flex-start; /* Alinha no topo */
     flex-wrap: wrap;
-    min-height: calc(100vh - 80px); /
+    min-height: calc(100vh - 80px); 
+    margin-top: 30px;
 }
 
 .container {
@@ -303,8 +304,14 @@ td:last-child {
 .foto-nome{
     display: flex;
     gap: 1rem;
+    margin-right: 43.625rem;
 }
 
+.bnt-perfil{
+    background-color: #af6012;
+    border-radius: 5px;
+
+}
 
 .tela{
     width: 70%;
