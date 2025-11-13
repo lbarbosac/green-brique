@@ -1,54 +1,42 @@
 <?php
-include_once '../src/include/conn.php';
+// O caminho é relativo a este arquivo (search-autocomplete.php em src/act/)
+// Precisa sair de 'act' (..) e entrar em 'include'
+include_once '../include/conn.php'; 
 
-if (!isset($_GET['query']) || empty(trim($_GET['query']))) {
-    header("Location: ../src/page-produtos.php");
-    exit;
+// Define o cabeçalho para retornar JSON
+header('Content-Type: application/json');
+
+if ($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET['query'])) {
+    
+    // Sanitização e Preparação
+    $search_query = mysqli_real_escape_string($conn, trim($_GET['query']));
+
+    if (!empty($search_query) && strlen($search_query) >= 2) {
+        
+        // Query funcional: busca por Nome que contenha o termo
+        $sql = "SELECT ProdutoID, Nome FROM produtos 
+                WHERE Nome LIKE '%$search_query%' 
+                ORDER BY Nome ASC
+                LIMIT 10";
+
+        $retorno = mysqli_query($conn, $sql);
+        $produtos = [];
+
+        if ($retorno) {
+            while ($linha = mysqli_fetch_assoc($retorno)) {
+                $produtos[] = [
+                    'ProdutoID' => $linha['ProdutoID'],
+                    'Nome' => htmlspecialchars($linha['Nome']) 
+                ];
+            }
+        }
+        
+        // Retorna o resultado em formato JSON
+        echo json_encode($produtos);
+        exit;
+    }
 }
 
-$nome = "%" . trim($_GET['query']) . "%";
-
-// Prepare and execute the query
-$sql = "SELECT * FROM produtos WHERE Nome LIKE ?";
-$stmt = $conn->prepare($sql);
-$stmt->bind_param("s", $nome);
-$stmt->execute();
-$result = $stmt->get_result();
-
-// Fetch results
-$buscados = $result->fetch_all(MYSQLI_ASSOC);
-
-// Display results
+// Retorna um array vazio por padrão
+echo json_encode([]);
 ?>
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resultados da Pesquisa</title>
-    <link rel="stylesheet" href="../assets/css/style-crud.css">
-</head>
-<body>
-    <header>
-        <h1>Resultados da Pesquisa</h1>
-    </header>
-    <main>
-        <div class="container">
-            <h2>Resultados para: "<?php echo htmlspecialchars($_GET['query']); ?>"</h2>
-            <?php if (!empty($buscados)): ?>
-                <ul>
-                    <?php foreach ($buscados as $produto): ?>
-                        <li>
-                            <strong><?php echo htmlspecialchars($produto['Nome']); ?></strong><br>
-                            <?php echo htmlspecialchars($produto['Descricao']); ?><br>
-                            <span>R$ <?php echo number_format($produto['Preco'], 2, ',', '.'); ?></span>
-                        </li>
-                    <?php endforeach; ?>
-                </ul>
-            <?php else: ?>
-                <p>Nenhum resultado encontrado.</p>
-            <?php endif; ?>
-        </div>
-    </main>
-</body>
-</html>
