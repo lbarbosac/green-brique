@@ -106,3 +106,65 @@ COMMIT;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+
+--
+-- Exclusão de tabelas de filtros anteriores, se existirem
+--
+DROP TABLE IF EXISTS `produto_subcategoria`;
+DROP TABLE IF EXISTS `subcategorias`;
+DROP TABLE IF EXISTS `categorias`;
+
+--
+-- Tabela 1: Categorias Principais
+--
+CREATE TABLE `categorias` (
+  `CategoriaID` INT(11) NOT NULL AUTO_INCREMENT,
+  `Nome` VARCHAR(100) NOT NULL UNIQUE,
+  PRIMARY KEY (`CategoriaID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Tabela 2: Subcategorias (Subfiltros)
+--
+CREATE TABLE `subcategorias` (
+  `SubcategoriaID` INT(11) NOT NULL AUTO_INCREMENT,
+  `CategoriaID` INT(11) NOT NULL, -- Chave estrangeira
+  `Nome` VARCHAR(100) NOT NULL,
+  PRIMARY KEY (`SubcategoriaID`),
+  FOREIGN KEY (`CategoriaID`) REFERENCES `categorias`(`CategoriaID`) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Tabela 3: Produto-Filtro (Relacionamento N:N)
+--
+CREATE TABLE `produto_subcategoria` (
+  `ProdutoID` INT(11) NOT NULL,
+  `SubcategoriaID` INT(11) NOT NULL,
+  PRIMARY KEY (`ProdutoID`, `SubcategoriaID`),
+  FOREIGN KEY (`ProdutoID`) REFERENCES `produtos`(`ProdutoID`) ON DELETE CASCADE,
+  FOREIGN KEY (`SubcategoriaID`) REFERENCES `subcategorias`(`SubcategoriaID`) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- --------------------------------------------------------
+-- Inserção de Dados
+-- --------------------------------------------------------
+--
+
+-- Inserir Categorias
+INSERT INTO `categorias` (`Nome`) VALUES 
+('Roupas'), 
+('Utensílios'), 
+('Alimentos');
+
+-- Inserir Subcategorias (ID 1 = Roupas)
+INSERT INTO `subcategorias` (`CategoriaID`, `Nome`) VALUES
+(1, 'Usadas'), (1, 'Novas'), (1, 'Em promoção'), (1, 'Mais Vendidas');
+
+-- Inserir Subcategorias (ID 2 = Utensílios)
+INSERT INTO `subcategorias` (`CategoriaID`, `Nome`) VALUES
+(2, 'Cozinha'), (2, 'Limpeza'), (2, 'Escritório'), (2, 'Promoção');
+
+-- Inserir Subcategorias (ID 3 = Alimentos)
+INSERT INTO `subcategorias` (`CategoriaID`, `Nome`) VALUES
+(3, 'Frescos'), (3, 'Congelados'), (3, 'Snacks'), (3, 'Orgânicos');
