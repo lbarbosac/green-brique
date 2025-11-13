@@ -8,7 +8,7 @@
     --fundo-principal: #F5F1E9; 
     --texto-principal: #3D352E; 
     --acento-principal: #C76F16; 
-    --acento-secundario: #b5b7b2;
+    --acento-secundario: #4e5347;
     --neutro: #B7B09C;         
     --fundo-card: #FAFAFA;    
 }
@@ -291,9 +291,8 @@ td:last-child {
     color: #3D352E;
     width: 95%;
     display: flex;
-    flex-direction: column; /* Align vertically */
-    align-items: center; /* Center horizontally */
-    justify-content: center; /* Center vertically */
+    justify-content: space-between;
+    align-items: center;
     padding: 2rem;
 }
 .img-perfil{
@@ -303,15 +302,33 @@ td:last-child {
 }
 .foto-nome{
     display: flex;
+    justify-content: center;
+    align-items: end;
     gap: 1rem;
-    margin-right: 43.625rem;
 }
 
-.bnt-perfil{
-    background-color: #af6012;
-    border-radius: 5px;
+.botao-perfil{
+    background-color: var(--acento-principal);
+    color: var(--fundo-principal);
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 400;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    width: 150px;
+    padding: 10px;
 
 }
+
+.nome{
+    margin-top: 10px;
+
+
+}
+
+
+
 
 .tela{
     width: 70%;

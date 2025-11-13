@@ -5,16 +5,16 @@ include_once './include/head.php';
 ?>
 
 <main>
-  <div class="perfil">
-    <div>
-      <div>
-        <div class="foto-nome">
-          <img class="img-perfil" src="https://gcomp.devpampa.com/fotos/times/time_759/jogadores/18268_1684415809422.png" alt="">
-          <h2>Leonardo Vargas Saldanha</h2>
-          
-        </div>
-      </div>
-    </div>
+<div class="perfil">
+  <div class="foto-nome">
+    <img class="img-perfil" src="https://gcomp.devpampa.com/fotos/times/time_759/jogadores/18268_1684415809422.png" alt="">
+    <h2 class="nome">Leonardo Vargas Saldanha</h2>
+  </div>
+  <div>
+    <button class="botao-perfil">Editar Perfil</button>
+  </div>
+</div>
+
 </div>
   <div class="container">
     <a href="./salvar-produtos.php" class="btn btn-add">Adicionar produto</a>
