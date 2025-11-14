@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Login Comerciante</title>
+    <link rel="icon" href="../img/pagelines-brands-solid-full.svg">
+    <link rel="stylesheet" href="./assets/css/salvar-infos.css">
+</head>
+<body>
+    <?php
+    include_once './include/head.php';
+    ?>
+    <main>
+        <div class="container">
+        <form action="./act/cadastrar-comerciante.php" method="post">
+            <div class="div-label">
+                <label for="nome_user">Nome de Usuário</label>
+                <div class="input-box">
+                    <input type="text" name="nome_user" required>
+                </div>
+            </div>
+            <div class="div-label">
+                <label for="senha">Senha</label>
+                <div class="input-box">
+                    <input id="senha" type="password" placeholder="Ex: 1109" name="senha" required>
+                    <i id="btnVerSenha" class="btn fa-solid fa-eye-slash" style="margin-right: 0.5rem;"></i>
+                </div>
+            </div>
+            <div class="div-label">
+                <label for="confirmar_senha">Confirmar Senha</label>
+                <div class="input-box">
+                    <input id="confirmar_senha" type="password" placeholder="Ex: 1109" name="confirmar_senha" required>
+                    <i id="btnVerConfirmarSenha" class="btn fa-solid fa-eye-slash" style="margin-right: 0.5rem;"></i>
+                </div>
+            </div>
+            <a href="./pagina-login-comerciante.php">
+                <button type="submit">Cadastrar</button>
+            </a>
+        </form>
+        </div>
+    </main>
+    <script src="./assets/js/pagina-cadastro-comerciante.js"></script>
+    <script src="https://kit.fontawesome.com/a0cfbec9a7.js" crossorigin="anonymous"></script>
+</body>
+</html>

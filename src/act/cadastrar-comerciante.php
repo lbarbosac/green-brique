@@ -15,6 +15,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     $sql = "INSERT INTO comerciantes (Nome, Senha) VALUES ('$nome', '$senha_hash')";
 
+
+    
     if (mysqli_query($conn, $sql)) {
         header("Location: ../pagina-login-comerciante.php?cadastro=sucesso");
         exit();
