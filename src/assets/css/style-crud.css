@@ -8,9 +8,9 @@
     --fundo-principal: #F5F1E9; 
     --texto-principal: #3D352E; 
     --acento-principal: #C76F16; 
-    --acento-secundario: #4e5347;
+    --acento-secundario: #6B705C;
     --neutro: #B7B09C;         
-    --fundo-card: #FAFAFA;   
+    --fundo-card: #FAFAFA;    
 }
 
 body {
@@ -116,8 +116,7 @@ main {
     justify-content: center;
     align-items: flex-start; /* Alinha no topo */
     flex-wrap: wrap;
-    min-height: calc(100vh - 80px); 
-    margin-top: 30px;
+    min-height: calc(100vh - 80px); /
 }
 
 .container {
@@ -304,18 +303,14 @@ td:last-child {
 .foto-nome{
     display: flex;
     gap: 1rem;
-    margin-right: 43.625rem;
 }
 
-.bnt-perfil{
-    background-color: #af6012;
-    border-radius: 5px;
-}
 
 .tela{
     width: 70%;
 }
 .crud-form {
+    max-width: 50%;
     margin: 2rem auto;
     padding: 2rem;
     background: var(--fundo-card);
@@ -342,7 +337,7 @@ td:last-child {
 .crud-form select {
     height: 2.5rem;
     margin-bottom: 1rem;
-    padding: 0.2rem;
+    padding: 0.6rem;
     width: 100%;
     border: 1px solid var(--neutro);
     border-radius: 6px;
