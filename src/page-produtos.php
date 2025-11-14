@@ -104,11 +104,6 @@ $retorno = mysqli_query($conn, $sql);
                     <?php endforeach; ?>
                 </ul>
 
-                <form class="categoria-busca" action="./page-produtos.php" method="get" aria-label="Buscar produtos na categoria <?php echo htmlspecialchars($categoria['Nome']); ?>" hidden>
-                    <input type="hidden" name="cat_id" value="<?php echo $id; ?>" />
-                    <input type="text" name="query" placeholder="Buscar em <?php echo htmlspecialchars($categoria['Nome']); ?>" />
-                    <button type="submit" aria-label="Pesquisar produtos"><i class="fas fa-search"></i></button>
-                </form>
             </li>
             <?php endforeach; ?>
         </ul>
