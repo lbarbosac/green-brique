@@ -1,0 +1,39 @@
+/* --- Import fonts --- */
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Pangolin&display=swap');
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+:root {
+    --fundo-principal: #F5F1E9; 
+    --texto-principal: #3D352E; 
+    --acento-principal: #C76F16; 
+    --acento-secundario: #6B705C;
+    --neutro: #B7B09C;         
+    --fundo-card: #FAFAFA;    
+}
+
+main{
+    width: 100vw;
+    height: 100vh;
+    background-color: violet;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+
+.perfil-comerciante{
+    width: 85vw;
+    height: 85vh;
+    background-color: var(--fundo-card);
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
