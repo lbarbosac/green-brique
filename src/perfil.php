@@ -3,7 +3,7 @@ include_once './include/logado.php';
 include_once './include/conn.php';
 include_once './include/head.php';
 ?>
-
+<link rel="stylesheet" href="./assets/css/perfil.css">
 <main>
   <div class="perfil">
     <div>

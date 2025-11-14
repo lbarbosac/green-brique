@@ -1,0 +1,91 @@
+*{
+    box-sizing: border-box;
+}
+:root {
+    --fundo-principal: #F5F1E9;
+    --texto-principal: #3D352E;
+    --acento-principal: #C76F16;
+    --acento-secundario:#3F6F4A;
+    --neutro: #B7B09C;
+    --fundo-card: #FAFAFA;
+    --border: #D8D2C4;
+    --shadow: rgba(0, 0, 0, 0.12);
+}
+
+header {
+    background-color: var(--acento-secundario); /* Fundo verde musgo */
+    color: var(--fundo-principal); /* Texto bege claro para contraste */
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+header.crud-header {
+    background-color: var(--acento-secundario);
+    color: var(--fundo-principal);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.8rem;
+    font-family: "Pangolin", cursive; /* Títulos com Pangolin para um toque amigável */
+    font-weight: 400;
+}
+
+/* --- NAVEGAÇÃO --- */
+nav#menu {
+    display: flex;
+    gap: 1.5rem; /* Espaço entre os links */
+    justify-content: center;
+    align-items: center;
+}
+
+nav#menu a {
+    color: var(--fundo-principal); /* Links na cor de fundo claro do header */
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    font-family: "Lato", sans-serif;
+}
+
+nav#menu a:hover {
+    color: var(--acento-principal); /* Laranja ao passar o mouse */
+}
+
+#logo{
+    width: 3rem;
+    height: 3rem;
+}
+#avatar{
+    padding: 10px;
+    border-radius: 50%;
+    border: 2px solid white;
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+        padding: 1rem;
+    }
+    .perfil{
+        padding: 1rem;
+    }
+    nav#menu {
+        margin-top: 1rem;
+        flex-wrap: wrap; /* Permite que os links quebrem a linha */
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    header h1 {
+        font-size: 1.5rem;
+    }
+}
