@@ -63,15 +63,6 @@
 <body>
     <header>
         <img src="./img/logo-branco.png" alt="" id="logo">
-        
-        <div id="search-container">
-            <form id="search-bar" action="./page-produtos.php" method="GET"> 
-                <input type="text" name="query" id="search-input" placeholder="Pesquisar produtos..." autocomplete="off" required>
-                <button id="button" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
-            </form>
-            <div id="suggestions-list"></div>
-        </div>
-        
         <nav id="menu" >
             <a href="./page-produtos.php">Home</a>
             <a href="./perfil.php">Perfil</a>
