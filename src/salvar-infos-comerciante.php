@@ -13,34 +13,34 @@
     ?>
     <main>
         <div class="container">
-        <form action="./act/cadastrar-comerciante.php" method="post">
+        <form action="./act/salvar-infos.php" method="post">
             <div class="div-label">
                 <label for="nome_user">Nome de Usuário</label>
                 <div class="input-box">
-                    <input type="text" name="nome_user" required>
+                    <input class="input-info" type="text" name="nome_user" required>
                 </div>
             </div>
-            <div class="div-label">
-                <label for="senha">Senha</label>
+
+             <!-- Input de Email Adicionado -->
+             <div class="div-label">
+                <label for="email">Email</label>
                 <div class="input-box">
-                    <input id="senha" type="password" placeholder="Ex: 1109" name="senha" required>
-                    <i id="btnVerSenha" class="btn fa-solid fa-eye-slash" style="margin-right: 0.5rem;"></i>
+                    <input class="input-info" type="email" id="email" name="email" placeholder="Ex: seuemail@dominio.com" required>
                 </div>
             </div>
+
+            <!-- Input de Telefone Adicionado -->
             <div class="div-label">
-                <label for="confirmar_senha">Confirmar Senha</label>
+                <label for="telefone">Telefone</label>
                 <div class="input-box">
-                    <input id="confirmar_senha" type="password" placeholder="Ex: 1109" name="confirmar_senha" required>
-                    <i id="btnVerConfirmarSenha" class="btn fa-solid fa-eye-slash" style="margin-right: 0.5rem;"></i>
+                    <input class="input-info" type="tel" id="telefone" name="telefone" placeholder="Ex: (11) 98765-4321" required>
                 </div>
             </div>
-            <a href="./pagina-login-comerciante.php">
-                <button type="submit">Cadastrar</button>
-            </a>
+                <button type="submit">Salvar Informações</button>
         </form>
         </div>
     </main>
-    <script src="./assets/js/pagina-cadastro-comerciante.js"></script>
+    <script src="./assets/js/salvar-infos-comerciante.js"></script>
     <script src="https://kit.fontawesome.com/a0cfbec9a7.js" crossorigin="anonymous"></script>
 </body>
 </html>
