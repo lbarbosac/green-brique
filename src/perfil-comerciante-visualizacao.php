@@ -3,11 +3,12 @@
     include_once './include/head.php';
 
 
-    $sql = "SELECT Nome, Telefone, Endereco,Foto, Maps,Telefone FROM comerciantes WHERE ComercianteID = " . $comerciante_id;
+    $sql = "SELECT Nome, Telefone, Endereco, Foto, Maps FROM comerciantes WHERE ComercianteID = " . $comerciante_id;
     $retorno = mysqli_query($conn, $sql);
 
     if($retorno && mysqli_num_rows($retorno) > 0) {
         $produto = mysqli_fetch_assoc($retorno);
+        $retorno = mysqli_query($conn, $sql);
         
         $foto_comerciante = htmlspecialchars($produto['Foto']);
         $nome_comerciante = htmlspecialchars($produto['Nome']);
@@ -40,12 +41,13 @@
                     <img class="img-perfil" src="<?php echo ($foto_comerciante)?>" alt="Foto de Perfil do Comerciante">
                 </div>
 
+                <p><strong>Nome do Comerciante:</strong>
+                    <?php
+                        echo ($nome_comerciante);
+                    ?>
+                </p>
+
                 <div class="informacoes-comerciante">
-                    <p><strong>Nome do Comerciante:</strong>
-                        <?php
-                            echo ($nome_comerciante);
-                        ?>
-                    </p>
 
                     <p><strong>Endereço:</strong>
                         <?php
