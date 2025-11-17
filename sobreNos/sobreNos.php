@@ -20,33 +20,33 @@
         <div class="card active">
           <img src="https://avatars.githubusercontent.com/u/178475000?v=4" alt="Eduardo Ávila">
           <h2>Eduardo Ávila</h2>
-          <a href="#">@eduardoavila</a>
+          <a href="https://www.linkedin.com/in/avilazduduu/">Linkedin</a>
         </div>
         <div class="card">
           <img src="https://www.estadao.com.br/resizer/v2/CYLWEHO24VGPHMXEGRCRAYA6ZY.jpg?quality=80&auth=d80226d4d83977c2b1bfd625f73d01247f194672066d1a488631dc71d1aa1d9f&width=1200&height=1200&smart=true" alt="Nicolas Hara">
           <h2>Nicolas Hara</h2>
-          <a href="#">@nicolashara</a>
+          <a href="https://www.linkedin.com/in/nicolas-hara-302733344/">Linkedin</a>
         </div>
         <div class="card">
           <img src="https://avatars.githubusercontent.com/u/178474865?v=4" alt="Lucas Barbosa">
           <h2>Lucas Barbosa</h2>
-          <a href="#">@lucasbarbosa</a>
+          <a href="https://www.linkedin.com/in/lbarbosac/">Linkedin</a>
         </div>
         <div class="card">
           <img src="https://avatars.githubusercontent.com/u/178387402?s=400&u=9d8b3e5d44c477a6dd0b9c6d405c5a17c9ca26f7&v=4" alt="Cassiano Ramos">
           <h2>Cassiano Ramos</h2>
-          <a href="#">@cassianoramos</a>
+          <a href="https://www.linkedin.com/in/cassiano-ramos-252a19343/">Linkedin</a>
         </div>
         <div class="card">
           <img src="https://avatars.githubusercontent.com/u/5431806?v=4" alt="Sandreco">
           <h2>Sandreco</h2>
-          <a href="#">@sandreco</a>
+          <a href="https://www.linkedin.com/in/eisandromc/">Linkedin</a>
         </div>
 
         <div class="card">
-          <img src="imagens/sandreco.png" alt="Sandreco">
-          <h2>Willi</h2>
-          <a href="#">@will</a>
+          <img src="https://media.licdn.com/dms/image/v2/C4D03AQFM3zToSB5okA/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1518147550912?e=1764806400&v=beta&t=oeRAHxAvgcyrt2r0-LGN4keafG1iFdhqeDapOrSIKOA" alt="Sandreco">
+          <h2>Willian</h2>
+          <a href="https://www.linkedin.com/in/willian-de-campos-vieira-6331b292/">Linkedin</a>
         </div>
       </div>
 
