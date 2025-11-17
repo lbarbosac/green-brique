@@ -18,7 +18,7 @@
 
       <div class="carousel">
         <div class="card active">
-          <img src="https://gracakids.com.br/wp-content/uploads/2023/03/Muito-Animal.jpg" alt="Eduardo Ávila">
+          <img src="https://avatars.githubusercontent.com/u/178475000?v=4" alt="Eduardo Ávila">
           <h2>Eduardo Ávila</h2>
           <a href="#">@eduardoavila</a>
         </div>
@@ -28,7 +28,7 @@
           <a href="#">@nicolashara</a>
         </div>
         <div class="card">
-          <img src="https://ichef.bbci.co.uk/ace/ws/640/cpsprodpb/a285/live/1760ca90-8335-11f0-83cc-c5da98c419b8.jpg.webp" alt="Lucas Barbosa">
+          <img src="https://avatars.githubusercontent.com/u/178474865?v=4" alt="Lucas Barbosa">
           <h2>Lucas Barbosa</h2>
           <a href="#">@lucasbarbosa</a>
         </div>
@@ -59,10 +59,10 @@
       <h2 class="main-title">Quem Somos</h2>
       <p class="main-paragraph">
       <ul class="main-list">
-          <li>Cansado de comprar coisas que viajam o mundo e prejudicam o planeta? Nós também!
-            A Green Brique nasceu para mudar isso. Somos um marketplace ecológico com uma missão simples: provar que dá para cuidar do planeta e do seu bolso ao mesmo tempo.
-            A ideia é juntar você com o melhor do comércio local e sustentável. Em vez de comprar de longe, você encontra aqui, perto da sua casa, aquele produtor ou loja que faz tudo com cuidado, pensando no futuro.
-            A gente usa a tecnologia para te conectar com esses vizinhos incríveis, facilitando a compra de produtos que são bons para você, para a sua comunidade e, principalmente, para o meio ambiente.</li>
+          <li>
+          A Green Brique é um marketplace sustentável criado para conectar pessoas que acreditam em um consumo mais consciente. 
+          Aqui, cada anúncio representa uma nova chance de reduzir o desperdício, reutilizar recursos e diminuir a emissão de carbono. 
+          Nosso propósito é simples: dar novo valor ao que já existe, promovendo um ciclo de consumo mais inteligente e ecológico.</li>
         </ul>
       </p>
     </div>
