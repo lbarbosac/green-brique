@@ -101,7 +101,7 @@
 
   <footer>
     <div class="footer-container">
-      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDF5XsLZjD60SsGNTcNquq9VNn59Vi5mXooFRNJcTvk0HtVEE38ovxcwbM2gV8I07Pxd-uYo-2oPRhilXoywtu0vd33vtap9krlwgIitk" alt="" class="footer-img">
+      <img src="https://cdn-icons-png.flaticon.com/512/3412/3412024.png" alt="" class="footer-img">
       <h3 class="footer-title">Sustentabilidade</h3>
       <p class="footer-paragraph">
         A gente não só fala de verde, a gente faz. Nosso foco principal 
@@ -110,7 +110,7 @@
     </div>
 
     <div class="footer-container">
-      <img src="https://s2-g1.glbimg.com/MVIpOVDJgHL5JQkPIkh6NbAtkzw=/0x0:620x794/984x0/smart/filters:strip_icc()/s.glbimg.com/jo/g1/f/original/2012/03/06/caters_monkey_snapper_03.jpg" alt="" class="footer-img">
+      <img src="https://cdn-icons-png.flaticon.com/512/4434/4434722.png" alt="" class="footer-img">
       <h3 class="footer-title">Saúde</h3>
       <p class="footer-paragraph">
       Comprar na Green Brique é cuidar de você. Produtos locais e sustentáveis são, muitas vezes, mais frescos e têm menos químicos.
