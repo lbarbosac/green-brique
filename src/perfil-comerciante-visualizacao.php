@@ -41,13 +41,13 @@
                     <img class="img-perfil" src="<?php echo ($foto_comerciante)?>" alt="Foto de Perfil do Comerciante">
                 </div>
 
-                <p><strong>Nome do Comerciante:</strong>
-                    <?php
-                        echo ($nome_comerciante);
-                    ?>
-                </p>
-
                 <div class="informacoes-comerciante">
+
+                    <p><strong>Nome do Comerciante:</strong>
+                        <?php
+                            echo ($nome_comerciante);
+                        ?>
+                    </p>    
 
                     <p><strong>Endereço:</strong>
                         <?php
