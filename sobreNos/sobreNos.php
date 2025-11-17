@@ -23,7 +23,7 @@
           <a href="#">@eduardoavila</a>
         </div>
         <div class="card">
-          <img src="https://s2-g1.glbimg.com/P9KY0OSc8Ik4isMSRHVnDHtZ59Y=/0x0:606x591/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2024/I/8/GkLO4AQ6qYvf6yDmn2AA/large.png" alt="Nicolas Hara">
+          <img src="https://www.estadao.com.br/resizer/v2/CYLWEHO24VGPHMXEGRCRAYA6ZY.jpg?quality=80&auth=d80226d4d83977c2b1bfd625f73d01247f194672066d1a488631dc71d1aa1d9f&width=1200&height=1200&smart=true" alt="Nicolas Hara">
           <h2>Nicolas Hara</h2>
           <a href="#">@nicolashara</a>
         </div>
@@ -33,12 +33,12 @@
           <a href="#">@lucasbarbosa</a>
         </div>
         <div class="card">
-          <img src="https://conexaoplaneta.com.br/wp-content/uploads/2019/10/macaco-especie-rarissima-criticamente-ameacado-extincao-nasce-zoo-australia-2-conexao-planeta.jpg.png" alt="Cassiano Ramos">
+          <img src="https://avatars.githubusercontent.com/u/178387402?s=400&u=9d8b3e5d44c477a6dd0b9c6d405c5a17c9ca26f7&v=4" alt="Cassiano Ramos">
           <h2>Cassiano Ramos</h2>
           <a href="#">@cassianoramos</a>
         </div>
         <div class="card">
-          <img src="imagens/sandreco.png" alt="Sandreco">
+          <img src="https://avatars.githubusercontent.com/u/5431806?v=4" alt="Sandreco">
           <h2>Sandreco</h2>
           <a href="#">@sandreco</a>
         </div>
