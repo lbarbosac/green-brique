@@ -152,7 +152,7 @@ td:last-child {
         width: 100%;
         box-sizing: border-box;
     }
-
+    
     th {
         display: none; /* Esconde os cabeçalhos em telas pequenas, pode ser refeito com data-atributos */
     }
