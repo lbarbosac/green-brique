@@ -4,31 +4,49 @@
 *{
     box-sizing: border-box;
 }
+
 :root {
-    --fundo-principal: #F5F1E9; 
-    --texto-principal: #3D352E; 
-    --acento-principal: #C76F16; 
-    --acento-secundario: #4e5347;
-    --neutro: #B7B09C;         
-    --fundo-card: #FAFAFA;    
+    /* Tons de base - fundos brancos e beges suaves para leveza */
+    --fundo-principal: #F6F4EF;        /* Bege muito claro para fundo da página */
+    --fundo-card: #FFFFFF;             /* Cartões/áreas de conteúdo em branco puro */
+    --border: #D9D6CF;                /* Bordas e separadores, tom neutro suave */
+    --shadow: rgba(0, 0, 0, 0.08);    /* Sombras suaves para profundidade */
+
+    /* Cores principais - verdes naturais que remetem à natureza */
+    --verde-escuro: #2D5D34;          /* Verde forte, para acentos principais */
+    --verde-medio: #4A7C4A;           /* Verde secundário para destaques */
+    --verde-claro: #9CCC65;           /* Verde claro para hover, foco, realces */
+    --verde-suave: #C8E6C9;           /* Verde muito suave, para fundos e hover leves */
+
+    /* Cores de texto - tons escuros com boa legibilidade */
+    --texto-principal: #3B3A36;       /* Preto suave para texto principal */
+    --texto-secundario: #5A5A58;      /* Cinza escuro para subtítulos e textos complementares */
+    --texto-inativo: #9E9E9E;         /* Cinza médio para texto secundário ou desabilitado */
+
+    /* Cores de ação e destaque */
+    --acento-principal: var(--verde-escuro);   /* Usar verde escuro para botões e links */
+    --acento-secundario: var(--verde-medio);   /* Verde médio para hover e interações */
+
+    /* Alertas / feedback */
+    --aviso: #E57373;                 /* Vermelho suave para erros */
+    --sucesso: #81C784;               /* Verde claro para sucesso */
+
+    /* Fundo invertido para contraste (ex: footer ou seções escuras) */
+    --fundo-invertido: #2D5D34;
+    --texto-invertido: #F6F4EF;
 }
 
 body {
-    margin: 0;
-    padding: 0;
-    font-family: "Lato", sans-serif; 
-    background-color: var(--fundo-principal);
+    font-family: 'Lato', sans-serif;
     color: var(--texto-principal);
-    line-height: 1.6;
-    
+    background-color: var(--fundo-principal);
 }
 
-body.crud-page {
-    background-color: var(--fundo-principal);
-    color: var(--texto-principal);
-    font-family: "Lato", sans-serif;
+h1, h2, h3, h4, h5, h6, .titulo, .button {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    color: var(--verde-escuro);
 }
-
 
 header {
     background-color: var(--acento-secundario); /* Fundo verde musgo */
