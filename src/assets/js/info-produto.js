@@ -1,35 +1,19 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const botaoDiminuir = document.getElementById('diminuir-qtd');
-    const botaoAumentar = document.getElementById('aumentar-qtd');
-    const valorQuantidade = document.getElementById('quantidade-valor');
-  
-    let quantidade = 1;
-  
-    function atualizarQuantidade() {
-      valorQuantidade.textContent = quantidade + (quantidade === 1 ? ' unidade' : ' unidades');
+  const botaoChat = document.getElementById('botao-chat');
+  const linkVendedor = document.getElementById('info-vendedor');
+
+  botaoChat.addEventListener('click', (e) => {
+    e.preventDefault(); // Evita comportamento padrão do botão/link
+
+    // Se o alerta não estiver ativo, adiciona a classe de alerta e dá foco no link vendedor
+    if (!linkVendedor.classList.contains('link-alerta')) {
+      linkVendedor.classList.add('link-alerta');
+      linkVendedor.focus(); // Foca para acessibilidade e sinal visual
+
+      // Remove a classe de alerta após 5 segundos para não ficar permanante
+      setTimeout(() => {
+        linkVendedor.classList.remove('link-alerta');
+      }, 5000);
     }
-  
-    botaoDiminuir.addEventListener('click', () => {
-      if (quantidade > 1) {
-        quantidade--;
-        atualizarQuantidade();
-      }
-    });
-  
-    botaoAumentar.addEventListener('click', () => {
-      quantidade++;
-      atualizarQuantidade();
-    });
-  
-    document.getElementById('link-falar-vendedor').addEventListener('click', e => {
-      e.preventDefault();
-      alert('Funcionalidade de falar com o vendedor será implementada no backend.');
-    });
-  
-    document.getElementById('botao-chat').addEventListener('click', () => {
-      alert('Verificando disponibilidade do produto...');
-    });
-  
-    // Atualiza o texto inicial da quantidade
-    atualizarQuantidade();
   });
+});
