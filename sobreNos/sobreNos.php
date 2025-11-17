@@ -119,7 +119,7 @@
     </div>
 
     <div class="footer-container">
-      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtVYaMLeNtbgLIbOMBDD2b0FfSxlNTrqS4dA79kvp0rEtNCb4BomrTE20fePof9J3MAcEHMq6EDUVM0XMFpQtLyVF0F9dO7z70ZEsCdOI" alt="" class="footer-img">
+      <img src="https://cdn-icons-png.flaticon.com/512/9310/9310591.png" alt="" class="footer-img">
       <h3 class="footer-title">Economia</h3>
       <p class="footer-paragraph">
       Seu dinheiro fica aqui, pertinho. Ao apoiar o comércio local, você ajuda a criar uma 
