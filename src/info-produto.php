@@ -51,35 +51,37 @@ if ($produto_id !== null && $produto_id > 0) {
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title><?php echo $titulo_pagina; ?></title>
-    <link rel="stylesheet" href="./assets/css/info-produto.css"/>
+    <link rel="stylesheet" href="./assets/css/info-produto.css?v=<?php echo date("YmdHis"); ?>"/>
 </head>
 <body>
     <main class="container">
-        <figure class="imagem-produto-container">
-            <img src="<?php echo $img_url; ?>" alt="<?php echo $nome_produto; ?>" class="imagem-produto">
-        </figure>
-        <section class="info-produto">
-            <h2 class="nome-produto"><?php echo $nome_produto; ?></h2>
-            <p class="descricao-produto"><?php echo $descricao_produto; ?></p>
+        <aside id="infos-produto">
+            <figure class="imagem-produto-container">
+                <img src="<?php echo $img_url; ?>" alt="<?php echo $nome_produto; ?>" class="imagem-produto">
+            </figure>
+            <section class="info-produto">
+                <h2 class="nome-produto"><?php echo $nome_produto; ?></h2>
+                <p class="descricao-produto"><?php echo $descricao_produto; ?></p>
             
-            <p><strong>Estoque:</strong> <?php echo $quantidade_estoque > 0 ? $quantidade_estoque . ' unidades' : 'Esgotado'; ?></p>
+                <p><strong>Estoque:</strong> <?php echo $quantidade_estoque > 0 ? $quantidade_estoque . ' unidades' : 'Esgotado'; ?></p>
             
-            <a href="#" id="info-vendedor" class="link-acao">Informações do vendedor</a>
-        </section>
+                <a href="#" id="info-vendedor" class="link-acao">Informações do vendedor</a>
+            </section>
+        </aside>
+        
         <aside class="controles">
+
             <div class="preco">R$ <?php echo $preco_formatado; ?></div>
-            <h3>Fale com o vendedor via chat</h3>
-            <button id="botao-chat" class="btn-primario" 
+            <div id="chats">
+                <h3>Fale com o vendedor via chat</h3>
+                <p class="vendedor-por">Vendido por: <?php echo $nomeVendedor ?? 'Nome do vendedor'; ?></p>
+            </div>
+            <button id="botao-chat" class="btn-chamar-vendedor" 
                     data-produto-id="<?php echo $produto_id ?? ''; ?>">
                 Este produto está disponível?
             </button>
-            <div class="seletor-quantidade" role="group" aria-label="Selecionar quantidade">
-                <button id="diminuir-qtd" aria-label="Diminuir quantidade">−</button>
-                <span id="quantidade-valor">1 unidade</span>
-                <button id="aumentar-qtd" aria-label="Aumentar quantidade">+</button>
-            </div>
         </aside>
     </main>
-    <script src="./assets/js/info-produto.js"></script>
+    <script src="./assets/js/info-produto.js?v=<?php echo date("YmdHis"); ?>"></script>
 </body>
 </html>
