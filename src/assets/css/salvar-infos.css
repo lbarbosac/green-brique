@@ -1,0 +1,126 @@
+/* --- Reset e Variáveis --- */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --fundo-principal: #F5F1E9; 
+    --texto-principal: #3D352E; 
+    --acento-principal: #C76F16; 
+    --acento-hover: #af6012;
+    --neutro: #B7B09C; 
+    --fundo-card: #FAFAFA;
+    --fundo-input: #ffffff;
+}
+
+/* --- Layout Centralizado --- */
+body {
+    font-family: "Lato", sans-serif;
+    background-color: var(--fundo-principal);
+    color: var(--texto-principal);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    width: 100%;
+}
+
+/* --- Card Principal (Tamanho Reduzido) --- */
+.user-card {
+    max-width: 400px; /* Reduzido de 500px para 400px */
+    width: 100%;
+    background-color: var(--fundo-card); 
+    padding: 1.8rem;  /* Reduzido de 2.5rem para 1.8rem */
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    /* Adicionado para dar espaço do topo */
+    margin-top: 3rem; /* Aproximadamente 48px. Aumente se quiser descer mais. */
+}
+
+/* --- Título --- */
+.form-title {
+    font-size: 1.4rem; /* Fonte menor */
+    font-weight: 700;
+    color: var(--texto-principal);
+    text-align: center;
+    margin-bottom: 0.2rem;
+}
+
+/* --- Estrutura do Formulário --- */
+.user-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem; /* Menor espaço entre os campos */
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+/* --- Labels e Inputs --- */
+.form-label {
+    font-size: 0.9rem; /* Fonte menor */
+    color: var(--texto-principal);
+    font-weight: 600;
+}
+
+.input-wrapper {
+    width: 100%;
+}
+
+.form-input {
+    width: 100%;
+    height: 2.5rem; /* Altura reduzida de 3rem para 2.5rem */
+    padding: 0 0.8rem;
+    border: 1px solid var(--neutro);
+    border-radius: 5px;
+    font-size: 0.95rem;
+    color: var(--texto-principal);
+    background-color: var(--fundo-input);
+    font-family: "Lato", sans-serif;
+    transition: all 0.3s ease;
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: var(--acento-principal);
+    box-shadow: 0 0 0 3px rgba(199, 111, 22, 0.15);
+}
+
+/* --- Botão (Tamanho Reduzido) --- */
+.btn-primary {
+    margin-top: 0.5rem;
+    background-color: var(--acento-principal);
+    color: var(--fundo-principal);
+    height: 2.6rem; /* Altura reduzida */
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    width: 100%;
+}
+
+.btn-primary:hover {
+    background-color: var(--acento-hover);
+    transform: translateY(-2px);
+}
+
+.btn-primary:active {
+    transform: translateY(0);
+}

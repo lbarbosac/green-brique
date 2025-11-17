@@ -13,9 +13,18 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $comerciante = mysqli_fetch_assoc($resultado);
 
         if (password_verify($senha, $comerciante['Senha'])) {
-            $_SESSION['logado'] = true;
-            $_SESSION['ComercianteID'] = $comerciante['id'];
-            header("Location: ../perfil.php");
+            $comerciante_id = $comerciante['ComercianteID'];
+            $comerciante_nome = urlencode($comerciante['Nome']);
+            $comerciante_email = urlencode($comerciante['Email']);
+            $comerciante_telefone = urlencode($comerciante['Telefone']);
+
+            // Check if it is the first login
+            if (empty($comerciante['Email']) || empty($comerciante['Telefone'])) {
+                header("Location: ../salvar-infos-comerciante.php?ComercianteID=$comerciante_id&Nome=$comerciante_nome");
+                exit();
+            }
+
+            header("Location: ../perfil.php?ComercianteID=$comerciante_id&Nome=$comerciante_nome&Email=$comerciante_email&Telefone=$comerciante_telefone");
             exit();
         } else {
             echo "Senha incorreta.";
