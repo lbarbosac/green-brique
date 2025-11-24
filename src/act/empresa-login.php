@@ -6,7 +6,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $nome = mysqli_real_escape_string($conn, $_POST['nome_user']);
     $senha = mysqli_real_escape_string($conn, $_POST['senha']);
 
-    $sql = "SELECT * FROM comerciantes WHERE Nome = '$nome'";
+    $sql = "SELECT * FROM cnpj WHERE Nome = '$nome'";
     $resultado = mysqli_query($conn, $sql);
 
     if ($resultado && mysqli_num_rows($resultado) > 0) {
@@ -15,7 +15,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         if (password_verify($senha, $comerciante['Senha'])) {
             $_SESSION['logado'] = true;
             $_SESSION['ComercianteID'] = $comerciante['id'];
-            header("Location: ../salvar-infos-comerciante.php");
+            header("Location: ../perfil-empresa-visualizacao.php");
             exit();
         } else {
             echo "Senha incorreta.";
