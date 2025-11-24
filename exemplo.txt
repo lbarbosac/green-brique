@@ -1,0 +1,3 @@
+Fazer com que ao clicar no botao de ir para o perfil: Verificar se estar logado, se sim vai pra conta da
+empresa logada com as infos e produtos cadastrados
+se não, voltar para criar conta ou cadastrar

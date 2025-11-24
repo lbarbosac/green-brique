@@ -63,7 +63,7 @@ $sql = $sql_base . $join_clause . $where_clause . " GROUP BY p.ProdutoID";
 $retorno = mysqli_query($conn, $sql);
 ?>
 
-<link rel="stylesheet" href="./assets/css/page-produtos.css?v=<?php echo date("YmdHis"); ?>">
+<link rel="stylesheet" href="./assets/css/page-produtos.css">
 
 <main>
     <aside class="scrollable-filters" role="navigation" aria-label="Filtros de Categorias e Subcategorias">

@@ -9,9 +9,16 @@ body{
     background-color: #f5f1e9;
     max-height: 100vh;
 }
-main{
-    width: 55rem;
-    height: 35.5rem;
+#form-title {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--texto-principal);
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+form{
+    margin-top: 8rem;
+    padding: 2rem;
     border-radius: 10px;
     background: #FAFAFA;
     box-shadow: 10px 4px 70px 0 rgba(0, 0, 0, 0.30);
@@ -78,19 +85,22 @@ label{
     line-height: normal;
 }
 button{
-    margin: 1.5rem;
-    width: 12.125rem;
-    height: 2.125rem;
-    background-color: #C76F16;
-    border-radius: 0.4rem;
+    background-color: var(--acento-principal);
+    color: var(--fundo-principal);
+    width: 95%;
+    padding: 0.5rem;
+    margin-top: 1rem;
     border: none;
-    color:#D9D9D9;
-    font-family: "Pangolin", cursive;
-    font-weight: 400;
-    font-style: normal;
-    filter: drop-shadow(0 4px 30px rgba(0, 0, 0, 0.25));
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 700;
     cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 #btnVerSenha:hover{
     cursor: pointer;
+}
+button:hover {
+    background-color: #af6012;
+    transform: translateY(-2px);
 }
