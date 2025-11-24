@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
+body {
+  font-family: 'Lato', sans-serif;
+  background: #F6F4EF;
+  margin: 0;
+  min-height: 100vh;
+}
+
+.container-salvos {
+  max-width: 660px;
+  margin: 85px auto 0 auto;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 5px 30px rgba(0,0,0,0.10);
+  padding: 2rem 1.2rem;
+}
+
+/* Título */
+h2 {
+  color: #2D5D34;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Produto salvo */
+.produto-salvo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;  /* distribui espaço igual entre info e lixeira */
+  gap: 1.3rem;
+  border: 1px solid #E3E2DD;
+  border-radius: 9px;
+  background: #F6F4EF;
+  margin-bottom: 1.2rem;
+  padding: 1.1rem 0.8rem;
+  transition: background .18s, box-shadow .18s;
+  cursor: pointer;
+  position: relative;
+}
+
+.produto-salvo:hover,
+.produto-salvo:focus {
+  background: #C8E6C9;
+  box-shadow: 0 3px 12px #9CCC6545;
+}
+
+.produto-salvo img {
+  width: 60px; height: 60px;
+  border-radius: 7px;
+  object-fit: cover;
+  background: #fff;
+}
+
+/* Informações do produto salvo */
+.produto-info {
+  flex: 1 1 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.24rem;
+  min-width: 0;
+}
+
+.produto-titulo {
+  font-size: 1.19rem;
+  font-weight: 600;
+  color: #2D5D34;
+  word-break: break-word;
+}
+
+/* Ícone lixeira bem centralizado à direita */
+.btn-excluir {
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  font-size: 1.5rem;
+  color: #E57373;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, transform 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  box-sizing: border-box;
+}
+
+/* Efeito hover/focus */
+.btn-excluir:hover, .btn-excluir:focus {
+  background: #FBE9E7;
+  color: #B71C1C;
+  outline: none;
+  transform: scale(1.12);
+}
+
+/* MODAL DE CONFIRMAÇÃO (INICIALMENTE NÃO VISÍVEL) */
+.modal-excluir {
+  position: fixed;
+  top:0; left:0;
+  width:100vw; height:100vh;
+  background: rgba(34,48,34,.55);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 5000;
+}
+
+.modal-excluir.ativo {
+  display: flex !important;
+}
+
+.modal-content {
+  background: #fff;
+  border-radius: 14px;
+  width: 97%;
+  max-width: 350px;
+  box-shadow: 0 7px 30px #0003;
+  padding: 1.5rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.3rem;
+}
+
+.modal-actions {
+  display: flex;
+  gap: 1.1rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-confirmar-exclusao {
+  background: #2D5D34;
+  color: #fff;
+  font-weight: 700;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  padding: 0.7rem 1.3rem;
+  cursor: pointer;
+  transition: background .17s;
+}
+.btn-confirmar-exclusao:hover, .btn-confirmar-exclusao:focus {
+  background: #388E3C;
+  outline: none;
+}
+
+.btn-cancelar-exclusao {
+  background: #FBE9E7;
+  color: #B71C1C;
+  font-weight: 600;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  padding: 0.7rem 1.3rem;
+  cursor: pointer;
+  transition: background .17s;
+}
+.btn-cancelar-exclusao:hover, .btn-cancelar-exclusao:focus {
+  background: #E57373;
+  color: #fff;
+  outline: none;
+}
+
+@media (max-width: 600px) {
+  .container-salvos { padding: 1rem 0.2rem;}
+  .produto-salvo img { width: 44px; height: 44px;}
+  .produto-titulo { font-size: 1rem;}
+  .btn-excluir { width: 36px; height: 36px; font-size: 1.18rem; }
+  .modal-content { max-width: 95vw; }
+}
