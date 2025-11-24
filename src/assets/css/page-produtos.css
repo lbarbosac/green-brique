@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap');
 
 :root {
+
     /* Tons de base - fundos brancos e beges suaves para leveza */
     --fundo-principal: #F6F4EF;        /* Bege muito claro para fundo da página */
     --fundo-card: #FFFFFF;             /* Cartões/áreas de conteúdo em branco puro */
@@ -29,8 +30,13 @@
     /* Fundo invertido para contraste (ex: footer ou seções escuras) */
     --fundo-invertido: #2D5D34;
     --texto-invertido: #F6F4EF;
+    --fundo-principal: #F5F1E9;
+    --texto-principal: #3D352E;
+    --acento-principal: #C76F16;
+    --acento-secundario: #6B705C;
+    --neutro: #B7B09C;
+    --fundo-card: #FAFAFA;
 }
-
 
 body {
     margin: 0;
@@ -38,24 +44,8 @@ body {
     font-family: "Lato", sans-serif;
     background-color: var(--fundo-principal);
     color: var(--texto-principal);
-    margin-top: -65px;
-}
-
-.search-title {
-    font-size: 2rem;
-    font-weight: 700;
-    margin-top: 3rem;
-    margin-bottom: 1rem;
-    color: var(--texto-principal);
-    font-family: 'Lato', sans-serif;
-    color: var(--texto-principal);
-    background-color: var(--fundo-principal);
-}
-
-h1, h2, h3, h4, h5, h6, .titulo, .button {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 700;
-    color: var(--verde-escuro);
+    line-height: 1.6;
+    overflow: hidden; /* Prevent scrolling on the entire page */
 }
 
 .scrollable-filters {
@@ -319,16 +309,75 @@ main {
     height: 45px;
     object-fit: cover;
     border-radius: 6px;
+    background-color: var(--fundo-card);
+    padding: 1rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+    height: 100vh;
+    position: fixed;
+}
+
+.scrollable-filters img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+.nav-title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--texto-principal);
+}
+
+#container-filtros {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.filtros {
+    margin-bottom: 1rem;
+}
+
+.filtro {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    padding: 0.5rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.filtro:hover {
+    background-color: var(--acento-secundario);
+    color: var(--fundo-principal);
+}
+
+main {
+    margin-left: 22%;
+    margin-top: 80px; /* Space for the fixed header */
+    padding: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: flex-start;
+    height: calc(100vh - 80px); /* Full height minus header */
+    overflow-y: auto; /* Make only the product area scrollable */
+
 }
 
 #container-produtos {
     display: flex;
     flex-wrap: wrap;
     gap: 2.5rem;
+    gap: 2rem;
     justify-content: flex-start;
 }
 
 .container-produto {
+
     width: calc(25% - 2.5rem);
     background-color: var(--fundo-card);
     border-radius: 12px;
@@ -344,6 +393,18 @@ main {
     transform: translateY(-6px);
     box-shadow: 0 7px 18px rgba(0, 0, 0, 0.18);
     outline: none;
+    width: calc(25% - 2rem);
+    background-color: var(--fundo-card);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+    color: var(--texto-principal);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.container-produto:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
 }
 
 .container-image-produto img {
@@ -352,6 +413,8 @@ main {
     border-top-right-radius: 12px;
     aspect-ratio: 3/ 3;
     object-fit: cover;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
 }
 
 .container-nome-produto,
@@ -419,17 +482,54 @@ main {
         padding: 1rem 0.5rem;
         margin-top: 0;
         box-shadow: none;
+
+    padding: 0.5rem 1rem;
+    text-align: left; /* Align text to the left */
+    }
+}
+
+.nome-produto {
+    font-size: 1rem; /* Smaller font size */
+    font-weight: 700;
+    margin: 0.5rem 0;
+    color: var(--texto-principal); /* Ensure visibility */
+}
+
+.descricao-produto {
+    font-size: 0.9rem; /* Smaller font size */
+    color: var(--texto-principal); /* Ensure visibility */
+    margin: 0.5rem 0;
+}
+
+.preco-produto {
+    font-size: 1.2rem; /* Adjusted font size */
+    font-weight: 700;
+    color: #000; /* Black color for price */
+    margin: 0.5rem 0;
+}
+
+@media (max-width: 768px) {
+    .scrollable-filters {
+        width: 100%;
+        height: auto;
+        position: static;
+        margin-bottom: 2rem;
     }
 
     main {
         margin-left: 0;
         padding: 1rem;
     }
-
     #autocomplete-list {
         width: 100%;
     }
 
+    .container-produto {
+        width: calc(50% - 1rem);
+    }
+}
+
+@media (max-width: 480px) {
     .container-produto {
         width: 100%;
     }
