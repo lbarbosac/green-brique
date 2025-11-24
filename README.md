@@ -97,19 +97,22 @@ Distribuído sob a Licença MIT. Veja `LICENSE` para mais informações.
 
 ---
 
-## 👤 Contato
+## 👤 Contatos
 
 * **Contribuinte:** Eduardo Ávila Pereira
 * **Email:** avilazdudu@gmail.com
 * **GitHub:** [@avilazdudu](https://github.com/avilazdudu)
+---
 
 * **Contribuinte:** Lucas Cândido Barbosa
 * **Email:** lucas2304barbosa@gmail.com
 * **GitHub:** [@lbarbosac](https://github.com/lbarbosac)
+---
 
 * **Contribuinte:** Nicolas Hayashi Hara
 * **Email:** nico.hhara@gmail.com
 * **GitHub:** [@NicolasHHara](https://github.com/NicolasHHara)
+---
 
 * **Contribuinte:** Cassiano Sutil Ramos
 * **Email:** cassianoramos@gmail.com
