@@ -245,6 +245,23 @@ main.container {
     }
 }
 
+.icone-salvar {
+    position: relative;
+}
+.icone-salvar i {
+    transition: color .2s, transform .2s;
+}
+.icone-salvar:hover i,
+.icone-salvar:focus i {
+    color: var(--verde-claro);
+    transform: scale(1.18);
+}
+.icone-salvar.salvo i,
+.icone-salvar i.fas {
+    color: var(--verde-escuro);
+}
+
+
 .link-alerta {
   background-color: var(--aviso, #E57373);
   color: white !important;

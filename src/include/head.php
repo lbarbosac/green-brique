@@ -17,9 +17,12 @@
         <nav id="menu" >
             <a href="./page-produtos.php">Home</a>
             <a href="../src/sobreNos.php">Quem somos</a>
-            <a href="./perfil.php" id="avatar">
+            <a href="./perfil.php" class="avatar">
                 <i class="fa-solid fa-user fa-xl"></i>
             </a>
-            <i class="fa-solid fa-cart-shopping fa-xl"></i>
+            <a href="./produtos-salvos.php" class="avatar icone-salvar" title="Ver produtos salvos" aria-label="Ver produtos salvos">
+                <i class="fa-regular fa-bookmark"></i>
+            </a>
+            
         </nav>
     </header>
