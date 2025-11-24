@@ -18,7 +18,7 @@
             <a href="./page-produtos.php">Home</a>
             <a href="../src/sobreNos.php">Quem somos</a>
             <a href="./perfil.php" class="avatar">
-                <i class="fa-solid fa-user fa-xl"></i>
+                <i class="fa-regular fa-user"></i>
             </a>
             <a href="./produtos-salvos.php" class="avatar icone-salvar" title="Ver produtos salvos" aria-label="Ver produtos salvos">
                 <i class="fa-regular fa-bookmark"></i>
