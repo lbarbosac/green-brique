@@ -42,7 +42,11 @@ O principal objetivo do **Green Brique** é **aumentar significativamente a visi
 
 ## ⚙️ Tecnologias Utilizadas
 
-> *[Preencha aqui as tecnologias que você utilizou, como: React, Node.js, Express, MongoDB, etc.]*
+O projeto **Green Brique** foi construído utilizando as seguintes tecnologias:
+
+* **Backend:** **PHP**
+* **Frontend:** **HTML5**, **CSS3** e **JavaScript (JS)** puro.
+* **Banco de Dados:** **MySQL** gerenciado através do **phpMyAdmin**.
 
 ---
 
