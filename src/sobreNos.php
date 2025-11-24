@@ -8,30 +8,15 @@
 </head>
 
 <body>
-  <?php
-  include_once './include/head.php';
-  ?>
   <menu>
     <div class="menu-container-title">
       <h1 class="menu-title">Sobre Nós</h1>
     </div>
+
     <div class="carousel-wrapper">
       <button class="nav-btn prev">‹</button>
 
       <div class="carousel">
-        <div class="carousel-images">
-          <div class="carousel-slide">
-            <img src="./img/dudu-carrosel.png" alt="Eduardo Avila">
-          </div>
-          <div class="carousel-slide">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxJNsyJtBYI0nWnDpMXv38LO0rc4G_1AAJkg&s" alt="Nicolas Hara">
-          </div>
-          <div class="carousel-slide">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Macaca_nigra_self-portrait_large.jpg" alt="Lucas Barbosa">
-          </div>
-          <div class="carousel-slide">
-            <img src="https://rihappy.vtexassets.com/arquivos/ids/8457168/17515702501622.jpg?v=638872412174200000" alt="Cassiano Ramos">
-          </div>
         <div class="card active">
           <img src="https://avatars.githubusercontent.com/u/178475000?v=4" alt="Eduardo Ávila">
           <h2>Eduardo Ávila</h2>
@@ -48,7 +33,7 @@
           <a href="https://www.linkedin.com/in/lbarbosac/">Linkedin</a>
         </div>
         <div class="card">
-          <img src="https://avatars.githubusercontent.com/u/178387402?s=400&u=9d8b3e5d44c477a6dd0b9c6d405c5a17c9ca26f7&v=4" alt="Cassiano Ramos">
+          <img src="https://img.odcdn.com.br/wp-content/uploads/2024/01/Destaque-Clone-de-macaco.jpg" alt="Cassiano Ramos">
           <h2>Cassiano Ramos</h2>
           <a href="https://www.linkedin.com/in/cassiano-ramos-252a19343/">Linkedin</a>
         </div>
@@ -143,9 +128,7 @@
       </p>
     </div>
   </footer>
-  <?php
-  include_once './include/footer.php';
-  ?>
+
   <script src="./assets/js/sobreNos.js"></script>
 </body>
 </html>
