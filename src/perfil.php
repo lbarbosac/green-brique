@@ -1,13 +1,6 @@
-<?php 
-include_once './include/logado.php';
+<?php
 include_once './include/conn.php';
 include_once './include/head.php';
-
-// Receba os dados do comerciante via URL
-$comerciante_id = isset($_GET['ComercianteID']) ? intval($_GET['ComercianteID']) : 0;
-$nome = isset($_GET['Nome']) ? urldecode($_GET['Nome']) : '';
-$email = isset($_GET['Email']) ? urldecode($_GET['Email']) : '';
-$telefone = isset($_GET['Telefone']) ? urldecode($_GET['Telefone']) : '';
 ?>
 <link rel="stylesheet" href="./assets/css/perfil.css">
 <main>
@@ -16,9 +9,8 @@ $telefone = isset($_GET['Telefone']) ? urldecode($_GET['Telefone']) : '';
       <div>
         <div class="foto-nome">
           <img class="img-perfil" src="https://gcomp.devpampa.com/fotos/times/time_759/jogadores/18268_1684415809422.png" alt="">
-          <h2><?php echo htmlspecialchars($nome); ?></h2>
-          <p>Email: <?php echo htmlspecialchars($email); ?></p>
-          <p>Telefone: <?php echo htmlspecialchars($telefone); ?></p>
+          <h2>Leonardo Vargas Saldanha</h2>
+         
         </div>
       </div>
     </div>
@@ -50,6 +42,7 @@ $telefone = isset($_GET['Telefone']) ? urldecode($_GET['Telefone']) : '';
     </table>
   </div>
 </main>
-<?php 
+<?php
 include_once './include/footer.php';
 ?>
+ 
