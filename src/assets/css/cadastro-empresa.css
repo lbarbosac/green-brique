@@ -1,0 +1,132 @@
+/* Variáveis de cores do seu tema (para reuso) */
+  :root {
+    --fundo-principal: #F5F1E9; 
+    --texto-principal: #3D352E; 
+    --acento-principal: #C76F16; 
+    --neutro: #B7B09C; 
+    --fundo-card: #FAFAFA;
+}
+
+/* Apenas a estrutura base do formulário */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+}
+
+form {
+    max-width: 600px;
+    width: 90%;
+    margin-top: 7rem;
+    padding: 2rem;
+
+    background: var(--fundo-card);
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    font-family: "Lato", sans-serif;
+    box-sizing: border-box;
+}
+
+#form-title {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--texto-principal);
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+/* Estilização dos Labels e Inputs/Selects */
+.form-label {
+    font-size: 1.1rem;
+    color: var(--texto-principal);
+    font-weight: 500;
+}
+
+.form-input, #quantidade-produto, #descricao-produto, #select-filtros {
+    height: auto;
+    min-height: 2.5rem;
+    padding: 0.8rem;
+    width: 100%;
+    border: 1px solid var(--neutro);
+    border-radius: 6px;
+    font-size: 1rem;
+    font-family: "Lato", sans-serif;
+    box-sizing: border-box;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-input:focus, #quantidade-produto:focus, #descricao-produto:focus, #select-filtros:focus {
+    outline: none;
+    border-color: var(--acento-principal);
+    box-shadow: 0 0 6px rgba(199, 111, 22, 0.3);
+}
+
+#descricao-produto {
+    min-height: 8rem; /* Aumenta a altura da descrição */
+    resize: vertical;
+}
+
+/* Estilo Moderno para o Select Múltiplo (Filtros) */
+#select-filtros {
+    min-height: 10rem; /* Altura mínima para mostrar as opções */
+    padding: 0;
+    border: 2px solid var(--neutro);
+    /* Reset do estilo padrão do select */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    cursor: pointer;
+}
+
+/* Estilização dos Grupos de Opções (Categorias) */
+#select-filtros optgroup {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--acento-principal);
+    background-color: var(--fundo-principal);
+    padding: 10px 15px;
+}
+
+/* Estilização das Opções (Subfiltros) */
+#select-filtros option {
+    padding: 8px 20px;
+    font-size: 1rem;
+    color: var(--texto-principal);
+    background-color: white;
+    transition: background-color 0.1s;
+}
+
+/* Destaca a opção ao selecionar ou passar o mouse */
+#select-filtros option:checked, 
+#select-filtros option:hover {
+    background-color: #e0e0e0;
+    color: var(--texto-principal);
+}
+
+/* Botão Salvar */
+#submit-button {
+    background-color: var(--acento-principal);
+    color: var(--fundo-principal);
+    padding: 0.8rem;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#submit-button:hover {
+    background-color: #af6012;
+    transform: translateY(-2px);
+}
+
+.div-form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}

@@ -17,7 +17,7 @@
         $telefone_comerciante = htmlspecialchars($produto['Telefone']);
     } else {
         $foto_comerciante = "Foto não Disponível";
-        $nome_comerciante = "Comerciante não Encontrado";
+        $nome_comerciante = "Empresa não Encontrado";
         $endereco_comerciante = "Endereço não Disponível";
         $img_maps_comerciante = "Localização não Disponível";
         $telefone_comerciante = "Contato não Disponível";
@@ -30,7 +30,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./assets/css/perfil-comerciante-visualizacao.css">
+    <link rel="stylesheet" href="./assets/css/perfil-empresa-visualizacao.css">
 </head>
 <body>
     <main>
@@ -43,7 +43,7 @@
 
                 <div class="informacoes-comerciante">
 
-                    <p><strong>Nome do Comerciante:</strong>
+                    <p><strong>Nome da Empresa:</strong>
                         <?php
                             echo ($nome_comerciante);
                         ?>
@@ -55,7 +55,7 @@
                         ?>
                     </p>
                     <div class="container-maps">
-                        <img class="img-maps" src="<?php echo ($img_maps_comerciante); ?>" alt="Mapa do comerciante">
+                        <img class="img-maps" src="<?php echo ($img_maps_comerciante); ?>" alt="Local da empresa">
                     </div>
                     <p><strong>Contato:</strong>
                         <?php
@@ -67,6 +67,6 @@
         </section>
     </main>
 
-    <script src="./assets/js/perfil-comerciante-visualizacao.js"></script>
+    <script src="./assets/js/perfil-empresa-visualizacao.js"></script>
 </body>
 </html>
