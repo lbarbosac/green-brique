@@ -88,4 +88,5 @@ if ($produto_id !== null && $produto_id > 0) {
     </main>
     <script src="./assets/js/info-produto.js?v=<?php echo date("YmdHis"); ?>"></script>
 </body>
-</html>
+</html>  
+
