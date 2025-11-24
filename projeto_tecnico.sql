@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 24/11/2025 às 12:49
+-- Tempo de geração: 24/11/2025 às 13:39
 -- Versão do servidor: 10.4.32-MariaDB
 -- Versão do PHP: 8.2.12
 
@@ -55,8 +55,16 @@ CREATE TABLE `cnpj` (
   `Senha` varchar(100) NOT NULL,
   `Endereco` varchar(300) NOT NULL,
   `ImagemPerfil` binary(11) NOT NULL,
-  `ImagemLocal` varchar(11) NOT NULL
+  `ImagemLocal` varchar(11) NOT NULL,
+  `CEP` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Despejando dados para a tabela `cnpj`
+--
+
+INSERT INTO `cnpj` (`CnpjID`, `Telefone`, `Email`, `Nome`, `Senha`, `Endereco`, `ImagemPerfil`, `ImagemLocal`, `CEP`) VALUES
+(1, '21212', '1221@w.com', '221', '$2y$10$MIfFXN2UT2hO5tWGjFCVKu772gwjAaygeGMJKjf57/i3Iep0OG49K', 'saas21', 0x3231323132310000000000, '2121', '2321');
 
 -- --------------------------------------------------------
 
@@ -226,7 +234,7 @@ ALTER TABLE `categorias`
 -- AUTO_INCREMENT de tabela `cnpj`
 --
 ALTER TABLE `cnpj`
-  MODIFY `CnpjID` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `CnpjID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT de tabela `comerciantes`
