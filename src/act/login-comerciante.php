@@ -15,7 +15,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         if (password_verify($senha, $comerciante['Senha'])) {
             $_SESSION['logado'] = true;
             $_SESSION['ComercianteID'] = $comerciante['id'];
-            header("Location: ../perfil.php");
+            header("Location: ../salvar-infos-comerciante.php");
             exit();
         } else {
             echo "Senha incorreta.";

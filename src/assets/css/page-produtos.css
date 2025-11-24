@@ -47,6 +47,15 @@ body {
     margin-top: 3rem;
     margin-bottom: 1rem;
     color: var(--texto-principal);
+    font-family: 'Lato', sans-serif;
+    color: var(--texto-principal);
+    background-color: var(--fundo-principal);
+}
+
+h1, h2, h3, h4, h5, h6, .titulo, .button {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    color: var(--verde-escuro);
 }
 
 .scrollable-filters {
