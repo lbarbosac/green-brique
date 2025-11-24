@@ -71,25 +71,24 @@ nav#menu {
 }
 
 nav#menu a {
-    color: var(--fundo-principal); /* Links na cor de fundo claro do header */
+    color: var(--fundo-card); 
     text-decoration: none;
     font-weight: 500;
     transition: color 0.3s ease;
     font-family: "Lato", sans-serif;
 }
 
-nav#menu a:hover {
-    color: var(--acento-principal); /* Laranja ao passar o mouse */
+#menu a:hover {
+    color: var(--verde-suave);
+}
+
+#menu .avatar:hover {
+    opacity: 0.8;
 }
 
 #logo{
     width: 3rem;
     height: 3rem;
-}
-.avatar{
-    padding: 10px;
-    border-radius: 50%;
-    border: 2px solid white;
 }
 
 @media (max-width: 768px) {
