@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,6 +7,25 @@
     <title>Página Login Comerciante</title>
     <link rel="icon" href="../img/pagelines-brands-solid-full.svg">
     <link rel="stylesheet" href="./assets/css/salvar-infos.css">
+<?php
+include_once './include/logado.php';
+include_once './include/conn.php';
+
+// Receba os dados do comerciante via URL
+$comerciante_id = isset($_GET['ComercianteID']) ? intval($_GET['ComercianteID']) : 0;
+$nome = isset($_GET['Nome']) ? urldecode($_GET['Nome']) : '';
+$email = isset($_GET['Email']) ? urldecode($_GET['Email']) : '';
+$telefone = isset($_GET['Telefone']) ? urldecode($_GET['Telefone']) : '';
+?>
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../img/pagelines-brands-solid-full.svg">
+    <link rel="stylesheet" href="./assets/css/salvar-infos.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <?php

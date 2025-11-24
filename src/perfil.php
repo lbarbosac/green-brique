@@ -1,5 +1,4 @@
-<?php 
-include_once './include/logado.php';
+<?php
 include_once './include/conn.php';
 include_once './include/head.php';
 ?>
@@ -43,6 +42,7 @@ include_once './include/head.php';
     </table>
   </div>
 </main>
-<?php 
+<?php
 include_once './include/footer.php';
 ?>
+ 

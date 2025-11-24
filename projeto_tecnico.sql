@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 13/11/2025 às 12:38
+-- Tempo de geração: 17/11/2025 às 12:50
 -- Versão do servidor: 10.4.32-MariaDB
 -- Versão do PHP: 8.2.12
 
@@ -30,17 +30,19 @@ SET time_zone = "+00:00";
 CREATE TABLE `comerciantes` (
   `ComercianteID` int(11) NOT NULL,
   `Nome` varchar(255) NOT NULL,
-  `Senha` varchar(255) NOT NULL
+  `Senha` varchar(255) NOT NULL,
+  `Email` varchar(225) NOT NULL,
+  `Telefone` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Despejando dados para a tabela `comerciantes`
 --
 
-INSERT INTO `comerciantes` (`ComercianteID`, `Nome`, `Senha`) VALUES
-(1, 'avilazdudu', '$2y$10$KfD5ox9.XVjzac4Sq5hTgOy5wbsepFznqzVePo6EhIccptfFncudy'),
-(2, 'miguelraba', '$2y$10$p3BpINJi.Drv57aaqSWCp.FsVIUmZhoFkMYy7xSz5d8LC3YZPjeA2'),
-(3, 'cassiano_ramos', '$2y$10$9AfWA5EyIgyiOd56b.RBUe3INtFm9phXReNBxxlyO4OkMi4/9ry.C');
+INSERT INTO `comerciantes` (`ComercianteID`, `Nome`, `Senha`, `Email`, `Telefone`) VALUES
+(1, 'avilazdudu', '$2y$10$KfD5ox9.XVjzac4Sq5hTgOy5wbsepFznqzVePo6EhIccptfFncudy', '', ''),
+(2, 'miguelraba', '$2y$10$p3BpINJi.Drv57aaqSWCp.FsVIUmZhoFkMYy7xSz5d8LC3YZPjeA2', '', ''),
+(3, 'cassiano_ramos', '$2y$10$9AfWA5EyIgyiOd56b.RBUe3INtFm9phXReNBxxlyO4OkMi4/9ry.C', '', '');
 
 -- --------------------------------------------------------
 
@@ -70,9 +72,57 @@ INSERT INTO `produtos` (`ProdutoID`, `Nome`, `Descricao`, `Preco`, `Quantidade`,
 (6, 'Jojo\'s Steel Ball Run', 'Um guia sobre as habilidades, conceitos e estratégias para construir uma carreira sólida e bem-sucedida em desenvolvimento de software.', 89.70, 150, 'https://www.americanas.com.br/_next/image?url=https%3A%2F%2Famericanas.vtexassets.com%2Farquivos%2Fids%2F11884394%2F7485631658_1_xlarge.jpg%3Fv%3D638754227714530000&w=768&q=90'),
 (7, 'Primo do Japa', 'Japonês da 25 de março.', 999.99, 1, 'https://cinepop.com.br/wp-content/uploads/2017/04/sungkang_1.jpg');
 
+-- --------------------------------------------------------
+
+--
+-- Estrutura para tabela `produto_subcategoria`
+--
+
+CREATE TABLE `produto_subcategoria` (
+  `ProdutoID` int(11) NOT NULL,
+  `SubcategoriaID` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura para tabela `subcategorias`
+--
+
+CREATE TABLE `subcategorias` (
+  `SubcategoriaID` int(11) NOT NULL,
+  `CategoriaID` int(11) NOT NULL,
+  `Nome` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Despejando dados para a tabela `subcategorias`
+--
+
+INSERT INTO `subcategorias` (`SubcategoriaID`, `CategoriaID`, `Nome`) VALUES
+(1, 1, 'Usadas'),
+(2, 1, 'Novas'),
+(3, 1, 'Em promoção'),
+(4, 1, 'Mais Vendidas'),
+(5, 2, 'Cozinha'),
+(6, 2, 'Limpeza'),
+(7, 2, 'Escritório'),
+(8, 2, 'Promoção'),
+(9, 3, 'Frescos'),
+(10, 3, 'Congelados'),
+(11, 3, 'Snacks'),
+(12, 3, 'Orgânicos');
+
 --
 -- Índices para tabelas despejadas
 --
+
+--
+-- Índices de tabela `categorias`
+--
+ALTER TABLE `categorias`
+  ADD PRIMARY KEY (`CategoriaID`),
+  ADD UNIQUE KEY `Nome` (`Nome`);
 
 --
 -- Índices de tabela `comerciantes`
@@ -87,8 +137,28 @@ ALTER TABLE `produtos`
   ADD PRIMARY KEY (`ProdutoID`);
 
 --
+-- Índices de tabela `produto_subcategoria`
+--
+ALTER TABLE `produto_subcategoria`
+  ADD PRIMARY KEY (`ProdutoID`,`SubcategoriaID`),
+  ADD KEY `SubcategoriaID` (`SubcategoriaID`);
+
+--
+-- Índices de tabela `subcategorias`
+--
+ALTER TABLE `subcategorias`
+  ADD PRIMARY KEY (`SubcategoriaID`),
+  ADD KEY `CategoriaID` (`CategoriaID`);
+
+--
 -- AUTO_INCREMENT para tabelas despejadas
 --
+
+--
+-- AUTO_INCREMENT de tabela `categorias`
+--
+ALTER TABLE `categorias`
+  MODIFY `CategoriaID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT de tabela `comerciantes`
@@ -100,71 +170,34 @@ ALTER TABLE `comerciantes`
 -- AUTO_INCREMENT de tabela `produtos`
 --
 ALTER TABLE `produtos`
-  MODIFY `ProdutoID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `ProdutoID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8,
+  MODIFY `Descricao` TEXT DEFAULT '',
+  MODIFY `Img` TEXT DEFAULT NULL;
+
+--
+-- AUTO_INCREMENT de tabela `subcategorias`
+--
+ALTER TABLE `subcategorias`
+  MODIFY `SubcategoriaID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+
+--
+-- Restrições para tabelas despejadas
+--
+
+--
+-- Restrições para tabelas `produto_subcategoria`
+--
+ALTER TABLE `produto_subcategoria`
+  ADD CONSTRAINT `produto_subcategoria_ibfk_1` FOREIGN KEY (`ProdutoID`) REFERENCES `produtos` (`ProdutoID`) ON DELETE CASCADE,
+  ADD CONSTRAINT `produto_subcategoria_ibfk_2` FOREIGN KEY (`SubcategoriaID`) REFERENCES `subcategorias` (`SubcategoriaID`) ON DELETE CASCADE;
+
+--
+-- Restrições para tabelas `subcategorias`
+--
+ALTER TABLE `subcategorias`
+  ADD CONSTRAINT `subcategorias_ibfk_1` FOREIGN KEY (`CategoriaID`) REFERENCES `categorias` (`CategoriaID`) ON DELETE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
-
---
--- Exclusão de tabelas de filtros anteriores, se existirem
---
-DROP TABLE IF EXISTS `produto_subcategoria`;
-DROP TABLE IF EXISTS `subcategorias`;
-DROP TABLE IF EXISTS `categorias`;
-
---
--- Tabela 1: Categorias Principais
---
-CREATE TABLE `categorias` (
-  `CategoriaID` INT(11) NOT NULL AUTO_INCREMENT,
-  `Nome` VARCHAR(100) NOT NULL UNIQUE,
-  PRIMARY KEY (`CategoriaID`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Tabela 2: Subcategorias (Subfiltros)
---
-CREATE TABLE `subcategorias` (
-  `SubcategoriaID` INT(11) NOT NULL AUTO_INCREMENT,
-  `CategoriaID` INT(11) NOT NULL, -- Chave estrangeira
-  `Nome` VARCHAR(100) NOT NULL,
-  PRIMARY KEY (`SubcategoriaID`),
-  FOREIGN KEY (`CategoriaID`) REFERENCES `categorias`(`CategoriaID`) ON DELETE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Tabela 3: Produto-Filtro (Relacionamento N:N)
---
-CREATE TABLE `produto_subcategoria` (
-  `ProdutoID` INT(11) NOT NULL,
-  `SubcategoriaID` INT(11) NOT NULL,
-  PRIMARY KEY (`ProdutoID`, `SubcategoriaID`),
-  FOREIGN KEY (`ProdutoID`) REFERENCES `produtos`(`ProdutoID`) ON DELETE CASCADE,
-  FOREIGN KEY (`SubcategoriaID`) REFERENCES `subcategorias`(`SubcategoriaID`) ON DELETE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- --------------------------------------------------------
--- Inserção de Dados
--- --------------------------------------------------------
---
-
--- Inserir Categorias
-INSERT INTO `categorias` (`Nome`) VALUES 
-('Roupas'), 
-('Utensílios'), 
-('Alimentos');
-
--- Inserir Subcategorias (ID 1 = Roupas)
-INSERT INTO `subcategorias` (`CategoriaID`, `Nome`) VALUES
-(1, 'Usadas'), (1, 'Novas'), (1, 'Em promoção'), (1, 'Mais Vendidas');
-
--- Inserir Subcategorias (ID 2 = Utensílios)
-INSERT INTO `subcategorias` (`CategoriaID`, `Nome`) VALUES
-(2, 'Cozinha'), (2, 'Limpeza'), (2, 'Escritório'), (2, 'Promoção');
-
--- Inserir Subcategorias (ID 3 = Alimentos)
-INSERT INTO `subcategorias` (`CategoriaID`, `Nome`) VALUES
-(3, 'Frescos'), (3, 'Congelados'), (3, 'Snacks'), (3, 'Orgânicos');
