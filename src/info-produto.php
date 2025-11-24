@@ -70,14 +70,14 @@ if ($produto_id !== null && $produto_id > 0) {
         </aside>
         
         <aside class="controles">
-
-            <div class="preco">R$ <?php echo $preco_formatado; ?></div>
-            <div id="chats">
-                <h3>Fale com o vendedor via chat</h3>
+            <div class="preco-e-btn-salvar">
+                <div class="preco">R$ <?php echo $preco_formatado; ?></div>
                 <button id="btn-salvar-produto" class="btn-salvar"
                 title="Salvar produto" aria-label="Salvar este produto">
                     <i class="fa-regular fa-bookmark" id="icone-salvo"></i>
                 </button>
+            </div>
+            <div id="chats">   
                 <p class="vendedor-por">Vendido por: <?php echo $nomeVendedor ?? 'Nome do vendedor'; ?></p>
             </div>
             <button id="botao-chat" class="btn-chamar-vendedor" 
