@@ -70,44 +70,7 @@ form {
     resize: vertical;
 }
 
-/* Estilo Moderno para o Select Múltiplo (Filtros) */
-#select-filtros {
-    min-height: 10rem; /* Altura mínima para mostrar as opções */
-    padding: 0;
-    border: 2px solid var(--neutro);
-    /* Reset do estilo padrão do select */
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    cursor: pointer;
-}
 
-/* Estilização dos Grupos de Opções (Categorias) */
-#select-filtros optgroup {
-    font-size: 1.1rem;
-    font-weight: 700;
-    color: var(--acento-principal);
-    background-color: var(--fundo-principal);
-    padding: 10px 15px;
-}
-
-/* Estilização das Opções (Subfiltros) */
-#select-filtros option {
-    padding: 8px 20px;
-    font-size: 1rem;
-    color: var(--texto-principal);
-    background-color: white;
-    transition: background-color 0.1s;
-}
-
-/* Destaca a opção ao selecionar ou passar o mouse */
-#select-filtros option:checked, 
-#select-filtros option:hover {
-    background-color: #e0e0e0;
-    color: var(--texto-principal);
-}
-
-/* Botão Salvar */
 #submit-button {
     background-color: var(--acento-principal);
     color: var(--fundo-principal);

@@ -17,6 +17,7 @@
         <nav id="menu" >
             <a href="./page-produtos.php">Home</a>
             <a href="../src/sobreNos.php">Quem somos</a>
+            <a href="../src/login-empresa.php">Login</a>
             <a href="./perfil.php" class="avatar">
                 <i class="fa-regular fa-user"></i>
             </a>

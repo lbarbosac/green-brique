@@ -8,6 +8,9 @@
 </head>
 
 <body>
+  <?php
+  include_once './include/head.php';
+  ?>
   <menu>
     <div class="menu-container-title">
       <h1 class="menu-title">Sobre Nós</h1>
@@ -33,7 +36,7 @@
           <a href="https://www.linkedin.com/in/lbarbosac/">Linkedin</a>
         </div>
         <div class="card">
-          <img src="https://img.odcdn.com.br/wp-content/uploads/2024/01/Destaque-Clone-de-macaco.jpg" alt="Cassiano Ramos">
+          <img src="https://avatars.githubusercontent.com/u/178387402?v=4" alt="Cassiano Ramos">
           <h2>Cassiano Ramos</h2>
           <a href="https://www.linkedin.com/in/cassiano-ramos-252a19343/">Linkedin</a>
         </div>

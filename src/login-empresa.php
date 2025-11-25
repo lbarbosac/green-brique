@@ -4,16 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Página Login Comerciante</title>
-    <link rel="stylesheet" href="./assets/css/pagina-login-comerciante.css">
+    <link rel="stylesheet" href="./assets/css/login-empresa.css">
     <link rel="icon" href="../img/pagelines-brands-solid-full.svg">
 </head>
 <body>
+    <?php
+    include_once './include/head.php';
+    ?>
     <main>
         <form action="./act/empresa-login.php" method="post">
-            <div class="box-logo">
-                <img src="./img/logo-png.png" alt="" style="height: 8rem;">
-                <span class="texto-logo" style="font-size: 2rem;">Green Brique</span>
-            </div>
+            <h2 id="form-title">Login</h2>
             <div class="div-label">
                 <label for="nome_user">Nome da Empresa</label>
                 <div class="input-box">
