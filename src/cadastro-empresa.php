@@ -47,12 +47,14 @@
 
             <div class="div-form">
                 <label for="img-perfil-empresa" class="form-label">Imagem de Perfil</label>
-                <input id="img-perfil-empresa" class="form-input" type="text" name="img-perfil-empresa" placeholder="URL da Imagem de Perfil" required>
+                <input id="img-perfil-empresa" class="form-file" type="file" name="img-perfil-empresa" required>
+                <label for="img-perfil-empresa" class="file-label">Escolher Imagem de Perfil</label>
             </div>
 
             <div class="div-form">
                 <label for="img-local-empresa" class="form-label">Imagem do Local</label>
-                <input id="img-local-empresa" class="form-input" type="text" name="img-local-empresa" placeholder="URL da Imagem do Local" required>
+                <input id="img-local-empresa" class="form-file" type="file" name="img-local-empresa" required>
+                <label for="img-local-empresa" class="file-label">Escolher Imagem do Local</label>
             </div>
 
             <div class="div-form">

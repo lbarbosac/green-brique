@@ -46,7 +46,7 @@
             <div class="container-perfil-comerciante">
 
                 <div class="foto-perfil-comerciante">
-                    <img class="img-perfil" src="<?php echo ($img_perfil_cnpj)?>" alt="Foto de Perfil do Comerciante">
+                    <img class="img-perfil" src="<?php echo ($img_perfil_cnpj ? './uploads/' . $img_perfil_cnpj : './assets/img/default-profile.png'); ?>" alt="Foto de Perfil do Comerciante">
                 </div>
 
                 <div class="informacoes-comerciante">
@@ -69,7 +69,7 @@
                         ?>
                     </p>
                     <div class="container-maps">
-                        <img class="img-maps" src="<?php echo ($img_local_cnpj); ?>" alt="Local da empresa">
+                        <img class="img-maps" src="<?php echo ($img_local_cnpj ? './uploads/' . $img_local_cnpj : './assets/img/default-local.png'); ?>" alt="Local da empresa">
                     </div>
                     <p><strong>Telefone:</strong>
                         <?php
