@@ -60,7 +60,6 @@ body {
     font-size: 1.5rem;
     font-weight: 700;
     margin-bottom: 1.5rem;
-    color: var(--acento-principal);
     display: flex;
     align-items: center;
     gap: 0.6rem;
@@ -220,6 +219,7 @@ body {
     border-radius: 8px;
     border: 2px solid var(--acento-principal);
     transition: background-color 0.3s ease, color 0.3s ease;
+    text-decoration: underline;
 }
 
 .todos-produtos a.categoria-button:hover,
@@ -383,15 +383,16 @@ main {
 .container-produto:hover,
 .container-produto:focus {
     transform: translateY(-6px);
-    box-shadow: 0 7px 18px rgba(0, 0, 0, 0.18);
+    box-shadow: 0 7px 18px var(--verde-medio);
     outline: none;
     width: calc(25% - 2rem);
     background-color: var(--fundo-card);
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 6px;
     text-decoration: none;
     color: var(--texto-principal);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+    transition-duration: 0.7s;
+    border: solid 2px var(--verde-escuro);
 }
 
 .container-produto:hover {
