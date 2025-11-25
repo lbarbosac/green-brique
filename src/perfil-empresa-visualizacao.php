@@ -1,27 +1,35 @@
 <?php
     include_once './include/conn.php';
-    include_once './include/head.php';
+    session_start();
 
+    if (!isset($_SESSION['CnpjID']) || !is_numeric($_SESSION['CnpjID'])) {
+        die("Acesso não autorizado.");
+    }
+    $cnpj_id = (int) $_SESSION['CnpjID'];
 
-    $sql = "SELECT Nome, Telefone, Endereco, Foto, Maps FROM comerciantes WHERE ComercianteID = " . $comerciante_id;
+    $sql = "SELECT Nome, Telefone, Email, Endereco, ImagemPerfil, ImagemLocal, CEP FROM cnpj WHERE CnpjID = " . $cnpj_id;
     $retorno = mysqli_query($conn, $sql);
 
-    if($retorno && mysqli_num_rows($retorno) > 0) {
+    if($retorno && mysqli_num_rows($retorno) > 0) {        
         $produto = mysqli_fetch_assoc($retorno);
-        $retorno = mysqli_query($conn, $sql);
-        
-        $foto_comerciante = htmlspecialchars($produto['Foto']);
-        $nome_comerciante = htmlspecialchars($produto['Nome']);
-        $endereco_comerciante = htmlspecialchars($produto['Endereco']);
-        $img_maps_comerciante = htmlspecialchars($produto['Maps']);
-        $telefone_comerciante = htmlspecialchars($produto['Telefone']);
+    
+        $nome_cnpj = htmlspecialchars($produto['Nome']);
+        $email_cnpj = htmlspecialchars($produto['Email']);
+        $endereco_cnpj = htmlspecialchars($produto['Endereco']);
+        $img_local_cnpj = htmlspecialchars($produto['ImagemLocal']);
+        $img_perfil_cnpj = htmlspecialchars($produto['ImagemPerfil']);
+        $telefone_cnpj = htmlspecialchars($produto['Telefone']);
+        $cep_cnpj = htmlspecialchars($produto['CEP']);
     } else {
-        $foto_comerciante = "Foto não Disponível";
-        $nome_comerciante = "Empresa não Encontrado";
-        $endereco_comerciante = "Endereço não Disponível";
-        $img_maps_comerciante = "Localização não Disponível";
-        $telefone_comerciante = "Contato não Disponível";
+        $nome_cnpj = "Foto não Disponível";
+        $email_cnpj = "Email não disponível";
+        $endereco_cnpj = "Endereço não disponível";
+        $img_perfil_cnpj = "Imagem Perfil não disponível";
+        $img_local_cnpj = "Local não disponível";
+        $telefone_cnpj = "Telefone não disponível";
+        $cep_cnpj = "CEP não disponível";
     }
+    
 ?>
 
 <!DOCTYPE html>
@@ -38,28 +46,40 @@
             <div class="container-perfil-comerciante">
 
                 <div class="foto-perfil-comerciante">
-                    <img class="img-perfil" src="<?php echo ($foto_comerciante)?>" alt="Foto de Perfil do Comerciante">
+                    <img class="img-perfil" src="<?php echo ($img_perfil_cnpj)?>" alt="Foto de Perfil do Comerciante">
                 </div>
 
                 <div class="informacoes-comerciante">
 
                     <p><strong>Nome da Empresa:</strong>
                         <?php
-                            echo ($nome_comerciante);
+                            echo ($nome_cnpj);
                         ?>
-                    </p>    
+                    </p>   
+                    
+                    <p><strong>CEP:</strong>
+                        <?php
+                            echo ($cep_cnpj);
+                        ?>
+                    </p>
 
                     <p><strong>Endereço:</strong>
                         <?php
-                            echo ($endereco_comerciante);
+                            echo ($endereco_cnpj);
                         ?>
                     </p>
                     <div class="container-maps">
-                        <img class="img-maps" src="<?php echo ($img_maps_comerciante); ?>" alt="Local da empresa">
+                        <img class="img-maps" src="<?php echo ($img_local_cnpj); ?>" alt="Local da empresa">
                     </div>
-                    <p><strong>Contato:</strong>
+                    <p><strong>Telefone:</strong>
                         <?php
-                            echo ("$telefone_comerciante");
+                            echo ("$telefone_cnpj");
+                        ?>
+                    </p>
+
+                    <p><strong>Email:</strong>
+                        <?php
+                            echo ("$email_cnpj");
                         ?>
                     </p>
                 </div>
