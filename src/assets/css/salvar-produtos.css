@@ -11,14 +11,14 @@
 #main-content {
     display: flex;
     justify-content: center;
-    align-items: flex-start;
+    align-items:center;
     min-height: 100vh;
 }
 
 #crud-form-produtos {
     max-width: 600px;
     width: 90%;
-    margin: 2rem auto;
+    margin: 3.5rem;
     padding: 2rem;
     background: var(--fundo-card);
     border-radius: 12px;
