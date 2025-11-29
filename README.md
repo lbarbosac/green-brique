@@ -56,7 +56,7 @@ Para iniciar o **Green Brique** em seu ambiente de desenvolvimento, siga os pass
 
 1.  **Clone o Repositório:**
     ```bash
-    git clone [https://github.com/seu-usuario/green-brique.git](https://github.com/seu-usuario/green-brique.git)
+    git clone [https://github.com/lbarbosac/green-brique](https://github.com/lbarbosac/green-brique)
     cd green-brique
     ```
 
@@ -108,7 +108,7 @@ Distribuído sob a Licença MIT. Veja `LICENSE` para mais informações.
 * **GitHub:** [@avilazdudu](https://github.com/avilazdudu)
 ---
 
-* **Contribuinte:** Lucas Cândido Barbosa
+* **Contribuinte:** Lucas Barbosa Cândido
 * **Email:** lucas2304barbosa@gmail.com
 * **GitHub:** [@lbarbosac](https://github.com/lbarbosac)
 ---
