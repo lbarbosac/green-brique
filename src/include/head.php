@@ -13,8 +13,8 @@
 </head>
 <body>
     <header>
-        <img src="./img/logo-branco.png" alt="" id="logo">
         <nav id="menu" >
+            <img src="./img/logo-branco.png" alt="" id="logo">
             <a href="./page-produtos.php">Home</a>
             <a href="../src/sobreNos.php">Quem somos</a>
             <a href="../src/login-empresa.php">Login</a>

@@ -1,3 +1,5 @@
+console.log(window.screen.width);
+
 const carousel = document.querySelector('.carousel');
 const cards = Array.from(document.querySelectorAll('.card')); 
 const nextBtn = document.querySelector('.next');

@@ -41,8 +41,7 @@ menu {
   align-items: center;
   justify-content: center;
   gap: 12px;
-  width: 90%;
-  max-width: 1200px;
+  width: 65%;
   margin: 40px auto;
   position: relative;
 }
@@ -54,7 +53,6 @@ menu {
   scroll-snap-type: x mandatory; /* fixa o cartão no centro */
   -webkit-overflow-scrolling: touch;
   gap: 30px;
-  width: 75%;
   padding: 12px 6px;
   scrollbar-width: none;
   height: 250px;
@@ -204,7 +202,7 @@ footer {
   gap: 25px;
   flex-wrap: wrap;
   margin-bottom: 60px;
-  width: 67%;
+  width: 58%;
 }
 
 .footer-container {
