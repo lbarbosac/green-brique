@@ -68,7 +68,7 @@ nav#menu {
     gap: 1.5rem; /* Espaço entre os links */
     justify-content: space-around;
     align-items: center;
-    width: 100%;
+    width: 60%;
 }
 
 nav#menu a {
