@@ -1,0 +1,116 @@
+:root {
+    --fundo-principal: #F6F4EF;
+    --fundo-card: #FFFFFF;
+    --border: #D9D6CF;
+    --shadow: rgba(0,0,0,0.08);
+    --verde-escuro: #2D5D34;
+    --verde-medio: #4A7C4A;
+    --verde-claro: #9CCC65;
+    --texto-principal: #3B3A36;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    background: var(--fundo-principal);
+    color: var(--texto-principal);
+    padding-top: 4.5rem; /* espaço pro header fixo */
+}
+
+.container-vendedor {
+    min-height: calc(100vh - 4.5rem);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+}
+
+.card-vendedor {
+    background: var(--fundo-card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px var(--shadow);
+    max-width: 480px;
+    width: 100%;
+    padding: 1.8rem 2rem;
+}
+
+.nome-vendedor {
+    font-size: 1.8rem;
+    color: var(--verde-escuro);
+    margin-bottom: 1rem;
+}
+
+.linha-info {
+    margin-bottom: 0.8rem;
+    font-size: 1rem;
+}
+
+.label {
+    font-weight: 600;
+    color: var(--verde-medio);
+    margin-right: 0.3rem;
+}
+
+.valor,
+.valor-link {
+    color: var(--texto-principal);
+}
+
+.valor-link {
+    text-decoration: none;
+    font-weight: 500;
+    border-bottom: 1px solid transparent;
+    transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.valor-link:hover,
+.valor-link:focus {
+    color: var(--verde-escuro);
+    border-color: var(--verde-claro);
+    outline: none;
+}
+
+.texto-ajuda {
+    margin: 1.3rem 0 1.6rem;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: #555;
+}
+
+.btn-voltar {
+    display: inline-block;
+    padding: 0.7rem 1.4rem;
+    border-radius: 999px;
+    background: var(--verde-escuro);
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    border: none;
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.1s ease, box-shadow 0.2s ease;
+    box-shadow: 0 3px 6px var(--shadow);
+}
+
+.btn-voltar:hover,
+.btn-voltar:focus {
+    background: var(--verde-medio);
+    transform: translateY(-1px);
+    outline: none;
+}
+
+@media (max-width: 480px) {
+    .card-vendedor {
+        padding: 1.3rem 1.4rem;
+    }
+
+    .nome-vendedor {
+        font-size: 1.5rem;
+    }
+}
