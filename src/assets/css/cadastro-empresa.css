@@ -1,3 +1,4 @@
+/* Variáveis de cores do seu tema (para reuso) */
   :root {
     --fundo-principal: #F5F1E9; 
     --texto-principal: #3D352E; 
@@ -6,12 +7,12 @@
     --fundo-card: #FAFAFA;
 }
 
+/* Apenas a estrutura base do formulário */
 body {
     display: flex;
     justify-content: center;
     align-items: flex-start;
     min-height: 100vh;
-    background-color: #f5f1e9;
 }
 
 form {
@@ -38,6 +39,7 @@ form {
     margin-bottom: 0.5rem;
 }
 
+/* Estilização dos Labels e Inputs/Selects */
 .form-label {
     font-size: 1.1rem;
     color: var(--texto-principal);
@@ -64,7 +66,7 @@ form {
 }
 
 #descricao-produto {
-    min-height: 8rem; 
+    min-height: 8rem; /* Aumenta a altura da descrição */
     resize: vertical;
 }
 
@@ -90,30 +92,4 @@ form {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
-}
-
-.form-file {
-    display: none;
-}
-
-.file-label {
-    display: inline-block;
-    padding: 0.8rem 1.2rem;
-    background-color: var(--acento-principal);
-    color: var(--fundo-principal);
-    border-radius: 6px;
-    font-size: 1rem;
-    font-weight: 700;
-    cursor: pointer;
-    text-align: center;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-.file-label:hover {
-    background-color: #af6012;
-    transform: translateY(-2px);
-}
-
-.file-label:active {
-    transform: translateY(0);
 }

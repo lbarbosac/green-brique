@@ -1,42 +1,25 @@
-/* --- Import fonts --- */
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Pangolin&display=swap');
 
-*{
+* {
     box-sizing: border-box;
 }
+
 :root {
-    --fundo-principal: #F5F1E9; 
-    --texto-principal: #3D352E; 
-    --acento-principal: #C76F16; 
-    --acento-secundario: #6B705C;
-    --neutro: #B7B09C;         
-    --fundo-card: #FAFAFA;    
-    /* Tons de base - fundos brancos e beges suaves para leveza */
-    --fundo-principal: #F6F4EF;        /* Bege muito claro para fundo da página */
-    --fundo-card: #FFFFFF;             /* Cartões/áreas de conteúdo em branco puro */
-    --border: #D9D6CF;                /* Bordas e separadores, tom neutro suave */
-    --shadow: rgba(0, 0, 0, 0.08);    /* Sombras suaves para profundidade */
-
-    /* Cores principais - verdes naturais que remetem à natureza */
-    --verde-escuro: #2D5D34;          /* Verde forte, para acentos principais */
-    --verde-medio: #4A7C4A;           /* Verde secundário para destaques */
-    --verde-claro: #9CCC65;           /* Verde claro para hover, foco, realces */
-    --verde-suave: #C8E6C9;           /* Verde muito suave, para fundos e hover leves */
-
-    /* Cores de texto - tons escuros com boa legibilidade */
-    --texto-principal: #3B3A36;       /* Preto suave para texto principal */
-    --texto-secundario: #5A5A58;      /* Cinza escuro para subtítulos e textos complementares */
-    --texto-inativo: #9E9E9E;         /* Cinza médio para texto secundário ou desabilitado */
-
-    /* Cores de ação e destaque */
-    --acento-principal: var(--verde-escuro);   /* Usar verde escuro para botões e links */
-    --acento-secundario: var(--verde-medio);   /* Verde médio para hover e interações */
-
-    /* Alertas / feedback */
-    --aviso: #E57373;                 /* Vermelho suave para erros */
-    --sucesso: #81C784;               /* Verde claro para sucesso */
-
-    /* Fundo invertido para contraste (ex: footer ou seções escuras) */
+    --fundo-principal: #F6F4EF;
+    --fundo-card: #FFFFFF;
+    --border: #D9D6CF;
+    --shadow: rgba(0, 0, 0, 0.08);
+    --verde-escuro: #2D5D34;
+    --verde-medio: #4A7C4A;
+    --verde-claro: #9CCC65;
+    --verde-suave: #C8E6C9;
+    --texto-principal: #3B3A36;
+    --texto-secundario: #5A5A58;
+    --texto-inativo: #9E9E9E;
+    --acento-principal: var(--verde-escuro);
+    --acento-secundario: var(--verde-medio);
+    --aviso: #E57373;
+    --sucesso: #81C784;
     --fundo-invertido: #2D5D34;
     --texto-invertido: #F6F4EF;
 }
@@ -55,8 +38,8 @@ h1, h2, h3, h4, h5, h6, .titulo, .button {
 }
 
 header {
-    background-color: var(--acento-secundario); /* Fundo verde musgo */
-    color: var(--fundo-principal); /* Texto bege claro para contraste */
+    background-color: var(--acento-secundario);
+    color: var(--fundo-principal);
     padding: 1rem 2rem;
     display: flex;
     justify-content: space-between;
@@ -100,7 +83,6 @@ header {
     padding: 0.2rem;
 }
 
-
 header.crud-header {
     background-color: var(--acento-secundario);
     color: var(--fundo-principal);
@@ -109,20 +91,19 @@ header.crud-header {
 header h1 {
     margin: 0;
     font-size: 1.8rem;
-    font-family: "Pangolin", cursive; /* Títulos com Pangolin para um toque amigável */
+    font-family: "Pangolin", cursive;
     font-weight: 400;
 }
 
-/* --- NAVEGAÇÃO --- */
 nav#menu {
     display: flex;
-    gap: 1.5rem; /* Espaço entre os links */
+    gap: 1.5rem;
     justify-content: center;
     align-items: center;
 }
 
 nav#menu a {
-    color: var(--fundo-principal); /* Links na cor de fundo claro do header */
+    color: var(--fundo-principal);
     text-decoration: none;
     font-weight: 500;
     transition: color 0.3s ease;
@@ -130,30 +111,28 @@ nav#menu a {
 }
 
 nav#menu a:hover {
-    color: var(--acento-principal); /* Laranja ao passar o mouse */
+    color: var(--acento-principal);
 }
 
-/* --- CONTEÚDO PRINCIPAL (MAIN) --- */
 main {
     padding: 2rem;
-    display: flex; 
+    display: flex;
     justify-content: center;
-    align-items: flex-start; /* Alinha no topo */
+    align-items: flex-start;
     flex-wrap: wrap;
-    min-height: calc(100vh - 80px); /
+    min-height: calc(100vh - 80px);
 }
 
 .container {
-    max-width: 62.5rem; 
-    width: 95%; 
-    background-color: var(--fundo-card); 
+    max-width: 62.5rem;
+    width: 95%;
+    background-color: var(--fundo-card);
     padding: 2rem;
     border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); 
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     box-sizing: border-box;
 }
 
-/* Escopo para tabelas CRUD */
 table.crud-table {
     width: 100%;
     border-collapse: collapse;
@@ -167,80 +146,79 @@ th.crud-header, td.crud-cell {
 table {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 1.5rem; 
+    margin-top: 1.5rem;
     text-align: center;
 }
 
 th, td {
     padding: 12px 15px;
-    border-bottom: 1px solid var(--neutro); /* Linhas divisórias usando o neutro */
+    border-bottom: 1px solid var(--neutro);
     font-family: "Lato", sans-serif;
 }
 
 th {
-    background-color: var(--fundo-principal); 
+    background-color: var(--fundo-principal);
     color: var(--texto-principal);
     font-weight: 700;
-    text-transform: uppercase; 
+    text-transform: uppercase;
     font-size: 0.9rem;
     letter-spacing: 0.05em;
-    border-bottom: 2px solid var(--neutro); 
+    border-bottom: 2px solid var(--neutro);
 }
 
 tr:nth-child(even) {
-    background-color: rgba(245, 241, 233, 0.5); 
+    background-color: rgba(245, 241, 233, 0.5);
 }
 
 tr:hover {
-    background-color: var(--fundo-principal); 
+    background-color: var(--fundo-principal);
     transition: background-color 0.2s ease;
 }
 
 td:last-child {
-    text-align: center; 
-    white-space: nowrap; 
+    text-align: center;
+    white-space: nowrap;
 }
-
 
 .btn {
     display: inline-block;
     padding: 8px 14px;
     border: none;
     border-radius: 5px;
-    color: var(--fundo-principal); 
+    color: var(--fundo-principal);
     text-decoration: none;
     font-weight: 500;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.2s ease;
-    margin: 0 5px; 
+    margin: 0 5px;
     font-family: "Lato", sans-serif;
     font-size: 0.9rem;
 }
 
 .btn-edit {
-    background-color: var(--acento-principal); /* Laranja para Editar */
+    background-color: var(--acento-principal);
 }
 
 .btn-edit:hover {
-    background-color: #af6012; /* Laranja um pouco mais escuro no hover */
+    background-color: #af6012;
     transform: translateY(-1px);
 }
 
 .btn-add {
-    background-color: green; /* Laranja para Editar */
+    background-color: green;
 }
-.btn-add:hover{
+
+.btn-add:hover {
     background-color: darkgreen;
     transform: translateY(-1px);
 }
 
-
 .btn-delete {
-    background-color: var(--texto-principal); /* Marrom escuro para Excluir */
+    background-color: var(--texto-principal);
 }
 
 .btn-delete:hover {
-    background-color: #2e2823; /* Marrom um pouco mais escuro no hover */
+    background-color: #2e2823;
     transform: translateY(-1px);
 }
 
@@ -251,12 +229,13 @@ td:last-child {
         padding: 1rem;
     }
 
-    .perfil{
+    .perfil {
         padding: 1rem;
     }
+
     nav#menu {
         margin-top: 1rem;
-        flex-wrap: wrap; /* Permite que os links quebrem a linha */
+        flex-wrap: wrap;
         justify-content: center;
         gap: 1rem;
     }
@@ -274,24 +253,24 @@ td:last-child {
     }
 
     table, th, td {
-        display: block; /* Tabela em formato de "cartão" em telas pequenas */
+        display: block;
         width: 100%;
         box-sizing: border-box;
     }
 
     th {
-        display: none; /* Esconde os cabeçalhos em telas pequenas, pode ser refeito com data-atributos */
+        display: none;
     }
 
     td {
         border-bottom: none;
         position: relative;
-        padding-left: 50%; /* Espaço para o "novo" label */
+        padding-left: 50%;
         text-align: right;
     }
 
     td::before {
-        content: attr(data-label); /* Adiciona o label do cabeçalho */
+        content: attr(data-label);
         position: absolute;
         left: 0;
         width: 45%;
@@ -303,13 +282,15 @@ td:last-child {
 
     td:last-child {
         text-align: right;
-        padding-left: 15px; 
+        padding-left: 15px;
     }
 }
-#logo{
+
+#logo {
     width: 3rem;
     height: 3rem;
 }
+
 .perfil {
     color: #3D352E;
     width: 95%;
@@ -318,19 +299,21 @@ td:last-child {
     align-items: center;
     padding: 2rem;
 }
-.img-perfil{
+
+.img-perfil {
     border-radius: 100%;
     height: 5rem;
     width: 5rem;
 }
-.foto-nome{
+
+.foto-nome {
     display: flex;
     justify-content: center;
     align-items: end;
     gap: 1rem;
 }
 
-.botao-perfil{
+.botao-perfil {
     background-color: var(--acento-principal);
     color: var(--fundo-principal);
     border: none;
@@ -341,21 +324,16 @@ td:last-child {
     transition: background-color 0.3s ease, transform 0.2s ease;
     width: 150px;
     padding: 10px;
-
 }
 
-.nome{
+.nome {
     margin-top: 10px;
-
-
 }
 
-
-
-
-.tela{
+.tela {
     width: 70%;
 }
+
 .crud-form {
     max-width: 50%;
     margin: 2rem auto;
@@ -376,9 +354,11 @@ td:last-child {
     text-align: center;
     margin-bottom: 1.5rem;
 }
-.crud-form label{
+
+.crud-form label {
     font-size: 1.2rem;
 }
+
 .crud-form input,
 .crud-form textarea,
 .crud-form select {

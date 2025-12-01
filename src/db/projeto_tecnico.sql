@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 24/11/2025 às 13:39
+-- Tempo de geração: 01/12/2025 às 13:00
 -- Versão do servidor: 10.4.32-MariaDB
 -- Versão do PHP: 8.2.12
 
@@ -113,8 +113,8 @@ CREATE TABLE `produtos` (
   `Nome` varchar(255) NOT NULL,
   `Descricao` text DEFAULT NULL,
   `Preco` decimal(10,2) NOT NULL,
-  `Quantidade` int(11) DEFAULT 0,
-  `Img` text DEFAULT NULL
+  `Quantidade` int(11) NOT NULL,
+  `Img` varchar(500) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -122,13 +122,36 @@ CREATE TABLE `produtos` (
 --
 
 INSERT INTO `produtos` (`ProdutoID`, `Nome`, `Descricao`, `Preco`, `Quantidade`, `Img`) VALUES
-(1, 'Smartphone XZ Pro', 'O mais novo smartphone com 128GB de armazenamento, câmera tripla de 48MP e tela OLED 6.7\". Resistente à água.', 3499.90, 50, 'https://www.havan.com.br/media/catalog/product/cache/73a52df140c4d19dbec2b6c485ea6a50/c/e/celular-smartphone-xiaomi-redmi-note13-4g-octacore-8gb-ram-256gb-ssd_1007650.webp'),
-(2, 'Fone de Ouvido Bluetooth Wave', 'Fone de ouvido com cancelamento de ruído ativo, 30 horas de bateria e conexão Bluetooth 5.2. Inclui case de carregamento.', 799.00, 120, 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUxQ-pp2SuBenjeJEKqVq1qBYFaIFiy0uOaw&s'),
-(3, 'Cafeteira Expressa Grão Mestre', 'Cafeteira automática que mói grãos na hora. Prepara espresso, cappuccino e latte com o toque de um botão. 15 bar de pressão.', 1850.50, 30, 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcU-UxtCZNxtD7f7KaNNL4WWs2Q_VjjVyK4Q&s'),
-(4, 'Tênis de Corrida Flash 2.0', 'Tênis leve para corrida com solado de alta absorção de impacto e cabedal respirável. Ideal para treinos diários e maratonas.', 449.99, 200, 'https://mizunobr.vtexassets.com/arquivos/ids/252043-800-800?v=638572746155170000&width=800&height=800&aspect=true'),
-(5, 'Bolsa Ecobag Faith In The Future', 'A Ecobag Faith In The Future Louis é resistente, ecológica e espaçosa. Leve e prática para o dia a dia, traz uma estampa inspirada em Faith In The Future, unindo estilo e funcionalidade.', 289.90, 75, 'https://down-br.img.susercontent.com/file/br-11134207-7r98o-ln5xa0az1k5fcd'),
-(6, 'Jojo\'s Steel Ball Run', 'Um guia sobre as habilidades, conceitos e estratégias para construir uma carreira sólida e bem-sucedida em desenvolvimento de software.', 89.70, 150, 'https://www.americanas.com.br/_next/image?url=https%3A%2F%2Famericanas.vtexassets.com%2Farquivos%2Fids%2F11884394%2F7485631658_1_xlarge.jpg%3Fv%3D638754227714530000&w=768&q=90'),
-(7, 'Ecobag Sustentável', 'Ecobag sustentável, leve e resistente, perfeita para o uso diário. Espaçosa, dobrável e feita com material ecológico para acompanhar você com praticidade e consciência ambiental.', 999.99, 1, 'https://down-br.img.susercontent.com/file/d34919274b39b6f9f2e7f7a33ce1c509');
+(1, 'Kit de Talheres de Bambu Reutilizável com Estojo', 'Conjunto portátil de talheres 100% bambu, material biodegradável e renovável. Ideal para reduzir o uso de plástico descartável em refeições fora de casa.', 45.90, 150, 'https://images.unsplash.com/photo-1594917631750-618497645f7c?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'),
+(2, 'Kit Limpeza Ecológico Concentrado (Refil)', 'Contém 3 refis de cápsulas concentradas de limpeza multiuso e desinfetante. Reduz o consumo de plástico e as emissões de transporte de água. Certificado Vegan.', 89.90, 90, 'https://images.unsplash.com/photo-1616480536417-6425150e7b7e?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'),
+(3, 'Copo Retrátil de Silicone 500ml (Zero Desperdício)', 'Feito de silicone de grau alimentício, livre de BPA. Perfeito para café e bebidas frias, substituindo copos descartáveis. Dobrável e fácil de transportar.', 55.00, 220, 'https://images.unsplash.com/photo-1596701979401-447a2453c07e?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'),
+(4, 'Escova de Dentes de Bambu (Kit 4 unidades)', 'Cabo 100% biodegradável e cerdas macias. Embalagem zero plástico.', 32.50, 300, 'https://images.unsplash.com/photo-1542840428-c1729b7ef9fa'),
+(5, 'Shampoo Sólido de Alecrim (50g)', 'Produto concentrado, natural, vegano, sem sulfatos e sem embalagem plástica.', 45.90, 150, 'https://images.unsplash.com/photo-1610444156637-233631f4e3c9'),
+(6, 'Condicionador Sólido de Manteiga de Cacau', 'Hidratação profunda com ingredientes orgânicos, zero waste.', 49.90, 120, 'https://images.unsplash.com/photo-1610444157111-e12503d52848'),
+(7, 'Desodorante Natural em Pasta (Livre de Alumínio)', 'Fórmula com óleos essenciais, controla o odor sem agredir a pele. Em pote de vidro.', 38.00, 180, 'https://images.unsplash.com/photo-1594922119339-38a49c95d909'),
+(8, 'Fio Dental Biodegradável (Embalagem Refil)', 'Feito de seda de milho, embalado em pote de vidro com refil.', 25.00, 250, 'https://images.unsplash.com/photo-1591823907718-d7b42a926317'),
+(9, 'Sabonete Artesanal de Argila Verde', 'Feito à mão com ingredientes naturais, ideal para peles oleosas, embalado em papel reciclado.', 18.90, 400, 'https://images.unsplash.com/photo-1627915573750-f8f20b33c042'),
+(10, 'Absorvente Ecológico Reutilizável (Kit 3 un.)', 'Feito de tecido de algodão orgânico, lavável e durável.', 65.00, 100, 'https://images.unsplash.com/photo-1593952777083-d020e6f21223'),
+(11, 'Pente de Madeira Natural (Antiestático)', 'Feito de madeira certificada (reflorestamento), sem plástico, reduz o frizz.', 22.90, 200, 'https://images.unsplash.com/photo-1596701979401-447a2453c07e'),
+(12, 'Escalda Pés de Sal Marinho e Ervas', 'Produto 100% natural, embalagem de papel kraft compostável.', 35.00, 160, 'https://images.unsplash.com/photo-1592383845019-3226a275466c'),
+(13, 'Óleo Essencial de Lavanda (Orgânico)', 'Produto puro, extraído de fazenda orgânica, embalagem de vidro âmbar.', 59.90, 130, 'https://images.unsplash.com/photo-1587370830704-58a436578a1f'),
+(14, 'Esponja Vegetal de Bucha (Kit 3 un.)', 'Alternativa 100% natural e compostável para esponjas sintéticas de louça.', 19.90, 500, 'https://images.unsplash.com/photo-1617478330752-b8833894b9f6'),
+(15, 'Pano de Prato de Algodão Cru (Sustentável)', 'Tecido absorvente e durável, tingimento natural, sem químicos.', 15.00, 600, 'https://images.unsplash.com/photo-1594917631750-618497645f7c'),
+(16, 'Filtro de Café Reutilizável de Pano', 'Alternativa sustentável e durável aos filtros de papel descartáveis.', 28.00, 250, 'https://images.unsplash.com/photo-1550993072-c23f993d0f41'),
+(17, 'Recipiente de Armazenamento de Vidro (Hermético)', 'Pote de vidro com tampa de bambu, ideal para organização e redução de plástico.', 40.50, 210, 'https://images.unsplash.com/photo-1614798579998-380d6f46d328'),
+(18, 'Canudo de Aço Inoxidável (Kit 4 un. + escova)', 'Durável, reutilizável, perfeito para substituir canudos de plástico.', 34.90, 350, 'https://images.unsplash.com/photo-1590374169970-877473775f0f'),
+(19, 'Vela Aromática em Cera de Soja (Natural)', 'Feita com cera de soja (vegetal), pavio de algodão e pote reutilizável.', 60.00, 140, 'https://images.unsplash.com/photo-1621376044719-798836528d22'),
+(20, 'Sacola Reutilizável de Algodão Orgânico', 'Grande capacidade, forte e lavável, ideal para compras de mercado.', 24.90, 700, 'https://images.unsplash.com/photo-1611082163980-87c6a9956426'),
+(21, 'Kit Garrafa + Copo Retrátil (Zero Plástico)', 'Garrafa de vidro com capa de silicone e copo dobrável para viagens.', 95.00, 80, 'https://images.unsplash.com/photo-1616480536417-6425150e7b7e'),
+(22, 'Composteira Doméstica Pequena', 'Recipiente para reciclagem de lixo orgânico em casa.', 180.00, 50, 'https://images.unsplash.com/photo-1593179069516-e415b3c8f8b8'),
+(23, 'Detergente para Louças em Barra (Bio)', 'Produto concentrado, biodegradável, rende muito e não polui a água.', 29.90, 280, 'https://images.unsplash.com/photo-1597022064789-70f2098d5c4b'),
+(24, 'Camiseta Básica de Algodão Orgânico (Unissex)', 'Algodão 100% orgânico, cultivado sem pesticidas, certificado GOTS.', 79.90, 300, 'https://images.unsplash.com/photo-1618384218737-293674684534'),
+(25, 'Meias de Fibra de Bambu (Respirável)', 'Material natural, macio, antibacteriano e de crescimento rápido (sustentável).', 39.90, 450, 'https://images.unsplash.com/photo-1602495393098-ff231a499a09'),
+(26, 'Ecobag Grande com Alça Reforçada', 'Feita de lona reciclada, estampa minimalista, perfeita para o dia a dia.', 27.50, 550, 'https://images.unsplash.com/photo-1549419137-97d54972e3a8'),
+(27, 'Carteira de Cortiça Vegana (Slim)', 'Material sustentável, leve, durável e 100% livre de crueldade animal.', 85.00, 120, 'https://images.unsplash.com/photo-1597370830704-58a436578a1f'),
+(28, 'Tênis Sustentável de PET Reciclado', 'Cabedal feito a partir de garrafas PET recicladas e sola de borracha natural.', 289.00, 90, 'https://images.unsplash.com/photo-1577747809633-8a3d537d8e6a'),
+(29, 'Óculos de Sol com Armação de Madeira', 'Armação feita de bambu, leve e flutuante, lentes polarizadas com proteção UV.', 149.00, 70, 'https://images.unsplash.com/photo-1547432065-1d01f8f3c7d6'),
+(30, 'Embalagem de Cera de Abelha (Substitui Plástico Filme)', 'Pano encerado e reutilizável para embalar alimentos, lavável.', 36.00, 150, 'https://images.unsplash.com/photo-1578331326265-d41a8e1b65e2');
 
 -- --------------------------------------------------------
 
@@ -252,7 +275,7 @@ ALTER TABLE `cpf`
 -- AUTO_INCREMENT de tabela `produtos`
 --
 ALTER TABLE `produtos`
-  MODIFY `ProdutoID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `ProdutoID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
 
 --
 -- AUTO_INCREMENT de tabela `subcategorias`
