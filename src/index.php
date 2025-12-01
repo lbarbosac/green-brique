@@ -47,7 +47,7 @@ if ($subcat_id_filter > 0) {
 
 } elseif ($cat_id_filter > 0) {
     $join_clause .= " JOIN produto_subcategoria ps ON p.ProdutoID = ps.ProdutoID
-                      JOIN subcategorias s ON ps.SubcategoriaID = s.SubcategoriaID";
+                     JOIN subcategorias s ON ps.SubcategoriaID = s.SubcategoriaID";
     $where_clause .= " WHERE s.CategoriaID = $cat_id_filter";
 
     $sql_cat_name = "SELECT Nome FROM categorias WHERE CategoriaID = $cat_id_filter";
@@ -91,8 +91,6 @@ $retorno = mysqli_query($conn, $sql);
                     <i class="<?php echo $iconMap[$categoria['Nome']] ?? 'fas fa-folder'; ?>" aria-hidden="true"></i>
                     <span><?php echo htmlspecialchars($categoria['Nome']); ?></span>
                 </button>
-
-                <div class="categoria-extra-area" aria-live="polite" aria-atomic="true"></div>
 
                 <ul id="subcat-list-<?php echo $id; ?>" class="subcategoria-list" hidden>
                     <?php foreach ($categoria['Subcategorias'] as $subcat): ?>
