@@ -11,9 +11,9 @@
     --fonte-titulo: 'Montserrat', sans-serif;
     --fonte-corpo: 'Roboto', sans-serif;
     --tamanho-titulo: 3rem;
-    --espaco-grande: 4rem;
-    --espaco-medio: 2rem;
-    --espaco-pequeno: 1rem;
+    --espaco-grande: 2rem;
+    --espaco-medio: 1rem;
+    --espaco-pequeno: 0.5rem;
     --raio-borda: 8px;
     --velocidade-transicao: 0.3s;
 }
@@ -230,7 +230,6 @@ menu {
 .envoltura-conteudo {
     width: 100%;
     max-width: 1200px;
-    padding: 0 var(--espaco-pequeno);
 }
 
 #apresentacao .envoltura-conteudo {

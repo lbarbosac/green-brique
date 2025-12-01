@@ -18,7 +18,7 @@
         </div>
         <nav id="menu" >
             <a href="./index.php">Home</a>
-            <a href="../src/sobreNos.php">Quem somos</a>
+            <a href="../src/sobre-nos.php">Quem somos</a>
             <a href="../src/login-empresa.php">Login</a>
             <a href="./perfil.php" class="avatar">
                 <i class="fa-regular fa-user"></i>

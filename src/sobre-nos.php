@@ -14,6 +14,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 <body>
+  <?php
+  include_once './include/head.php';
+  ?>
     <main id="conteudo-principal">
         <section id="apresentacao" class="secao total-altura layout-texto-imagem animacao-entrada" aria-labelledby="apresentacao-titulo">
             <div class="envoltura-conteudo">
