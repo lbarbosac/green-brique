@@ -17,7 +17,12 @@ if ($produto_id !== null && $produto_id > 0) {
     $retorno = mysqli_query($conn, $sql);
 
     if ($retorno && mysqli_num_rows($retorno) > 0) {
+        $sql = "SELECT ProdutoID, Nome, Descricao, Preco, Quantidade, Img, ComercianteID 
+        FROM produtos 
+        WHERE ProdutoID = " . $produto_id;
+
         $produto = mysqli_fetch_assoc($retorno);
+        $comerciante_id = (int)$produto['ComercianteID'];
         
         $titulo_pagina = htmlspecialchars($produto['Nome']);
         $img_url = htmlspecialchars($produto['Img']);
@@ -65,7 +70,12 @@ if ($produto_id !== null && $produto_id > 0) {
             
                 <p><strong>Estoque:</strong> <?php echo $quantidade_estoque > 0 ? $quantidade_estoque . ' unidades' : 'Esgotado'; ?></p>
             
-                <a href="#" id="info-vendedor" class="link-acao">Informações do vendedor</a>
+                <a href="info-vendedor.php?id=<?php echo $comerciante_id ?? 0; ?>" 
+                id="info-vendedor" 
+                class="link-acao">
+                Informações do vendedor
+</a>
+
             </section>
         </aside>
         
