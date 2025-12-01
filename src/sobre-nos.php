@@ -85,18 +85,18 @@
                 </div>
                 <div class="card">
                   <img src="https://avatars.githubusercontent.com/u/178387402?v=4" alt="Cassiano Ramos">
-                  <h2>Cass Ramos</h2>
+                  <h2>Cassiano Ramos</h2>
                   <a href="https://www.linkedin.com/in/cassiano-ramos-252a19343/">Linkedin</a>
                 </div>
                 <div class="card">
                   <img src="https://avatars.githubusercontent.com/u/5431806?v=4" alt="Sandreco">
-                  <h2>Sandreco</h2>
+                  <h2>Sandro Martins</h2>
                   <a href="https://www.linkedin.com/in/eisandromc/">Linkedin</a>
                 </div>
         
                 <div class="card">
                   <img src="https://media.licdn.com/dms/image/v2/C4D03AQFM3zToSB5okA/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1518147550912?e=1764806400&v=beta&t=oeRAHxAvgcyrt2r0-LGN4keafG1iFdhqeDapOrSIKOA" alt="Sandreco">
-                  <h2>Willian</h2>
+                  <h2>Willian Campos</h2>
                   <a href="https://www.linkedin.com/in/willian-de-campos-vieira-6331b292/">Linkedin</a>
                 </div>
               </div>
