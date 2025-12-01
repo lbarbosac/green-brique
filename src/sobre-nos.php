@@ -59,51 +59,55 @@
             </div>
         </section>
 
-        <menu>
-            <div class="menu-container-title">
-              <h1 class="menu-title">Sobre Nós</h1>
+
+       <section id="ods" class="secao altura-reduzida animacao-entrada section-integrantes" aria-labelledby="integrantes-titulo">
+    <div class="envoltura-conteudo">
+        <h2 id="integrantes-titulo" class="titulo-secao">Integrantes/Colaboradores</h2>
+
+        <div class="grade-integrantes">
+
+            <div class="container-integrante">
+                <img class="img-integrantes" src="https://avatars.githubusercontent.com/u/178475000?v=4" alt="">
+                <h3 class="tittle-integrantes">Eduardo Avila</h3>
+                <p class="paragraph-integrantes"><strong>Linkedin:</strong> asdasdasdas</p>
             </div>
-        
-            <div class="carousel-wrapper">
-              <button class="nav-btn prev">‹</button>
-        
-              <div class="carousel">
-                <div class="card active">
-                  <img src="https://avatars.githubusercontent.com/u/178475000?v=4" alt="Eduardo Ávila">
-                  <h2>Eduardo Ávila</h2>
-                  <a href="https://www.linkedin.com/in/avilazduduu/">Linkedin</a>
-                </div>
-                <div class="card">
-                  <img src="https://www.estadao.com.br/resizer/v2/CYLWEHO24VGPHMXEGRCRAYA6ZY.jpg?quality=80&auth=d80226d4d83977c2b1bfd625f73d01247f194672066d1a488631dc71d1aa1d9f&width=1200&height=1200&smart=true" alt="Nicolas Hara">
-                  <h2>Nicolas Hara</h2>
-                  <a href="https://www.linkedin.com/in/nicolas-hara-302733344/">Linkedin</a>
-                </div>
-                <div class="card">
-                  <img src="https://avatars.githubusercontent.com/u/178474865?v=4" alt="Lucas Barbosa">
-                  <h2>Lucas Barbosa</h2>
-                  <a href="https://www.linkedin.com/in/lbarbosac/">Linkedin</a>
-                </div>
-                <div class="card">
-                  <img src="https://avatars.githubusercontent.com/u/178387402?v=4" alt="Cassiano Ramos">
-                  <h2>Cassiano Ramos</h2>
-                  <a href="https://www.linkedin.com/in/cassiano-ramos-252a19343/">Linkedin</a>
-                </div>
-                <div class="card">
-                  <img src="https://avatars.githubusercontent.com/u/5431806?v=4" alt="Sandreco">
-                  <h2>Sandro Martins</h2>
-                  <a href="https://www.linkedin.com/in/eisandromc/">Linkedin</a>
-                </div>
-        
-                <div class="card">
-                  <img src="https://media.licdn.com/dms/image/v2/C4D03AQFM3zToSB5okA/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1518147550912?e=1764806400&v=beta&t=oeRAHxAvgcyrt2r0-LGN4keafG1iFdhqeDapOrSIKOA" alt="Sandreco">
-                  <h2>Willian Campos</h2>
-                  <a href="https://www.linkedin.com/in/willian-de-campos-vieira-6331b292/">Linkedin</a>
-                </div>
-              </div>
-        
-              <button class="nav-btn next">›</button>
+
+            <div class="container-integrante">
+                <img class="img-integrantes" src="" alt="">
+                <h3 class="tittle-integrantes">Nicolas Hara</h3>
+                <p class="paragraph-integrantes"><strong>Linkedin:</strong> asdasdasdas</p>
             </div>
-          </menu>
+
+            <div class="container-integrante">
+                <img class="img-integrantes" src="https://avatars.githubusercontent.com/u/178474865?v=4" alt="">
+                <h3 class="tittle-integrantes">Lucas Barbosa</h3>
+                <p class="paragraph-integrantes"><strong>Linkedin:</strong> asdasdasdas</p>
+            </div>
+
+            <div class="container-integrante">
+                <img class="img-integrantes" src="https://avatars.githubusercontent.com/u/178387402?v=4" alt="">
+                <h3 class="tittle-integrantes">Cassiano Ramos</h3>
+                <p class="paragraph-integrantes"><strong>Linkedin:</strong> asdasdasdas</p>
+            </div>
+
+            <div class="container-integrante">
+                <img class="img-integrantes" src="https://avatars.githubusercontent.com/u/5431806?v=4" alt="">
+                <h3 class="tittle-integrantes">Sandro Martins</h3>
+                <p class="paragraph-integrantes"><strong>Linkedin:</strong> asdasdasdas</p>
+            </div>
+
+            <div class="container-integrante">
+                <img class="img-integrantes" src="https://media.licdn.com/dms/image/v2/C4D03AQFM3zToSB5okA/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1518147550912?e=1764806400&v=beta&t=oeRAHxAvgcyrt2r0-LGN4keafG1iFdhqeDapOrSIKOA" alt="">
+                <h3 class="tittle-integrantes">Willian Campos</h3>
+                <p class="paragraph-integrantes"><strong>Linkedin:</strong> asdasdasdas</p>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+
     </main>
 
     <script src="./assets/js/sobre-nos.js"></script>

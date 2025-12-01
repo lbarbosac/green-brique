@@ -227,10 +227,6 @@ menu {
     background-color: var(--cor-card-fundo);
 }
 
-.envoltura-conteudo {
-    width: 100%;
-    max-width: 1200px;
-}
 
 #apresentacao .envoltura-conteudo {
     display: flex;
@@ -467,4 +463,93 @@ menu {
         margin-left: auto;
         margin-right: auto;
     }
+}
+
+.envoltura-conteudo {
+    width: 100%;
+    max-width: 1200px;
+}
+
+
+
+.section-integrantes {
+    background: #fafafa;
+    padding: 50px 0;
+}
+
+.grade-integrantes {
+    width: 85%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px 10px;
+    justify-items: center;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+}
+
+.container-integrante {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+    width: 75%;
+    height: 300px;
+    transition: all 0.25s ease;
+    margin-bottom: 50px;
+    border: 1px solid #ececec;
+    border-radius: 1.3rem;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.08);
+    transition: 0.25s ease;
+}
+
+
+.container-integrante:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 26px rgba(0,0,0,0.12);
+    border-color: #6b705c;
+}
+
+.container-integrante:hover .img-integrantes {
+    transform: scale(1.07);
+    border-color: #87956f;
+}
+
+.img-integrantes {
+    transition: 0.25s ease;
+}
+
+.tittle-integrantes {
+    font-size: 1.2rem;
+    margin: 8px 0 6px 0;
+    letter-spacing: 0.5px;
+}
+
+/* Texto LinkedIn */
+.paragraph-integrantes {
+    font-size: 0.9rem;
+    line-height: 1.2;
+    margin-bottom: 5px;
+}
+
+.img-integrantes {
+    width: 130px;
+    height: 130px;
+    margin-bottom: 8px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #6b705c;
+    transition: 0.25s ease;
+    margin-top: 20px;
+}
+
+.container-integrante:hover {
+    transform: translateY(-6px) scale(1.03);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18);
+}
+
+.container-integrante:hover .img-integrantes {
+    transform: scale(1.07);
 }
