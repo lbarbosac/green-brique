@@ -1,6 +1,17 @@
 <?php 
-include_once './include/conn.php';
-include_once './include/head.php';
+session_start(); // OBRIGATÓRIO para acessar o ID do usuário logado
+
+require_once './include/conn.php';
+require_once './include/head.php'; // Assumindo que este arquivo existe e é necessário
+
+// 🚨 Captura o ID do comerciante logado e força a inicialização
+$comerciante_id = $_SESSION['ComercianteID'] ?? 0;
+
+// Validação de segurança básica: Redireciona se o comerciante não estiver logado
+if ($comerciante_id === 0) {
+    header('Location: login.php'); // Ajuste para a sua página de login
+    exit();
+}
 
 $nome = '';
 $preco = '';
@@ -9,37 +20,45 @@ $descricao = '';
 $img = '';
 $selected_subcategories = [];
 $categorias = []; 
-$id = 0; // Inicializa o ID
+$id = 0; // Inicializa o ID do produto
+
 
 if(isset($_GET['id'])){
-  $id = intval($_GET['id']);
+    $id = intval($_GET['id']);
 
-  // 1. Busca o produto
-  $sql_produto = 'SELECT ProdutoID, Img, Quantidade, Nome, Preco, Descricao
-                   FROM produtos
-                   WHERE ProdutoID = '.$id.';';
-  $resultado_produto = mysqli_query($conn, $sql_produto);
-  if ($resultado_produto && $row = mysqli_fetch_assoc($resultado_produto)) {
-    $nome = htmlspecialchars($row['Nome']);
-    $preco = htmlspecialchars($row['Preco']);
-    $quantidade = htmlspecialchars($row['Quantidade']);
-    $descricao = htmlspecialchars($row['Descricao']);
-    $img = htmlspecialchars($row['Img']);
-  }
-  
-  // 2. Busca os subfiltros já associados
-  $sql_selected_subs = 'SELECT SubcategoriaID FROM produto_subcategoria WHERE ProdutoID = '.$id.';';
-  $res_selected_subs = mysqli_query($conn, $sql_selected_subs);
-  while($row_sub = mysqli_fetch_assoc($res_selected_subs)){
-      $selected_subcategories[] = $row_sub['SubcategoriaID'];
-  }
+    // 1. Busca o produto e o ComercianteID associado
+    $sql_produto = 'SELECT ProdutoID, Img, Quantidade, Nome, Preco, Descricao, ComercianteID 
+                    FROM produtos
+                    WHERE ProdutoID = '.$id.';';
+    $resultado_produto = mysqli_query($conn, $sql_produto);
+    
+    if ($resultado_produto && $row = mysqli_fetch_assoc($resultado_produto)) {
+        
+        // 🚨 VALIDAÇÃO DE SEGURANÇA: Impede que um comerciante edite o produto de outro
+        if ((int)$row['ComercianteID'] !== $comerciante_id) {
+            die("ERRO: Você não tem permissão para editar este produto."); 
+        }
+
+        $nome = htmlspecialchars($row['Nome']);
+        $preco = htmlspecialchars($row['Preco']);
+        $quantidade = htmlspecialchars($row['Quantidade']);
+        $descricao = htmlspecialchars($row['Descricao']);
+        $img = htmlspecialchars($row['Img']);
+    }
+    
+    // 2. Busca os subfiltros já associados
+    $sql_selected_subs = 'SELECT SubcategoriaID FROM produto_subcategoria WHERE ProdutoID = '.$id.';';
+    $res_selected_subs = mysqli_query($conn, $sql_selected_subs);
+    while($row_sub = mysqli_fetch_assoc($res_selected_subs)){
+        $selected_subcategories[] = $row_sub['SubcategoriaID'];
+    }
 }
 
 // 3. Busca todas as Categorias e Subcategorias para o formulário
 $sql_categorias = 'SELECT c.CategoriaID, c.Nome AS CategoriaNome, s.SubcategoriaID, s.Nome AS SubcategoriaNome 
-                   FROM categorias c
-                   LEFT JOIN subcategorias s ON c.CategoriaID = s.CategoriaID
-                   ORDER BY c.Nome, s.Nome;';
+                    FROM categorias c
+                    LEFT JOIN subcategorias s ON c.CategoriaID = s.CategoriaID
+                    ORDER BY c.Nome, s.Nome;';
 $res_categorias = mysqli_query($conn, $sql_categorias);
 
 while($row = mysqli_fetch_assoc($res_categorias)){
@@ -58,12 +77,16 @@ while($row = mysqli_fetch_assoc($res_categorias)){
     }
 }
 ?>
-  <link rel="stylesheet" href="./assets/css/salvar-produtos.css">
-  <main id="main-content">
+
+<link rel="stylesheet" href="./assets/css/salvar-produtos.css">
+<main id="main-content">
     <div id="produtos-container">
         <form id="crud-form-produtos" action="./act/produtos.php" method="post">
             <input type="hidden" name="acao" value="salvar">
             <input type="hidden" name="id" value="<?php echo $id; ?>">
+            
+            <input type="hidden" name="comerciante_id" value="<?php echo $comerciante_id; ?>"> 
+            
             <h2 id="form-title">Cadastro de Produtos</h2>
             
             <label for="nome-produto" class="form-label">Nome do Produto</label>
@@ -100,8 +123,9 @@ while($row = mysqli_fetch_assoc($res_categorias)){
             <button id="submit-button" type="submit">Salvar Produto</button>
         </form>
     </div>
-  </main>
+</main>
 
-  <?php 
-  include_once './include/footer.php';
-  ?>
+<?php 
+// Assumindo que este arquivo existe e é necessário
+require_once './include/footer.php';
+?>
