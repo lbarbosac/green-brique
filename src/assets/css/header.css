@@ -3,32 +3,26 @@
 }
 
 :root {
-    /* Tons de base - fundos brancos e beges suaves para leveza */
-    --fundo-principal: #F6F4EF;        /* Bege muito claro para fundo da página */
-    --fundo-card: #FFFFFF;             /* Cartões/áreas de conteúdo em branco puro */
-    --border: #D9D6CF;                /* Bordas e separadores, tom neutro suave */
-    --shadow: rgba(0, 0, 0, 0.08);    /* Sombras suaves para profundidade */
+    --fundo-principal: #F6F4EF;        
+    --fundo-card: #FFFFFF;             
+    --border: #D9D6CF;                
+    --shadow: rgba(0, 0, 0, 0.08);    
 
-    /* Cores principais - verdes naturais que remetem à natureza */
-    --verde-escuro: #2D5D34;          /* Verde forte, para acentos principais */
-    --verde-medio: #4A7C4A;           /* Verde secundário para destaques */
-    --verde-claro: #9CCC65;           /* Verde claro para hover, foco, realces */
-    --verde-suave: #C8E6C9;           /* Verde muito suave, para fundos e hover leves */
+    
+    --verde-escuro: #2D5D34;        
+    --verde-medio: #4A7C4A;          
+    --verde-claro: #9CCC65;           
+    --verde-suave: #C8E6C9;           
 
-    /* Cores de texto - tons escuros com boa legibilidade */
-    --texto-principal: #3B3A36;       /* Preto suave para texto principal */
-    --texto-secundario: #5A5A58;      /* Cinza escuro para subtítulos e textos complementares */
-    --texto-inativo: #9E9E9E;         /* Cinza médio para texto secundário ou desabilitado */
+    --texto-principal: #3B3A36;    
+    --texto-secundario: #5A5A58;      
+    --texto-inativo: #9E9E9E;         
 
-    /* Cores de ação e destaque */
-    --acento-principal: var(--verde-escuro);   /* Usar verde escuro para botões e links */
-    --acento-secundario: var(--verde-medio);   /* Verde médio para hover e interações */
-
-    /* Alertas / feedback */
-    --aviso: #E57373;                 /* Vermelho suave para erros */
-    --sucesso: #81C784;               /* Verde claro para sucesso */
-
-    /* Fundo invertido para contraste (ex: footer ou seções escuras) */
+   
+    --acento-principal: var(--verde-escuro);   
+    --acento-secundario: var(--verde-medio);   
+    --aviso: #E57373;
+    --sucesso: #81C784;              
     --fundo-invertido: #2D5D34;
     --texto-invertido: #F6F4EF;
 }
@@ -58,17 +52,15 @@ header.crud-header {
 header h1 {
     margin: 0;
     font-size: 1.8rem;
-    font-family: "Pangolin", cursive; /* Títulos com Pangolin para um toque amigável */
+    font-family: "Pangolin", cursive;
     font-weight: 400;
 }
 
-/* --- NAVEGAÇÃO --- */
 nav#menu {
     display: flex;
-    gap: 1.5rem; /* Espaço entre os links */
     justify-content: space-around;
     align-items: center;
-    width: 60%;
+    width: 40%;
 }
 
 nav#menu a {
@@ -103,9 +95,9 @@ nav#menu a {
     }
     nav#menu {
         margin-top: 1rem;
-        flex-wrap: wrap; /* Permite que os links quebrem a linha */
+        flex-wrap: wrap;
         justify-content: center;
-        gap: 1rem;
+        gap: 0.5rem;
     }
 
     header h1 {

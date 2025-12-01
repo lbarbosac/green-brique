@@ -198,11 +198,8 @@ menu {
 /* ===== FOOTER ===== */
 footer {
   display: flex;
-  justify-content: space-between;
-  gap: 25px;
-  flex-wrap: wrap;
-  margin-bottom: 60px;
-  width: 58%;
+  justify-content:space-around;
+  width: 70%;
 }
 
 .footer-container {

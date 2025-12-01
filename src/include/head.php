@@ -17,7 +17,7 @@
             <img src="./img/logo-branco.png" alt="" id="logo">
         </div>
         <nav id="menu" >
-            <a href="./page-produtos.php">Home</a>
+            <a href="./index.php">Home</a>
             <a href="../src/sobreNos.php">Quem somos</a>
             <a href="../src/login-empresa.php">Login</a>
             <a href="./perfil.php" class="avatar">

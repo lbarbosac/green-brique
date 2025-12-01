@@ -71,7 +71,7 @@ $retorno = mysqli_query($conn, $sql);
         <ul class="container-categorias" role="list">
             <!-- Todos os Produtos, ícone destacado -->
             <li class="categoria-item todos-produtos">
-                <a href="./page-produtos.php" class="categoria-button" aria-current="<?php echo (!$cat_id_filter && !$subcat_id_filter) ? 'page' : 'false'; ?>">
+                <a href="./index.php" class="categoria-button" aria-current="<?php echo (!$cat_id_filter && !$subcat_id_filter) ? 'page' : 'false'; ?>">
                     <i class="fas fa-box-open" aria-hidden="true"></i> Todos os Produtos
                 </a>
             </li>
@@ -97,7 +97,7 @@ $retorno = mysqli_query($conn, $sql);
                 <ul id="subcat-list-<?php echo $id; ?>" class="subcategoria-list" hidden>
                     <?php foreach ($categoria['Subcategorias'] as $subcat): ?>
                     <li>
-                        <a href="./page-produtos.php?subcat_id=<?php echo $subcat['ID']; ?>" class="subcategoria-link" tabindex="0">
+                        <a href="./index.php?subcat_id=<?php echo $subcat['ID']; ?>" class="subcategoria-link" tabindex="0">
                             <?php echo htmlspecialchars($subcat['Nome']); ?>
                         </a>
                     </li>
