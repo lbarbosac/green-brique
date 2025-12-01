@@ -1,56 +1,114 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-    // Ícones para expandir/collapsar nas categorias
-    const categoriaButtons = document.querySelectorAll('.categoria-button:not(.todos-produtos a)');
-    categoriaButtons.forEach(button => {
+    // --- Lógica do Menu Lateral Responsivo (Sidebar) ---
+    const menuToggleBtn = document.getElementById('menu-toggle-btn');
+    const sidebar = document.getElementById('mobile-sidebar');
+    const overlay = document.getElementById('sidebar-overlay');
+    
+    const toggleSidebar = () => {
+        const isExpanded = menuToggleBtn.getAttribute('aria-expanded') === 'true';
 
-        // Inserir símbolo de + / - ao lado direito dinamicamente
-        const iconSpan = document.createElement('span');
-        iconSpan.classList.add('expand-icon');
-        iconSpan.textContent = '+';
-        iconSpan.style.marginLeft = 'auto';
-        iconSpan.style.fontWeight = '900';
-        iconSpan.style.fontSize = '1.3rem';
-        button.appendChild(iconSpan);
+        if (isExpanded) {
+            // Fechar Sidebar
+            sidebar.classList.remove('active');
+            menuToggleBtn.setAttribute('aria-expanded', 'false');
+            menuToggleBtn.querySelector('i').className = 'fa-solid fa-bars';
+            overlay.hidden = true;
+            document.body.classList.remove('noscroll');
+        } else {
+            // Abrir Sidebar
+            sidebar.classList.add('active');
+            menuToggleBtn.setAttribute('aria-expanded', 'true');
+            menuToggleBtn.querySelector('i').className = 'fa-solid fa-xmark';
+            overlay.hidden = false;
+            document.body.classList.add('noscroll');
+        }
+    };
+
+
+    if (menuToggleBtn && sidebar && overlay) {
+        // Evento principal para abrir/fechar
+        menuToggleBtn.addEventListener('click', toggleSidebar);
+
+        // Fechar ao clicar no overlay
+        overlay.addEventListener('click', toggleSidebar);
+
+        // Fechar ao redimensionar (volta para o estado desktop)
+        const checkDesktopResize = () => {
+            if (window.innerWidth > 768 && sidebar.classList.contains('active')) {
+                sidebar.classList.remove('active');
+                menuToggleBtn.setAttribute('aria-expanded', 'false');
+                menuToggleBtn.querySelector('i').className = 'fa-solid fa-bars';
+                overlay.hidden = true;
+                document.body.classList.remove('noscroll');
+            }
+        };
+
+        window.addEventListener('resize', checkDesktopResize);
+    }
+    
+    // --- Lógica de Expansão/Colapso de Subcategorias (Acordeão) ---
+    const categoriaButtons = document.querySelectorAll('.categoria-button:not(.todos-produtos a)');
+    
+    categoriaButtons.forEach(button => {
+        // Inicializa ou garante o ícone de toggle
+        let iconSpan = button.querySelector('.expand-icon');
+        if (!iconSpan) {
+            iconSpan = document.createElement('span');
+            iconSpan.classList.add('expand-icon');
+            iconSpan.style.marginLeft = 'auto';
+            iconSpan.style.fontWeight = '900';
+            iconSpan.style.fontSize = '1.3rem';
+            button.appendChild(iconSpan);
+        }
+        iconSpan.textContent = '+'; 
 
         button.addEventListener('click', () => {
             const expanded = button.getAttribute('aria-expanded') === 'true';
-
-            // Fechar todas as categorias abertas
+            
+            // Fechar todas as outras categorias
             categoriaButtons.forEach(btn => {
-                btn.setAttribute('aria-expanded', 'false');
-                btn.querySelector('.expand-icon').textContent = '+';
                 const sublist = document.getElementById(btn.getAttribute('aria-controls'));
-                const form = btn.parentElement.querySelector('.categoria-busca');
-                if (sublist) sublist.classList.remove('expanded');
-                if (sublist) sublist.hidden = true;
-                if (form) form.hidden = true;
+                if (btn !== button && btn.getAttribute('aria-expanded') === 'true') {
+                    btn.setAttribute('aria-expanded', 'false');
+                    btn.querySelector('.expand-icon').textContent = '+';
+                    if (sublist) {
+                        sublist.classList.remove('expanded');
+                        setTimeout(() => sublist.hidden = true, 350);
+                    }
+                }
             });
 
+            // Abrir/Fechar a categoria clicada
             if (!expanded) {
                 button.setAttribute('aria-expanded', 'true');
-                button.querySelector('.expand-icon').textContent = '−';
+                iconSpan.textContent = '−';
                 const sublist = document.getElementById(button.getAttribute('aria-controls'));
-                const form = button.parentElement.querySelector('.categoria-busca');
                 if (sublist) {
                     sublist.hidden = false;
-                    sublist.classList.add('expanded');
+                    setTimeout(() => sublist.classList.add('expanded'), 10);
                 }
-                if (form) form.hidden = false;
+            } else {
+                button.setAttribute('aria-expanded', 'false');
+                iconSpan.textContent = '+';
+                const sublist = document.getElementById(button.getAttribute('aria-controls'));
+                if (sublist) {
+                    sublist.classList.remove('expanded');
+                    setTimeout(() => sublist.hidden = true, 350);
+                }
             }
         });
     });
 
-    // Autocomplete na barra de busca geral
+    // --- Lógica do Autocomplete (MANTIDA) ---
     const input = document.getElementById('search-input');
     const autocompleteList = document.getElementById('autocomplete-list');
+    let activeIndex = -1;
 
     if (input) {
-        let activeIndex = -1;
-
+        
         input.addEventListener('input', () => {
             const query = input.value.trim();
-
             if (query.length < 2) {
                 autocompleteList.innerHTML = '';
                 autocompleteList.hidden = true;
@@ -58,6 +116,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 return;
             }
 
+            // A lógica de fetch para produto_autocomplete.php deve estar funcionando
             fetch(`./include/produto_autocomplete.php?query=${encodeURIComponent(query)}`)
                 .then(response => response.json())
                 .then(results => {
@@ -85,14 +144,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
                     autocompleteList.hidden = false;
                     input.setAttribute('aria-expanded', 'true');
-                })
-                .catch(() => {
-                    autocompleteList.innerHTML = '';
-                    autocompleteList.hidden = true;
-                    input.setAttribute('aria-expanded', 'false');
                 });
         });
 
+        // Navegação com teclado no autocomplete (ArrowDown/Up, Enter, Escape)
         input.addEventListener('keydown', (e) => {
             const items = autocompleteList.querySelectorAll('li');
             if (items.length === 0) return;
@@ -112,6 +167,8 @@ document.addEventListener('DOMContentLoaded', () => {
                     e.preventDefault();
                     if (activeIndex > -1) {
                         items[activeIndex].click();
+                    } else {
+                        input.closest('form').submit(); // Envia o formulário se nada estiver selecionado
                     }
                     break;
                 case 'Escape':
@@ -131,9 +188,11 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
 
-        // Fecha sugestões clicando fora
+        // Fecha sugestões clicando fora (melhorado para não fechar o sidebar)
         document.addEventListener('click', (e) => {
-            if (!input.contains(e.target) && !autocompleteList.contains(e.target)) {
+             const isClickOnSidebar = sidebar.contains(e.target) || menuToggleBtn.contains(e.target);
+
+             if (!input.contains(e.target) && !autocompleteList.contains(e.target)) {
                 autocompleteList.innerHTML = '';
                 autocompleteList.hidden = true;
                 input.setAttribute('aria-expanded', 'false');

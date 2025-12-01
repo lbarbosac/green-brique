@@ -37,7 +37,7 @@ body {
     background-color: var(--fundo-principal);
     color: var(--texto-principal);
     line-height: 1.6;
-    overflow: hidden; /* Prevent scrolling on the entire page */
+    overflow: hidden;
 }
 
 .scrollable-filters {
@@ -45,7 +45,7 @@ body {
     position: fixed;
     top: 0;
     left: 0;
-    
+    color: #4A7C4A;
     padding: 1.5rem;
     height: 100vh;
     margin-top: 65px;
@@ -59,11 +59,10 @@ body {
 .nav-title {
     font-size: 1.5rem;
     font-weight: 700;
-    margin-bottom: 1.5rem;
-    display: flex;
-    align-items: center;
-    gap: 0.6rem;
+    margin-bottom: 1rem;
+    color: var(--verde-escuro);
 }
+
 
 .container-categorias {
     list-style: none;
@@ -96,11 +95,23 @@ body {
     font-family: 'Montserrat', sans-serif;
     display: flex;
     align-items: center;
+    text-align: center;
+    justify-content: center;
     gap: 8px;
     cursor: pointer;
     border-radius: 6px;
     padding: 6px 8px;
     transition: background-color 0.3s ease;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+#opcao-todos-produtos {
+    padding: 0;
+    margin: 0;
+    font-size: 1.1rem;
+    font-weight: 600;
 }
 
 .categoria-button:hover,
@@ -315,13 +326,6 @@ main {
     margin-bottom: 1rem;
 }
 
-.nav-title {
-    font-size: 1.2rem;
-    font-weight: 700;
-    margin-bottom: 1rem;
-    color: var(--texto-principal);
-}
-
 #container-filtros {
     list-style: none;
     padding: 0;
@@ -369,7 +373,6 @@ main {
 }
 
 .container-produto {
-
     width: calc(25% - 2.5rem);
     background-color: var(--fundo-card);
     border-radius: 12px;
@@ -385,7 +388,6 @@ main {
     transform: translateY(-6px);
     box-shadow: 0 7px 18px var(--verde-medio);
     outline: none;
-    width: calc(25% - 2rem);
     background-color: var(--fundo-card);
     border-radius: 6px;
     text-decoration: none;
