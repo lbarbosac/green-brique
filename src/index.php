@@ -69,10 +69,11 @@ $retorno = mysqli_query($conn, $sql);
     <aside class="scrollable-filters" role="navigation" aria-label="Filtros de Categorias e Subcategorias">
         <h2 class="nav-title"><i class="fas fa-filter" aria-hidden="true"></i> Filtros</h2>
         <ul class="container-categorias" role="list">
-            <!-- Todos os Produtos, ícone destacado -->
-            <li class="categoria-item todos-produtos">
+            <li class="categoria-item todos-produtos"  id="container-opc-tds-produtos">
                 <a href="./index.php" class="categoria-button" aria-current="<?php echo (!$cat_id_filter && !$subcat_id_filter) ? 'page' : 'false'; ?>">
-                    <i class="fas fa-box-open" aria-hidden="true"></i> Todos os Produtos
+                    <p id="opcao-todos-produtos">
+                        Todos os Produtos
+                    </p>
                 </a>
             </li>
 
