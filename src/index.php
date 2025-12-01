@@ -112,7 +112,7 @@ $retorno = mysqli_query($conn, $sql);
         <h1 class="search-title"><?php echo $title; ?></h1>
 
         <div class="search-bar-container geral-search" role="search" aria-label="Busca geral de produtos">
-            <form action="./page-produtos.php" method="get">
+            <form action="./index.php" method="get">
                 <input type="text" id="search-input" name="query" placeholder="Buscar produtos..." autocomplete="off" aria-autocomplete="list" aria-controls="autocomplete-list" aria-haspopup="listbox" aria-expanded="false" value="<?php echo htmlspecialchars($search_query); ?>" />
                 <ul id="autocomplete-list" role="listbox" aria-label="Sugestões de produtos" hidden></ul>
             </form>
