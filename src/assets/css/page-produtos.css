@@ -529,3 +529,7 @@ main {
         width: 100%;
     }
 }
+
+.search-title{
+    margin-top: 0;
+}
