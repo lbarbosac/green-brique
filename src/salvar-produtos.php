@@ -1,17 +1,8 @@
 <?php 
-session_start(); // OBRIGATÓRIO para acessar o ID do usuário logado
 
 require_once './include/conn.php';
-require_once './include/head.php'; // Assumindo que este arquivo existe e é necessário
+require_once './include/head.php'; 
 
-// 🚨 Captura o ID do comerciante logado e força a inicialização
-$comerciante_id = $_SESSION['ComercianteID'] ?? 0;
-
-// Validação de segurança básica: Redireciona se o comerciante não estiver logado
-if ($comerciante_id === 0) {
-    header('Location: login.php'); // Ajuste para a sua página de login
-    exit();
-}
 
 $nome = '';
 $preco = '';

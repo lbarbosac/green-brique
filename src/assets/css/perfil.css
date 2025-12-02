@@ -278,3 +278,21 @@ td:last-child {
     background-color: #af6012;
     transform: translateY(-2px);
 }
+
+header {
+    height: 80px; /* Altura fixa para padronizar */
+    padding: 0 2rem; /* Ajuste do padding para evitar inconsistências */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    font-family: 'Lato', sans-serif;
+    color: var(--texto-invertido);
+    background-color: var(--verde-escuro);
+}

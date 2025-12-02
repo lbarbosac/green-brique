@@ -23,7 +23,7 @@
                 <div class="bloco-texto">
                     <h1 id="apresentacao-titulo" class="titulo-secao">Green Brique</h1>
                     <p>Green Brique é uma iniciativa desenvolvida por alunos do ensino médio que oferece produtos sustentáveis para ajudar a cuidar do meio ambiente, promovendo um estilo de vida mais consciente e ecológico. O <strong>Brique</strong> no nome significa uma gíria que significa vendas ou troca, utilizada no Rio Grande do Sul.</p>
-                    <a href="#equipe" class="botao botao-primario" role="button">Conheça a Equipe <i class="fas fa-arrow-down micro-animacao"></i></a>
+                    <button href="#equipe" class="botao botao-primario" role="button">Conheça a Equipe <i class="fas fa-arrow-down micro-animacao"></i></button>
                 </div>
                 <div class="bloco-imagem">
                     <div class="imagem-principal" role="img" aria-label="Foto da equipe Green Brique em formato orgânico">
@@ -68,38 +68,98 @@
 
             <div class="container-integrante">
                 <img class="img-integrantes" src="https://avatars.githubusercontent.com/u/178475000?v=4" alt="">
-                <h3 class="tittle-integrantes">Eduardo Avila</h3>
-                <p class="paragraph-integrantes"><strong>Linkedin:</strong> asdasdasdas</p>
+                <h3 class="tittle-integrantes">Eduardo Ávila</h3>
+                <div class="container-logos">
+                <a href="">
+                        <i class="fa-brands fa-square-instagram fa-2xl"></i>
+                    </a>
+                    <a href="">
+                        <i class="fa-brands fa-linkedin fa-2xl"></i>
+                    </a>
+                    <a href="">
+                        <i class="fa-brands fa-square-facebook fa-2xl"></i>
+                    </a>
+                </div>
             </div>
 
             <div class="container-integrante">
                 <img class="img-integrantes" src="" alt="">
                 <h3 class="tittle-integrantes">Nicolas Hara</h3>
-                <p class="paragraph-integrantes"><strong>Linkedin:</strong> asdasdasdas</p>
+                <div class="container-logos">
+                    <a href="">
+                        <i class="fa-brands fa-square-instagram fa-2xl"></i>
+                    </a>
+                    <a href="">
+                        <i class="fa-brands fa-linkedin fa-2xl"></i>
+                    </a>
+                    <a href="">
+                        <i class="fa-brands fa-square-facebook fa-2xl"></i>
+                    </a>
+                </div>
             </div>
 
             <div class="container-integrante">
                 <img class="img-integrantes" src="https://avatars.githubusercontent.com/u/178474865?v=4" alt="">
                 <h3 class="tittle-integrantes">Lucas Barbosa</h3>
-                <p class="paragraph-integrantes"><strong>Linkedin:</strong> asdasdasdas</p>
+                <div class="container-logos">
+                <a href="">
+                        <i class="fa-brands fa-square-instagram fa-2xl"></i>
+                    </a>
+                    <a href="">
+                        <i class="fa-brands fa-linkedin fa-2xl"></i>
+                    </a>
+                    <a href="">
+                        <i class="fa-brands fa-square-facebook fa-2xl"></i>
+                    </a>
+                </div>
             </div>
 
             <div class="container-integrante">
                 <img class="img-integrantes" src="https://avatars.githubusercontent.com/u/178387402?v=4" alt="">
                 <h3 class="tittle-integrantes">Cassiano Ramos</h3>
-                <p class="paragraph-integrantes"><strong>Linkedin:</strong> asdasdasdas</p>
+                <div class="container-logos">
+                <a href="">
+                        <i class="fa-brands fa-square-instagram fa-2xl"></i>
+                    </a>
+                    <a href="">
+                        <i class="fa-brands fa-linkedin fa-2xl"></i>
+                    </a>
+                    <a href="">
+                        <i class="fa-brands fa-square-facebook fa-2xl"></i>
+                    </a>
+                </div>
             </div>
 
             <div class="container-integrante">
                 <img class="img-integrantes" src="https://avatars.githubusercontent.com/u/5431806?v=4" alt="">
                 <h3 class="tittle-integrantes">Sandro Martins</h3>
-                <p class="paragraph-integrantes"><strong>Linkedin:</strong> asdasdasdas</p>
+                <div class="container-logos">
+                <a href="">
+                        <i class="fa-brands fa-square-instagram fa-2xl"></i>
+                    </a>
+                    <a href="">
+                        <i class="fa-brands fa-linkedin fa-2xl"></i>
+                    </a>
+                    <a href="">
+                        <i class="fa-brands fa-square-facebook fa-2xl"></i>
+                    </a>
+                </div>
             </div>
 
             <div class="container-integrante">
                 <img class="img-integrantes" src="https://media.licdn.com/dms/image/v2/C4D03AQFM3zToSB5okA/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1518147550912?e=1764806400&v=beta&t=oeRAHxAvgcyrt2r0-LGN4keafG1iFdhqeDapOrSIKOA" alt="">
                 <h3 class="tittle-integrantes">Willian Campos</h3>
-                <p class="paragraph-integrantes"><strong>Linkedin:</strong> asdasdasdas</p>
+                <div class="container-logos">
+                <a href="">
+                        <i class="fa-brands fa-square-instagram fa-2xl"></i>
+                    </a>
+                    <a href="">
+                        <i class="fa-brands fa-linkedin fa-2xl"></i>
+                    </a>
+                    <a href="">
+                        <i class="fa-brands fa-square-facebook fa-2xl"></i>
+                    </a>
+                </div>
             </div>
 
         </div>

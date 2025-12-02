@@ -35,6 +35,23 @@ body {
     background-color: var(--cor-fundo-claro);
 }
 
+header {
+    height: 80px; /* Altura fixa para padronizar */
+    padding: 0 2rem; /* Ajuste do padding para evitar inconsistências */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    font-family: 'Lato', sans-serif;
+    color: var(--texto-invertido);
+    background-color: var(--verde-escuro);
+}
 
 .titulo-secao {
     font-family: var(--fonte-titulo);
@@ -55,8 +72,13 @@ p strong {
 
 a {
     text-decoration: none;
-    color: var(--cor-primaria);
-    transition: color var(--velocidade-transicao), transform var(--velocidade-transicao), box-shadow var(--velocidade-transicao);
+    color: rgb(22, 23, 24);
+}
+.container-logos{
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+    margin-top: 0.8rem;
 }
 menu {
     text-align: center;
