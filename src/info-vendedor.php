@@ -1,6 +1,5 @@
 <?php
 // Arquivo: info-vendedor.php
-
 require_once './include/conn.php';
 // ATENÇÃO: Se seu head.php contém APENAS funções PHP/variáveis, mantenha este require.
 // Se seu head.php contém as tags HTML <head> e <body>, remova-o daqui e use as tags HTML abaixo.
@@ -20,7 +19,7 @@ if (isset($_GET['id']) && is_numeric($_GET['id'])) {
 // Verifica se o ID é válido e tenta buscar
 if ($comerciante_id > 0) {
 
-    $sql = "SELECT ComercianteID, Nome, Telefone, Cidade, Estado 
+    $sql = "SELECT ComercianteID, Nome, Telefone, Cidade, Estado, Cnpj
             FROM comerciantes 
             WHERE ComercianteID = " . $comerciante_id;
 
@@ -34,6 +33,7 @@ if ($comerciante_id > 0) {
         $tel_comerciante = htmlspecialchars($comerciante['Telefone']);
         $cidade_comerciante = htmlspecialchars($comerciante['Cidade']);
         $estado_comerciante = htmlspecialchars($comerciante['Estado']);
+        $cnpj_comerciante = htmlspecialchars($comerciante['Cnpj']);
     } else {
         // Vendedor não encontrado no banco de dados
         $titulo_pagina = "Vendedor não encontrado";
@@ -62,9 +62,11 @@ if ($comerciante_id > 0) {
         <section class="card-vendedor">
             <h1 class="nome-vendedor"><?php echo $nome_comerciante; ?></h1>
 
-            <?php 
-            // Só exibe os detalhes se o vendedor foi encontrado
-            if ($comerciante_id > 0 && $nome_comerciante != "Acesso inválido" && $nome_comerciante != "Vendedor não encontrado"): 
+            <?php
+                if (!empty($cnpj_comerciante)) {
+                    echo "<p class='linha-info'><span class='label'>CNPJ:</span> <span class='valor'>{$cnpj_comerciante}</span></p>";
+                }
+            if ($comerciante_id > 0 && $nome_comerciante != "Acesso inválido" && $nome_comerciante != "Vendedor não encontrado"):
             ?>
                 <p class="linha-info">
                     <span class="label">Telefone:</span>
