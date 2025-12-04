@@ -70,13 +70,13 @@
                 <img class="img-integrantes" src="https://avatars.githubusercontent.com/u/178475000?v=4" alt="">
                 <h3 class="tittle-integrantes">Eduardo Ávila</h3>
                 <div class="container-logos">
-                <a href="">
+                <a href="https://www.instagram.com/avilazdudu/" target="_blank">
                         <i class="fa-brands fa-square-instagram fa-2xl"></i>
                     </a>
-                    <a href="">
+                    <a href="https://www.linkedin.com/in/avilazduduu/" target="_blank">
                         <i class="fa-brands fa-linkedin fa-2xl"></i>
                     </a>
-                    <a href="">
+                    <a href="https://github.com/avilazdudu" target="_blank">
                         <i class="fa-brands fa-square-github fa-2xl"></i>
                     </a>
                 </div>
@@ -86,13 +86,13 @@
                 <img class="img-integrantes" src="./uploads/japa.jfif" alt="">
                 <h3 class="tittle-integrantes">Nicolas Hara</h3>
                 <div class="container-logos">
-                    <a href="">
+                    <a href="https://www.instagram.com/nicolashhara/" target="_blank">
                         <i class="fa-brands fa-square-instagram fa-2xl"></i>
                     </a>
-                    <a href="">
+                    <a href="https://github.com/NicolasHHara" target="_blank">
                         <i class="fa-brands fa-linkedin fa-2xl"></i>
                     </a>
-                    <a href="">
+                    <a href="https://www.linkedin.com/in/nicolas-hara-302733344/" target="_blank">
                         <i class="fa-brands fa-square-github fa-2xl"></i>
                     </a>
                 </div>
@@ -102,13 +102,13 @@
                 <img class="img-integrantes" src="https://avatars.githubusercontent.com/u/178474865?v=4" alt="">
                 <h3 class="tittle-integrantes">Lucas Barbosa</h3>
                 <div class="container-logos">
-                <a href="">
+                <a href="https://www.instagram.com/llbarbosac/" target="_blank">
                         <i class="fa-brands fa-square-instagram fa-2xl"></i>
                     </a>
-                    <a href="">
+                    <a href="http://linkedin.com/in/lbarbosac/" target="_blank">
                         <i class="fa-brands fa-linkedin fa-2xl"></i>
                     </a>
-                    <a href="">
+                    <a href="https://github.com/lbarbosac" target="_blank">
                         <i class="fa-brands fa-square-github fa-2xl"></i>
                     </a>
                 </div>
@@ -118,13 +118,13 @@
                 <img class="img-integrantes" src="https://avatars.githubusercontent.com/u/178387402?v=4" alt="">
                 <h3 class="tittle-integrantes">Cassiano Ramos</h3>
                 <div class="container-logos">
-                <a href="">
+                <a href="https://www.instagram.com/ramxsqy/" target="_blank">
                         <i class="fa-brands fa-square-instagram fa-2xl"></i>
                     </a>
-                    <a href="">
+                    <a href="https://www.linkedin.com/in/cassiano-ramos-252a19343/" target="_blank">
                         <i class="fa-brands fa-linkedin fa-2xl"></i>
                     </a>
-                    <a href="">
+                    <a href="https://github.com/ramxsprince" target="_blank">
                         <i class="fa-brands fa-square-github fa-2xl"></i>
                     </a>
                 </div>
@@ -134,13 +134,13 @@
                 <img class="img-integrantes" src="https://avatars.githubusercontent.com/u/5431806?v=4" alt="">
                 <h3 class="tittle-integrantes">Sandro Martins</h3>
                 <div class="container-logos">
-                <a href="">
+                <a href="https://www.instagram.com/eisandromc/" target="_blank">
                         <i class="fa-brands fa-square-instagram fa-2xl"></i>
                     </a>
-                    <a href="">
+                    <a href="https://www.linkedin.com/in/eisandromc/" target="_blank">
                         <i class="fa-brands fa-linkedin fa-2xl"></i>
                     </a>
-                    <a href="">
+                    <a href="https://github.com/eisandromc" target="_blank">
                         <i class="fa-brands fa-square-github fa-2xl"></i>
                     </a>
                 </div>
@@ -150,13 +150,13 @@
                 <img class="img-integrantes" src="https://media.licdn.com/dms/image/v2/C4D03AQFM3zToSB5okA/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1518147550912?e=1766620800&v=beta&t=0oLFyPeYBE9nKtBVEaGTfJz3g3imh6rDo_whxYmgL_s" alt="">
                 <h3 class="tittle-integrantes">Willian Campos</h3>
                 <div class="container-logos">
-                <a href="">
+                <a href="https://www.instagram.com/willian0113/" target="_blank">
                         <i class="fa-brands fa-square-instagram fa-2xl"></i>
                     </a>
-                    <a href="">
+                    <a href="https://www.linkedin.com/in/willian-de-campos-vieira-6331b292/" target="_blank">
                         <i class="fa-brands fa-linkedin fa-2xl"></i>
                     </a>
-                    <a href="">
+                    <a href="#">
                         <i class="fa-brands fa-square-facebook fa-2xl"></i>
                     </a>
                 </div>

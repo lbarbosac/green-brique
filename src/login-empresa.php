@@ -28,7 +28,7 @@
                 </div>
             </div>
             <button type="submit">Logar</button>
-            <a href="./cadastro-empresa.php">Não tem cadastro?</a>
+            <a href="./cadastro-empresa.php" id="link-cad">Não tem cadastro?</a>
         </form>
     </main>
     <script src="./assets/js/pagina-login-comerciante.js"></script>
