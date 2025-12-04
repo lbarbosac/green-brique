@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 01/12/2025 às 14:48
+-- Tempo de geração: 04/12/2025 às 13:01
 -- Versão do servidor: 10.4.32-MariaDB
 -- Versão do PHP: 8.0.30
 
@@ -78,17 +78,18 @@ CREATE TABLE `comerciantes` (
   `Senha` varchar(255) NOT NULL,
   `Telefone` text NOT NULL,
   `Cidade` varchar(255) NOT NULL,
-  `Estado` varchar(255) NOT NULL
+  `Estado` varchar(255) NOT NULL,
+  `Cnpj` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Despejando dados para a tabela `comerciantes`
 --
 
-INSERT INTO `comerciantes` (`ComercianteID`, `Nome`, `Senha`, `Telefone`, `Cidade`, `Estado`) VALUES
-(1, 'avilazdudu', '$2y$10$KfD5ox9.XVjzac4Sq5hTgOy5wbsepFznqzVePo6EhIccptfFncudy', '51992774490', 'Porto Alegre', 'Rio Grande do Sul'),
-(2, 'miguelraba', '$2y$10$p3BpINJi.Drv57aaqSWCp.FsVIUmZhoFkMYy7xSz5d8LC3YZPjeA2', '51989274040', 'Canoas', 'Rio Grande do Sul'),
-(3, 'cassiano_ramos', '$2y$10$9AfWA5EyIgyiOd56b.RBUe3INtFm9phXReNBxxlyO4OkMi4/9ry.C', '54909274390', 'Porto Alegre', 'Rio Grande do Sul');
+INSERT INTO `comerciantes` (`ComercianteID`, `Nome`, `Senha`, `Telefone`, `Cidade`, `Estado`, `Cnpj`) VALUES
+(1, 'avilazdudu', '$2y$10$KfD5ox9.XVjzac4Sq5hTgOy5wbsepFznqzVePo6EhIccptfFncudy', '51992774490', 'Porto Alegre', 'Rio Grande do Sul', 1),
+(2, 'miguelraba', '$2y$10$p3BpINJi.Drv57aaqSWCp.FsVIUmZhoFkMYy7xSz5d8LC3YZPjeA2', '51989274040', 'Canoas', 'Rio Grande do Sul', 0),
+(3, 'cassiano_ramos', '$2y$10$9AfWA5EyIgyiOd56b.RBUe3INtFm9phXReNBxxlyO4OkMi4/9ry.C', '54909274390', 'Porto Alegre', 'Rio Grande do Sul', 0);
 
 -- --------------------------------------------------------
 

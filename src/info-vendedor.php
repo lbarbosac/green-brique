@@ -64,7 +64,7 @@ if ($comerciante_id > 0) {
 
             <?php
                 if (!empty($cnpj_comerciante)) {
-                    echo "<p class='linha-info'><span class='label'>CNPJ:</span> <span class='valor'>{$cnpj_comerciante}</span></p>";
+                    echo "<p class='linha-info'><span class='label'>CNPJ:</span> <span class='valor'>mamacp</span></p>";
                 }
             if ($comerciante_id > 0 && $nome_comerciante != "Acesso inválido" && $nome_comerciante != "Vendedor não encontrado"):
             ?>
