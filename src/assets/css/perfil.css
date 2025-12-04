@@ -6,7 +6,7 @@
 }
 :root {
     /* Tons de base - fundos brancos e beges suaves para leveza */
-    --fundo-principal: #F6F4EF;        /* Bege muito claro para fundo da página */
+    --fundo-principal: #F5F1E9;        /* Bege muito claro para fundo da página */
     --fundo-card: #FFFFFF;             /* Cartões/áreas de conteúdo em branco puro */
     --border: #D9D6CF;                /* Bordas e separadores, tom neutro suave */
     --shadow: rgba(0, 0, 0, 0.08);    /* Sombras suaves para profundidade */

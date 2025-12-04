@@ -16,6 +16,7 @@
         <div class="logo-container">
             <a href="./index.php" id="link-para-home">
                 <img src="./img/logo-branco.png" alt="" id="logo">
+                <span>Green Brique</span>
             </a>
         </div>
         <nav id="menu" >

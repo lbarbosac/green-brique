@@ -77,13 +77,13 @@
                         <i class="fa-brands fa-linkedin fa-2xl"></i>
                     </a>
                     <a href="">
-                        <i class="fa-brands fa-square-facebook fa-2xl"></i>
+                        <i class="fa-brands fa-square-github fa-2xl"></i>
                     </a>
                 </div>
             </div>
 
             <div class="container-integrante">
-                <img class="img-integrantes" src="" alt="">
+                <img class="img-integrantes" src="./uploads/japa.jfif" alt="">
                 <h3 class="tittle-integrantes">Nicolas Hara</h3>
                 <div class="container-logos">
                     <a href="">
@@ -93,7 +93,7 @@
                         <i class="fa-brands fa-linkedin fa-2xl"></i>
                     </a>
                     <a href="">
-                        <i class="fa-brands fa-square-facebook fa-2xl"></i>
+                        <i class="fa-brands fa-square-github fa-2xl"></i>
                     </a>
                 </div>
             </div>
@@ -109,7 +109,7 @@
                         <i class="fa-brands fa-linkedin fa-2xl"></i>
                     </a>
                     <a href="">
-                        <i class="fa-brands fa-square-facebook fa-2xl"></i>
+                        <i class="fa-brands fa-square-github fa-2xl"></i>
                     </a>
                 </div>
             </div>
@@ -125,7 +125,7 @@
                         <i class="fa-brands fa-linkedin fa-2xl"></i>
                     </a>
                     <a href="">
-                        <i class="fa-brands fa-square-facebook fa-2xl"></i>
+                        <i class="fa-brands fa-square-github fa-2xl"></i>
                     </a>
                 </div>
             </div>
@@ -141,7 +141,7 @@
                         <i class="fa-brands fa-linkedin fa-2xl"></i>
                     </a>
                     <a href="">
-                        <i class="fa-brands fa-square-facebook fa-2xl"></i>
+                        <i class="fa-brands fa-square-github fa-2xl"></i>
                     </a>
                 </div>
             </div>

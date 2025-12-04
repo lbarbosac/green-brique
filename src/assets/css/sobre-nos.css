@@ -24,33 +24,11 @@
     box-sizing: border-box;
 }
 
-html {
-    scroll-behavior: smooth;
-}
-
 body {
     font-family: var(--fonte-corpo);
     color: var(--cor-texto-escuro);
     line-height: 1.6;
-    background-color: var(--cor-fundo-claro);
-}
-
-header {
-    height: 80px; /* Altura fixa para padronizar */
-    padding: 0 2rem; /* Ajuste do padding para evitar inconsistências */
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 50px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
-    font-family: 'Lato', sans-serif;
-    color: var(--texto-invertido);
-    background-color: var(--verde-escuro);
+    background-color: #F5F1E9;
 }
 
 .titulo-secao {
