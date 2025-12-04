@@ -106,7 +106,7 @@ if ($produto_id > 0) {
                 </button>
             </div>
             <div id="chats">  
-                <p class="vendedor-por">Vendido por: **<?php echo $nomeVendedor; ?>**</p>
+                <p class="vendedor-por">Vendido por: <strong><?php echo $nomeVendedor; ?></strong></p>
             </div>
             <button id="botao-chat" class="btn-chamar-vendedor"
                     data-produto-id="<?php echo $produto_id; ?>">

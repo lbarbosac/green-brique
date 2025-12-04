@@ -232,6 +232,7 @@ menu {
     display: flex;
     align-items: center;
     gap: var(--espaco-grande);
+    justify-content: center;
     text-align: left;
 }
 
