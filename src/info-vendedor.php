@@ -19,7 +19,7 @@ if (isset($_GET['id']) && is_numeric($_GET['id'])) {
 // Verifica se o ID é válido e tenta buscar
 if ($comerciante_id > 0) {
 
-    $sql = "SELECT ComercianteID, Nome, Telefone, Cidade, Estado, Cnpj
+    $sql = "SELECT ComercianteID, Nome, Telefone, Cidade, Estado, Cnpj, ImagemPerfil, Email, IframeLocal
             FROM comerciantes 
             WHERE ComercianteID = " . $comerciante_id;
 
@@ -34,6 +34,11 @@ if ($comerciante_id > 0) {
         $cidade_comerciante = htmlspecialchars($comerciante['Cidade']);
         $estado_comerciante = htmlspecialchars($comerciante['Estado']);
         $cnpj_comerciante = htmlspecialchars($comerciante['Cnpj']);
+        $imagemPerfil_comerciante = htmlspecialchars($comerciante['ImagemPerfil']);
+        $email_comerciante = htmlspecialchars($comerciante['Email']);
+        $iframeLocal_comerciante = htmlspecialchars($comerciante['IframeLocal']);
+
+
     } else {
         // Vendedor não encontrado no banco de dados
         $titulo_pagina = "Vendedor não encontrado";
@@ -52,44 +57,72 @@ if ($comerciante_id > 0) {
     <link rel="stylesheet" href="./assets/css/info-vendedor.css?v=<?php echo date('YmdHis'); ?>">
 </head>
 <body>
-    <?php 
-    // 🚨 INCLUSÃO DO HEADER: Use o caminho correto para o seu menu (header.php)
-    // Se seu header.php estiver em include, use:
-    // require_once './include/header.php'; 
-    ?> 
-
     <main class="container-vendedor">
         <section class="card-vendedor">
             <h1 class="nome-vendedor"><?php echo $nome_comerciante; ?></h1>
-
-            <?php
-                if (!empty($cnpj_comerciante)) {
-                    echo "<p class='linha-info'><span class='label'>CNPJ:</span> <span class='valor'>mamacp</span></p>";
-                }
-            if ($comerciante_id > 0 && $nome_comerciante != "Acesso inválido" && $nome_comerciante != "Vendedor não encontrado"):
-            ?>
+            <?php 
+            if($cnpj_comerciante == 1){
+                echo '<div>
+                    <img src="'.$imagemPerfil_comerciante.'" alt="Foto de perfil do vendedor" class="foto-perfil-vendedor">
+                </div>
                 <p class="linha-info">
                     <span class="label">Telefone:</span>
-                    <a href="tel:<?php echo $tel_comerciante; ?>" class="valor-link">
-                        <?php echo $tel_comerciante; ?>
+                    <a href="tel:'.$tel_comerciante.'" class="valor-link">
+                         '. $tel_comerciante.'
                     </a>
                 </p>
 
                 <p class="linha-info">
-                    <span class="label">Localização:</span>
-                    <span class="valor">
-                        <?php echo $cidade_comerciante . " - " . $estado_comerciante; ?>
-                    </span>
+                    <span class="label">Email:</span>
+                    <a href="tel:'.$email_comerciante.'" class="valor-link">
+                        '.$tel_comerciante.'
+                    </a>
+                </p>
+
+                <p class="linha-info">
+                    <iframe src="'.$iframeLocal_comerciante.'" frameborder="0"></iframe>
                 </p>
 
                 <p class="texto-ajuda">
                     Entre em contato com o vendedor para combinar retirada, entrega ou tirar dúvidas sobre o produto.
                 </p>
-            <?php endif; ?>
+                
+                <a href="javascript:history.back()" class="btn-voltar">
+                    Voltar para o produto
+                </a>';
+            }
+            
+            else{
+                echo '<div>
+                    <img src="'.$imagemPerfil_comerciante.'" alt="Foto de perfil do vendedor" class="foto-perfil-vendedor">
+                </div>
+                <p class="linha-info">
+                    <span class="label">Telefone:</span>
+                    <a href="tel:'.$tel_comerciante.'" class="valor-link">
+                         '. $tel_comerciante.'
+                    </a>
+                </p>
 
-            <a href="javascript:history.back()" class="btn-voltar">
-                Voltar para o produto
-            </a>
+                <p class="linha-info">
+                    <span class="label">Email:</span>
+                    <a href="tel:'.$email_comerciante.'" class="valor-link">
+                        '.$email_comerciante.'
+                    </a>
+                </p>
+
+                <p class="linha-info">
+                    <span class="label">Localização:</span>
+                    <a href="">'.$estado_comerciante.'/ '. $cidade_comerciante.'</a>
+                </p>
+
+                <p class="texto-ajuda">
+                    Entre em contato com o vendedor para combinar retirada, entrega ou tirar dúvidas sobre o produto.
+                </p>
+                
+                <a href="javascript:history.back()" class="btn-voltar">
+                    Voltar para o produto
+                </a>';
+            }?>
         </section>
     </main>
 
