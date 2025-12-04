@@ -147,7 +147,7 @@
             </div>
 
             <div class="container-integrante">
-                <img class="img-integrantes" src="https://media.licdn.com/dms/image/v2/C4D03AQFM3zToSB5okA/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1518147550912?e=1764806400&v=beta&t=oeRAHxAvgcyrt2r0-LGN4keafG1iFdhqeDapOrSIKOA" alt="">
+                <img class="img-integrantes" src="https://media.licdn.com/dms/image/v2/C4D03AQFM3zToSB5okA/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1518147550912?e=1766620800&v=beta&t=0oLFyPeYBE9nKtBVEaGTfJz3g3imh6rDo_whxYmgL_s" alt="">
                 <h3 class="tittle-integrantes">Willian Campos</h3>
                 <div class="container-logos">
                 <a href="">

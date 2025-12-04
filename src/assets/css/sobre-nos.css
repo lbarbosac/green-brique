@@ -279,6 +279,7 @@ menu {
     width: 100%;
     padding-bottom: 100%;
     background-color: var(--cor-placeholder);
+    background-image: url(https://i.pinimg.com/736x/fe/b3/97/feb397034db4b7f451236187e4123c19.jpg);
     background-size: cover;
     background-position: center;
     box-shadow: var(--sombra-suave);
