@@ -18,7 +18,7 @@
         <form action="./act/empresa-login.php" method="post">
             <h2 id="form-title"><strong>Login</strong></h2>
             <div class="div-label">
-                <label for="nome_user">Nome da Empresa</label>
+                <label for="nome_user">Nome do Usuario</label>
                 <div class="input-box">
                     <input class="texto-input" type="text" placeholder="Ex: miguelnaiba" name="nome_user" required>
                 </div>
