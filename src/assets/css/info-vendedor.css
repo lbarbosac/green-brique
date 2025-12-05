@@ -38,12 +38,17 @@ body {
     max-width: 480px;
     width: 100%;
     padding: 1.8rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .nome-vendedor {
     font-size: 1.8rem;
     color: var(--verde-escuro);
     margin-bottom: 1rem;
+    
+    
 }
 
 .linha-info {
@@ -81,6 +86,8 @@ body {
     font-size: 0.95rem;
     line-height: 1.5;
     color: #555;
+    display: flex;
+    text-align: center;
 }
 
 .btn-voltar {
@@ -113,4 +120,13 @@ body {
     .nome-vendedor {
         font-size: 1.5rem;
     }
+}
+
+
+.foto-perfil-vendedor{
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
 }

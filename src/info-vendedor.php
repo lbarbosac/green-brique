@@ -57,9 +57,14 @@ if ($comerciante_id > 0) {
     <link rel="stylesheet" href="./assets/css/info-vendedor.css?v=<?php echo date('YmdHis'); ?>">
 </head>
 <body>
+    <?php
+        include_once './include/conn.php';
+        include_once './include/head.php';
+    ?>
     <main class="container-vendedor">
         <section class="card-vendedor">
-            <h1 class="nome-vendedor"><?php echo $nome_comerciante; ?></h1>
+            <h1 class="nome-vendedor"><strong> Informações do vendedor:</strong></h1>
+            <h2 class="nome-vendedor"><?php echo $nome_comerciante; ?></h2>
             <?php 
             if($cnpj_comerciante == 1){
                 echo '<div>
