@@ -15,7 +15,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         if (password_verify($senha, $comerciante['Senha'])) {
             $_SESSION['logado'] = true;
             $_SESSION['CnpjID'] = $comerciante['CnpjID']; // Store CnpjID in the session
-            header("Location: ../perfil-empresa-visualizacao.php");
+            header("Location: ../perfil.php");
             exit();
         } else {
             echo "Senha incorreta.";
