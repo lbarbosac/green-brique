@@ -22,7 +22,7 @@
             <div class="envoltura-conteudo">
                 <div class="bloco-texto">
                     <h1 id="apresentacao-titulo" class="titulo-secao">Green Brique</h1>
-                    <p>Green Brique é uma iniciativa desenvolvida por alunos do ensino médio que oferece produtos sustentáveis para ajudar a cuidar do meio ambiente, promovendo um estilo de vida mais consciente e ecológico. O <strong>Brique</strong> no nome significa uma gíria que significa vendas ou troca, utilizada no Rio Grande do Sul.</p>
+                    <p> <strong> Green Brique </strong> é uma iniciativa criada por estudantes do ensino médio que oferece produtos sustentáveis e incentiva hábitos mais conscientes para cuidar do meio ambiente. O nome <strong> Brique</strong>, refere-se a uma gíria gaúcha para venda ou troca, reflete a proposta de consumo responsável e acessível da marca.</p>
                     <button href="#equipe" class="botao botao-primario" role="button">Conheça a Equipe <i class="fas fa-arrow-down micro-animacao"></i></button>
                 </div>
                 <div class="bloco-imagem">
