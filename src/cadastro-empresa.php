@@ -47,45 +47,58 @@
             </div>
 
             <div class="div-label">
-                <label for="confirmar-senha-empresa" class="form-label">CNPJ?</label>
-                <div class ="input-box">
-                    <input type="text" placeholder="Sua opção aqui" list="opcoes-do-usuario">
+                <label for="tem-cnpj">CNPJ?</label>
+                    <div class="input-box">
+                        <input id="tem-cnpj" type="text" placeholder="Sua opção aqui" list="opcoes-do-usuario">
                         <datalist id="opcoes-do-usuario">
                             <option value="Nao"></option>
                             <option value="Sim"></option>
-                        </datalist>     
-                </div>
+                        </datalist>
+                    </div>
             </div>
 
-            <div class="div-label">
-                <label for="endereco-empresa" class="form-label">Endereço Comercial</label>
-                <div class ="input-box">
-                    <input id="endereco-empresa" class="form-input" type="text" name="endereco-empresa" placeholder="Endereço Comercial" required>
+            <!-- CAMPOS DE CNPJ (ficam escondidos no início) -->
+            <div id="campos-cnpj" style="display: none;">
+                <div class="div-label">
+                    <label for="endereco-empresa">Endereço Comercial</label>
+                    <div class="input-box">
+                        <input id="endereco-empresa" class="form-input" type="text" name="endereco-empresa" placeholder="Endereço Comercial">
+                    </div>
                 </div>
-            </div>
 
-            <div class="div-label">
-                <label for="cep-empresa" class="form-label">CEP</label>
-                <div class ="input-box">
-                    <input id="cep-empresa" class="form-input" type="text" name="cep-empresa" placeholder="CEP" required>
+                <div class="div-label">
+                    <label for="cep-empresa">Iframe Maps</label>
+                    <div class="input-box">
+                        <input id="cep-empresa" class="form-input" type="text" name="cep-empresa" placeholder="Iframe Maps">
+                    </div>
                 </div>
             </div>
 
             <div class="div-label">
                 <label for="senha-empresa" class="form-label">Senha</label>
                 <div class ="input-box">
-                    <input id="senha-empresa" class="form-input" type="password" name="senha-empresa" placeholder="Senha" required>
-                </div>
-            </div>
-        
-            <div class="div-label">
-                <label for="confirmar-senha-empresa" class="form-label">Confirmar Senha</label>
-                <div class ="input-box">
-                    <input id="confirmar-senha-empresa" class="form-input" type="password" name="confirmar-senha-empresa" placeholder="Confirmar Senha" required>
-                </div>
-            </div>
+                <input id="senha-empresa" class="form-input" type="password" name="senha-empresa" placeholder="Senha" required></div>
+            </div> 
 
+        <div class="div-label">
+            <label for="confirmar-senha-empresa" class="form-label">Confirmar Senha</label>
+            <div class ="input-box">
+                <input id="confirmar-senha-empresa" class="form-input" type="password" name="confirmar-senha-empresa" placeholder="Confirmar Senha" required>
+            </div>
+        </div>
 
+<script>
+    const cnpjInput = document.getElementById("tem-cnpj");
+    const camposCnpj = document.getElementById("campos-cnpj");
+
+    cnpjInput.addEventListener("input", () => {
+        if (cnpjInput.value === "Sim") {
+            camposCnpj.style.display = "block"; // mostra
+        } else {
+            camposCnpj.style.display = "none";  // esconde
+        }
+    });
+</script>
             
             <button id="submit-button" type="submit">Cadastrar Empresa</button>
     </form>
