@@ -94,6 +94,7 @@ input::placeholder{
 }
 label{
     color: var(--verde-medio);
+
     font-style: normal;
     line-height: normal;
     margin-bottom: 3px;
@@ -116,7 +117,7 @@ button{
     cursor: pointer;
 }
 button:hover {
-    background-color: var(--verde-escuro);
+    background-color: #af6012;
     transform: translateY(-2px);
 }
 #link-cad{
