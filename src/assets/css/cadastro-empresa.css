@@ -1,18 +1,25 @@
-/* Variáveis de cores do seu tema (para reuso) */
-  :root {
-    --fundo-principal: #F5F1E9; 
-    --texto-principal: #3D352E; 
-    --acento-principal: #C76F16; 
-    --neutro: #B7B09C; 
-    --fundo-card: #FAFAFA;
+:root {
+    --fundo-principal: #F5F1E9;
+    --fundo-card: #FFFFFF;
+    --border: #D9D6CF;
+    --shadow: rgba(0,0,0,0.08);
+    --verde-escuro: #2D5D34;
+    --verde-medio: #4A7C4A;
+    --verde-claro: #9CCC65;
+    --texto-principal: #3B3A36;
 }
 
-/* Apenas a estrutura base do formulário */
-body {
+
+body{
     display: flex;
+    align-items: center;
     justify-content: center;
-    align-items: flex-start;
-    min-height: 100vh;
+    max-height: 100vh;
+    height: 95vh;
+    width: 100vw;
+    font-family: 'Lato', sans-serif;
+    background: var(--fundo-principal);
+    color: var(--texto-principal);
 }
 
 form {

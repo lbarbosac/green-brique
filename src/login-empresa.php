@@ -16,17 +16,17 @@
     ?>
     <main>
         <form action="./act/empresa-login.php" method="post">
-            <h2 id="form-title">Login</h2>
+            <h2 id="form-title"><strong>Login</strong></h2>
             <div class="div-label">
                 <label for="nome_user">Nome da Empresa</label>
                 <div class="input-box">
-                    <input type="text" placeholder="Ex: miguelnaiba" name="nome_user" required>
+                    <input class="texto-input" type="text" placeholder="Ex: miguelnaiba" name="nome_user" required>
                 </div>
             </div>
             <div class="div-label">
                 <label for="senha">Senha</label>
                 <div class="input-box">
-                    <input id="senha" type="password" placeholder="Ex: 2121" name="senha" required>
+                    <input class="texto-input" id="senha" type="password" placeholder="Ex: 2121" name="senha" required>
                     <i id="btnVerSenha" class="fa-solid fa-eye-slash" style="margin-right: 0.5rem;"></i>
                 </div>
             </div>

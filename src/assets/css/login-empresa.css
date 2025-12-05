@@ -2,19 +2,36 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Pangolin&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Pangolin&display=swap');
 /**************/
+
+:root {
+    --fundo-principal: #F5F1E9;
+    --fundo-card: #FFFFFF;
+    --border: #D9D6CF;
+    --shadow: rgba(0,0,0,0.08);
+    --verde-escuro: #2D5D34;
+    --verde-medio: #4A7C4A;
+    --verde-claro: #9CCC65;
+    --texto-principal: #3B3A36;
+}
+
 body{
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #f5f1e9;
     max-height: 100vh;
+    height: 95vh;
+    width: 100vw;
+    font-family: 'Lato', sans-serif;
+    background: var(--fundo-principal);
+    color: var(--texto-principal);
 }
 #form-title {
-    font-size: 1.6rem;
     font-weight: 700;
-    color: var(--texto-principal);
+    color: var(--verde-medio);
     text-align: center;
     margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+    margin-top: -10px;
 }
 form{
     padding: 2rem;
@@ -25,10 +42,11 @@ form{
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    border: 1px solid var(--border);
+    gap: 10px;
 }
 .texto-logo{
     color: #6B705C;
-    font-family: "Lato", sans-serif;
     font-weight: 400;
     font-style: normal;
 }
@@ -46,8 +64,8 @@ form{
     width: 16.5rem;
     height: 2.125rem;
     background-color: #FFF;
-    border-radius: 5px;
     border: 0.08rem solid #3D352E;
+    border-radius: 999px;
 
 }
 input{
@@ -55,7 +73,6 @@ input{
     height: 1.5rem;
     border: none;
     padding-left: 0.8rem;
-    font-family: "Pangolin", cursive;
     font-weight: 400;
     font-style: normal;
     line-height: normal;
@@ -65,7 +82,6 @@ input:focus{
 }
 input::placeholder{
     margin-left: 0.5rem;
-    font-family: "Pangolin", cursive;
     font-weight: 400;
     font-style: normal;
     line-height: normal;
@@ -77,11 +93,12 @@ input::placeholder{
     margin: 0.5rem;
 }
 label{
-    color: #6B705C;
-    font-family: "Pangolin", cursive;
-    font-weight: 400;
+    color: var(--verde-medio);
+
     font-style: normal;
     line-height: normal;
+    margin-bottom: 3px;
+    font-weight: 600;
 }
 button{
     background-color: var(--acento-principal);
@@ -90,7 +107,7 @@ button{
     padding: 0.5rem;
     margin-top: 1rem;
     border: none;
-    border-radius: 6px;
+    border-radius: 999px;
     font-size: 1rem;
     font-weight: 700;
     cursor: pointer;
@@ -105,4 +122,9 @@ button:hover {
 }
 #link-cad{
     margin-top: 1rem;
+}
+
+.texto-input{
+    font-size: 0.9rem;
+    color: var(--verde-escuro);
 }
