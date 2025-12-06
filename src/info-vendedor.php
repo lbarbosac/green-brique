@@ -63,13 +63,11 @@ if ($comerciante_id > 0) {
     ?>
     <main class="container-vendedor">
         <section class="card-vendedor">
-            <h1 class="nome-vendedor"><strong> Informações do vendedor:</strong></h1>
+            <h1 class="nome-vendedor"><strong> Informações do vendedor</strong></h1>
             <h2 class="nome-vendedor"><?php echo $nome_comerciante; ?></h2>
             <?php 
             if($cnpj_comerciante == 1){
-                echo '<div>
-                    <img src="'.$imagemPerfil_comerciante.'" alt="Foto de perfil do vendedor" class="foto-perfil-vendedor">
-                </div>
+                echo '
                 <p class="linha-info">
                     <span class="label">Telefone:</span>
                     <a href="tel:'.$tel_comerciante.'" class="valor-link">
@@ -80,7 +78,7 @@ if ($comerciante_id > 0) {
                 <p class="linha-info">
                     <span class="label">Email:</span>
                     <a href="tel:'.$email_comerciante.'" class="valor-link">
-                        '.$tel_comerciante.'
+                        '.$email_comerciante.'
                     </a>
                 </p>
 

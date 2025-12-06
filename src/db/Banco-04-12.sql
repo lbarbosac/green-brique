@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 04/12/2025 às 14:01
+-- Tempo de geração: 06/12/2025 às 12:45
 -- Versão do servidor: 10.4.32-MariaDB
--- Versão do PHP: 8.0.30
+-- Versão do PHP: 8.2.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -90,9 +90,9 @@ CREATE TABLE `comerciantes` (
 --
 
 INSERT INTO `comerciantes` (`ComercianteID`, `Nome`, `Senha`, `Telefone`, `Cidade`, `Estado`, `Cnpj`, `ImagemPerfil`, `Email`, `IframeLocal`) VALUES
-(1, 'avilazdudu', '$2y$10$KfD5ox9.XVjzac4Sq5hTgOy5wbsepFznqzVePo6EhIccptfFncudy', '51992774490', 'Porto Alegre', 'Rio Grande do Sul', 1, '', 'mamaco', 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5325.1962458408!2d-51.183277566286975!3d-30.020132792028527!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x951979d5cc24660b%3A0xe102aa5e7bda53d1!2sZaffari!5e0!3m2!1spt-BR!2sbr!4v1764850789016!5m2!1spt-BR!2sbr'),
-(2, 'miguelraba', '$2y$10$p3BpINJi.Drv57aaqSWCp.FsVIUmZhoFkMYy7xSz5d8LC3YZPjeA2', '51989274040', 'Canoas', 'Rio Grande do Sul', 0, '', '', ''),
-(3, 'cassiano_ramos', '$2y$10$9AfWA5EyIgyiOd56b.RBUe3INtFm9phXReNBxxlyO4OkMi4/9ry.C', '54909274390', 'Porto Alegre', 'Rio Grande do Sul', 0, '', '', '');
+(1, 'Eduardo Ávila', '$2y$10$KfD5ox9.XVjzac4Sq5hTgOy5wbsepFznqzVePo6EhIccptfFncudy', '51992774490', 'Porto Alegre', 'Rio Grande do Sul', 1, '', 'avilazdudu@gmail.com\r\n', 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5325.1962458408!2d-51.183277566286975!3d-30.020132792028527!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x951979d5cc24660b%3A0xe102aa5e7bda53d1!2sZaffari!5e0!3m2!1spt-BR!2sbr!4v1764850789016!5m2!1spt-BR!2sbr'),
+(2, 'Miguel Naiba', '$2y$10$p3BpINJi.Drv57aaqSWCp.FsVIUmZhoFkMYy7xSz5d8LC3YZPjeA2', '51989274040', 'Canoas', 'Rio Grande do Sul', 0, '', 'miguelnaiba@gmail.com', ''),
+(3, 'Cassiano Ramos', '$2y$10$9AfWA5EyIgyiOd56b.RBUe3INtFm9phXReNBxxlyO4OkMi4/9ry.C', '54909274390', 'Porto Alegre', 'Rio Grande do Sul', 0, '', 'cassianoramos@gmail.com', '');
 
 -- --------------------------------------------------------
 
